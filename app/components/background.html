@@ -1,199 +1,46 @@
-<style type="text/css">
-.sky {
-  height: auto;
-  background: #007fd5;
-  position: relative;
-  overflow: hidden;
-  -webkit-animation: sky_background 5s ease-out infinite;
-  -moz-animation: sky_background 5s ease-out infinite;
-  -o-animation: sky_background 5s ease-out infinite;
-  animation: sky_background 5s ease-out infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.sky .clouds_one {
-  background: url("app/img/BG.png");
-  background-size: 100% 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 300%;
-  -webkit-animation: cloud_one 5s linear infinite;
-  -moz-animation: cloud_one 5s linear infinite;
-  -o-animation: cloud_one 5s linear infinite;
-  animation: cloud_one 5s linear infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.sky .clouds_two {
-  background: url("app/img/BG2.png");
-  background-size: 100% 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 300%;
-  -webkit-animation: cloud_two 50s linear infinite;
-  -moz-animation: cloud_two 50s linear infinite;
-  -o-animation: cloud_two 50s linear infinite;
-  animation: cloud_two 50s linear infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.sky .clouds_three {
-  background: url("app/img/BG.png");
-  background-size: 100% 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 300%;
-  -webkit-animation: cloud_three 25s linear infinite;
-  -moz-animation: cloud_three 25s linear infinite;
-  -o-animation: cloud_three 25s linear infinite;
-  animation: cloud_three 25s linear infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-/* @-webkit-keyframes sky_background {
-  0% {
-	background: #007fd5;
-	color: #007fd5
+<style>
+  .bg{
+    overflow: hidden;
   }
-  50% {
-	background: #000;
-	color: #a3d9ff
-  }
-  100% {
-	background: #007fd5;
-	color: #007fd5
-  }
-}
-@-moz-keyframes sky_background {
-  0% {
-	background: #007fd5;
-	color: #007fd5
-  }
-  50% {
-	background: #000;
-	color: #a3d9ff
-  }
-  100% {
-	background: #007fd5;
-	color: #007fd5
-  }
-}
-@keyframes sky_background {
-  0% {
-	background: #007fd5;
-	color: #007fd5
-  }
-  50% {
-	background: #000;
-	color: #a3d9ff
-  }
-  100% {
-	background: #007fd5;
-	color: #007fd5
-  }
-} */
-
-/* @-webkit-keyframes cloud_one {
-  0% {
-	right: 0
-  }
-  100% {
-	right: 200%
-  }
-}
-@-moz-keyframes cloud_one {
-  0% {
-	right: 0
-  }
-  100% {
-	right: 200%
-  }
-} */
-@keyframes cloud_one {
-  100% {
-	left: 0
-  }
-  0% {
-	left: -100%
-  }
-}
-
-/* @-webkit-keyframes cloud_two {
-  0% {
-	right: 0
-  }
-  100% {
-	right: 200%
-  }
-}
-@-moz-keyframes cloud_two {
-  0% {
-	right: 0
-  }
-  100% {
-	right: 200%
-  }
-} */
-@keyframes cloud_two {
-  100% {
-	left: 0
-  }
-  0% {
-	left: -100%
-  }
-
-}
-
-/* @-webkit-keyframes cloud_three {
-  0% {
-	right: 0
-  }
-  100% {
-	right: 200%
-  }
-}
-@-moz-keyframes cloud_three {
-  0% {
-	right: 0
-  }
-  100% {
-	right: 200%
-  }
-} */
-@keyframes cloud_three {
-  100% {
-	left: 0
-  }
-  0% {
-	left: -100%
-  }
-}
+   ul{
+    width:200%;
+    padding:0;
+    margin: 0;
+    position: relative;
+    margin-left: -100%;
+   }
+   li{
+    list-style: none;
+    float: left;
+    padding:0;
+    margin: 0;
+    animation: sky_background 5s ease-out infinite;
+   }
+   .li_one{
+    background: url('app/img/BG.png');
+    background-size: 100% 100%;
+   }
+   .li_two{
+    background: url('app/img/BG2.png');
+    background-size: 100% 100%;
+   }
 </style>
-<div class="sky">
-	<div class="clouds_one"></div>
-	<div class="clouds_two"></div>
-	<div class="clouds_three"></div>
+<div class="bg">
+  <ul>
+    <li class="common_li li_two"></li>
+    <li class="common_li li_one"></li>
+  </ul>
 </div>
-<script type="text/javascript">
-	$(function(){
-		$('.sky').css('height',$(window).height())
-	})
+<script>
+  $(function(){
+    $('.bg').css({'height':$(window).height(),'width':$(window).width()})
+    $('.bg ul').css({'height':$(window).height(),'width':$(window).width()*2})
+    $('.bg .common_li').css({'height':$(window).height(),'width':$(window).width()})
+    setInterval(function(){
+      $('ul').animate({left:"100%"},100000,'linear',function () {
+          var first=$("ul>li:first-child");
+          $('ul').append(first);
+      }).animate({left:"0"},0)
+    },500)
+  })
 </script>

@@ -3,35 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>南京智慧监管平台</title>
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
     <link rel="stylesheet" type="text/css" href="app/css/reset.css">
     <link rel="stylesheet" type="text/css" href="app/css/index.css">
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css">
   </head>
   <body>
   	<!-- 背景 -->
   	<div id="background"></div>
-	<div id="header_nav">
-		
-	</div>
-	<div id="menu">
-		
-	</div>
+  	<!-- 背景 -->
+
+  	<!-- 头部导航 -->
+	<div id="header_nav"></div>
+	<!-- 头部导航 -->
+
+	<!-- 侧栏菜单 -->
+	<div id="menu"></div>
+	<!-- 侧栏菜单 -->
+
+	<!-- 内容主视区 -->
 	<div id="content">
-		
+		<input id="time" type="text" />
 	</div>
-	
+	<!-- 内容主视区 -->
   </body>
 </html>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/echarts/dist/echarts.min.js"></script>
+<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
+<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
 <script type="text/javascript">
 	$(function(){
+		/* 模块加载 */
 		$('#header_nav').load('app/components/header.html');
 		$('#menu').load('app/components/menu.html')
-		$('#content').load('app/components/next.html')
+		$('#content').load('app/components/timepicker.html')
+		$('#background').load('app/components/background.html')
+		/* 模块加载 */
+
+		/* 主体框架布局 */
 		$('#menu').css('height',$(window).height()-100+'px');
 		$('#content').css({'height':$(window).height()-100+'px'});
-		$('#background').load('app/components/background.html')
 		$('#background').css({'width':$(window).width()},{'height':$(window).height()})
+		/* 主体框架布局 */
+
 	})
 </script>

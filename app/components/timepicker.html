@@ -1,0 +1,34 @@
+<div class="contents">
+	<input id="time" type="text" />
+</div>
+<style type="text/css">
+	#time{
+		margin-left: 300px;
+		margin-top: 100px;
+	}
+	.contents{
+		background: rgba(255, 255, 255, 0.3);
+		width: 100%;
+		height: 100%;
+	}
+	table {
+		font-size: 1em;
+	}
+	.demo-description {
+		clear: both;
+		padding: 12px;
+		font-size: 1.3em;
+		line-height: 1.4em;
+	}
+	.ui-draggable, .ui-droppable {
+		background-position: top;
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('#time').datetimepicker({
+            timeFormat: "HH:mm:ss",
+            dateFormat: "yy-mm-dd"
+        });
+	})
+</script>
