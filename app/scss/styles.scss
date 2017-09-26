@@ -1,0 +1,11 @@
+$color_red: red;
+.app{
+	background: $color_red;
+	.index{
+		height:120px;
+		width:200px;
+		.cssa{
+			overflow:hidden;
+		}
+	}
+}

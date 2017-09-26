@@ -1,0 +1,38 @@
+<div class="menus">
+	<div class="nav">
+		<div class="link" onclick="goto('app/components/next.html')"  style="margin-top: 0;">跳转到下一个页面</div>
+	</div>
+	<div class="nav">
+		<div class="link" onclick="goto('app/components/next2.html')">跳转到下一个页面</div>
+	</div>
+</div>
+<div class="button"></div>
+<style type="text/css">
+	.menus{
+		height: 100%;
+		background: rgba(255, 192, 203, .3);
+	}
+	.link{
+		margin-bottom: 10px;
+		background: green;
+		color: #fff;
+		line-height: 40px;
+		text-align: center;
+		padding: 10px 0;
+		cursor: pointer;
+	}
+	.link:first-child(){
+		margin-top: 0;
+	}
+	.button{
+		width: 20px;
+		height: 100px;
+		background: red;
+		float: left;
+	}
+</style>
+<script type="text/javascript">
+	function goto(path){
+		$('#content').load(path)
+	}
+</script>

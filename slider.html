@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+   li{
+    width:33%;
+    height:200px;
+    list-style: none;
+    float: left;
+    padding:0;
+    margin: 0;
+   }
+   ul{
+    width:310%;
+    padding:0;
+    margin: 0;
+    position: relative;
+   }
+   li>div{
+   width: 50px;
+   height:50px;
+   background: #000;
+   margin: auto ;
+   }
+  </style>
+ </head>
+ <body>
+ <div>
+  <button onclick="go()">前进</button>
+  <button onclick="back()">后退</button>
+ </div>
+ <div style="width: 200px;height: 200px;overflow: hidden;border: 1px solid #000">
+   <ul>
+    <li style="background-color:#f00;"><div></div></li>
+	 <li style="background-color:#ff0;"><div></div></li>
+	 <li style="background-color:#0f0;"><div></div></li>
+	 <li style="background-color:#00f;"><div></div></li>
+   </ul>
+ </div>
+ <script src="node_modules/jquery/dist/jquery.min.js"></script>
+ <script>
+  function  go() {
+      $('ul').animate({left:"-100%"},3000,'linear',function () {
+          var first=$("ul>li:first-child");
+          $('ul').append(first);
+      }).animate({left:"0"},0)
+  }
+  function  back() {
+      $('ul').animate({left:"-100%"},0,function () {
+          var last=$("ul>li:last-child");
+          $('ul').prepend(last);
+      }).animate({left:"0"},3000)
+  }
+  $(function(){
+    go()
+    setInterval(function(){
+      go()
+    },3000)
+  })
+ </script>
+ </body>
+</html>

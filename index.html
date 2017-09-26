@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>南京智慧监管平台</title>
+    <link rel="stylesheet" type="text/css" href="app/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="app/css/index.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+  	<!-- 背景 -->
+  	<div id="background"></div>
+	<div id="header_nav">
+		
+	</div>
+	<div id="menu">
+		
+	</div>
+	<div id="content">
+		
+	</div>
+	
+  </body>
+</html>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#header_nav').load('app/components/header.html');
+		$('#menu').load('app/components/menu.html')
+		$('#content').load('app/components/next.html')
+		$('#menu').css('height',$(window).height()-100+'px');
+		$('#content').css({'height':$(window).height()-100+'px'});
+		$('#background').load('app/components/background.html')
+		$('#background').css({'width':$(window).width()},{'height':$(window).height()})
+	})
+</script>
