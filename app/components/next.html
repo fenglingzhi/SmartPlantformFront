@@ -1,0 +1,416 @@
+<style type="text/css">
+  .contents{
+    height:100%;
+    position:relative;
+    z-index:-30;
+    }
+  .next{
+    margin-left:0;
+    padding-left:0;
+    padding-top:21px;
+    transform:translate(0,0);
+  }
+
+  .next>div>ul li{
+    width:100%;
+    min-height:10%;
+    padding-left:3%;
+    padding-top:1%;
+    padding-bottom:1%;
+  }
+  .next>div:first-child{
+    width:60%;
+    min-height:20px;
+    text-align:center;
+    transform:translate(35%,-68%);
+    border:5px solid #0181DD;
+    color:#0181DD;
+    font-size:18px;
+    border-top:0px;
+    border-bottom:0px;
+    border-radius:25%;
+    position:absolute;
+    z-index:1000;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:5%;
+    padding-right:5%;
+    background-color:#011A38;
+  }
+
+  .next>div:nth-child(2)>ul>li{
+    padding-top:5%;
+    /*word-wrap:break-word; word-break:break-all;*/
+    font-size:14px;}
+
+
+  .next>div:nth-child(2)>ul>li::-webkit-scrollbar{
+    width: 16px;
+    height: 16px;
+    background-color: #f5f5f5;
+  }
+  /*定义滚动条的轨道，内阴影及圆角*/
+  .next>div:nth-child(2)>ul>li::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,26,53,.5);
+    border-radius:10px;
+    background-color: #f5f5f5;
+  }
+  /*定义滑块，内阴影及圆角*/
+  .next>div:nth-child(2)>ul>li::-webkit-scrollbar-thumb{
+    width: 10px;
+    height: 20px;
+    border-radius:10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+  }
+
+
+
+
+
+
+  .next>div:nth-child(2)>ul>li:nth-child(odd){
+    background-color:#001A35;
+  }
+
+
+  .next>div:nth-child(2)>ul>li:nth-child(even){
+    background-color:#01335B;
+  }
+
+  .next>div:nth-child(2)>ul>li:first-child{
+    border-top:2px solid #0F5897;
+    border-bottom:0px;
+    border-left:2px solid #0F5897;
+    border-right:2px solid #0F5897;
+    border-radius:5%;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+  }
+
+  .next>div:nth-child(2)>ul>li:nth-child(2){
+    border-top:1px solid #0F5897;
+    border-bottom:0px;
+    border-left:2px solid #0F5897;
+    border-right:2px solid #0F5897;
+  }
+
+  .next>div:nth-child(2)>ul>li:nth-child(3){
+    border-top:1px solid #0F5897;
+    border-left:2px solid #0F5897;
+    border-right:2px solid #0F5897;
+  }
+
+  .next>div:nth-child(2)>ul>li:nth-child(4){
+    border-top:1px solid #0F5897;
+    border-bottom:2px solid #0F5897;
+    border-left:2px solid #0F5897;
+    border-right:2px solid #0F5897;
+    border-bottom-left-radius:5%;
+    border-bottom-right-radius:5%;
+  }
+
+  .next>div:nth-child(3){
+    width:60%;
+    min-height:20px;
+    text-align:center;
+    transform:translate(35%,40%);
+    border:5px solid #0181DD;
+    color:#0181DD;
+    font-size:18px;
+    border-top:0px;
+    border-bottom:0px;
+    border-radius:25%;
+    position:relative;
+    z-index:30;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:5%;
+    padding-right:5%;
+    background-color:#011A38;
+  }
+
+  .next>div:nth-child(4){
+    height:100%;
+    transform:translate(0,-10px);
+    text-align:left;
+  }
+
+  .next>div:nth-child(4)>ul>li:first-child{
+    padding-top:10%;
+  }
+
+  .next>div:nth-child(4)>ul>li:nth-child(odd){
+    background-color:#001A35;
+  }
+
+
+  .next>div:nth-child(4)>ul>li:nth-child(even){
+    background-color:#01335B;
+  }
+
+
+  .next>div:nth-child(4)>ul>li::-webkit-scrollbar{
+    width: 16px;
+    height: 16px;
+    background-color: #f5f5f5;
+  }
+  /*定义滚动条的轨道，内阴影及圆角*/
+  .next>div:nth-child(4)>ul>li::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    border-radius:10px;
+    background-color: #f5f5f5;
+  }
+  /*定义滑块，内阴影及圆角*/
+  .next>div:nth-child(4)>ul>li::-webkit-scrollbar-thumb{
+    width: 10px;
+    height: 20px;
+    border-radius:10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+  }
+
+
+
+
+
+  .next>div:nth-child(4)>ul>li{
+    padding-top:5%;
+    font-size:14px;
+    color:#fff
+  }
+
+  .next>div:nth-child(4)>ul>li:first-child{
+    border-top:2px solid #0F5897;
+    border-bottom:0px;
+    border-left:2px solid #0F5897;
+    border-right:2px solid #0F5897;
+    border-radius:5%;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+  }
+
+  .next>div:nth-child(4)>ul>li:nth-child(2){
+    border-top:1px solid #0F5897;
+    border-bottom:0px;
+    border-left:2px solid #0F5897;
+    border-right:2px solid #0F5897;
+  }
+
+  .next>div:nth-child(4)>ul>li:nth-child(3){
+    border-top:1px solid #0F5897;
+    border-left:2px solid #0F5897;
+    border-right:2px solid #0F5897;
+    border-bottom:2px solid #0F5897;
+    border-bottom-left-radius:5%;
+    border-bottom-right-radius:5%;
+  }
+
+  .next a{
+    text-decoration:none;
+    color:#e4393c}
+
+  .event_hr{
+    width:197px;
+    border-top:1px solid #6F7A47;
+    margin-bottom:5%
+  }
+
+  .next img{
+    transform:translate(0,-15%);
+  }
+
+  .event_3_p{
+    margin-bottom:0;
+  }
+
+  .warning_1{color:#DD222C;
+  }
+
+  .warning_1+p{
+    color:#fff;
+    transform:translate(13%,0);
+    width: 175px;
+  }
+
+  .warning_2{color:#EB5911;
+  }
+
+  .warning_2+p{
+    color:#fff;
+    transform:translate(13%,0);
+    width: 175px;
+  }
+
+  .warning_3{color:#D3CA37;
+  }
+
+  .warning_3+p{
+    color:#fff;
+    transform:translate(13%,0);
+    width: 175px;
+  }
+
+  .position{color:#09D0DB;
+  }
+
+  .position+p{
+    color:#fff;
+    transform:translate(13%,0);
+    width: 175px;
+  }
+
+  .event_1,.event_2,.event_3{color:#09D0DB;}
+
+  .event_2_menu{
+    padding-top: 8%;
+    padding-bottom: 5%;
+  }
+
+  .import_span_1{
+    color:#0181DD;
+    position:relative;
+    left:13%;
+  }
+
+  .event_1_span1_menu{width:175px;}
+
+  #import_ul p{
+    margin-bottom:0
+  }
+
+  #import_ul>li:last-child{
+    padding-bottom:0
+  }
+
+  #import_ul>li:last-child video{
+    width:80%;
+    margin-bottom:10px;
+    transform:translate(17%,0);
+    border:1px solid blue
+  }
+
+  #quick_do{
+    padding-top:15%;
+  }
+  .event_1_span{
+    position:relative;
+    left:13%;
+  }
+  .event_1_a{position:relative;
+    left:15%}
+
+  .event_1_a2{width:100px}
+
+  .event_1_span{position:relative;
+    left:13%
+  }
+
+  .event_1_span1{
+    position:relative;
+    left:13%
+  }
+  .event_1_p{
+    position:relative;
+    left:10%;
+    width: 175px;
+  }
+  .event_1_menu{
+    padding-top: 7%;
+  }
+  .event_1_police{
+    padding-bottom:10%;
+  }
+  .ungerncy{
+    overflow: auto;
+  }
+  .serious{
+    overflow: auto;
+    overflow-x: hidden;
+  }
+</style>
+
+<div class="contents">
+   <div class="next">
+     <div>紧急处理</div>
+        <div class="ungerncy">
+          <ul>
+            <li id="quick_do">
+              <img src="app/img/warning_1.png" alt="">
+              <span class="warning_1">17:00 【一级警情】</span>
+              <p>二看，一监区101监舍，死亡</p>
+            </li>
+            <li>
+              <img src="app/img/warning_2.png" alt="">
+              <span class="warning_2">16:05 【二级警情】</span>
+              <p>江宁，篮球场，聚众斗殴事件</p>
+            </li>
+            <li>
+              <img src="app/img/warning_3.png" alt="">
+              <span class="warning_3">15:30 【三级警情】</span>
+              <p>六合，三监区302监室，打架</p>
+            </li>
+            <li>
+              <img src="app/img/position.png" alt="">
+              <span class="position">12:00 【超区域报警】</span>
+              <p>浦口，食堂操作区，某某超区</p>
+            </li>
+          </ul>
+        </div>
+        <div>严重违规</div>
+        <div class="serious">
+          <ul id="import_ul">
+            <li id="import">
+              <span class="import_span_1">即时违规</span>
+              <p class="event_1_menu">
+                <img src="app/img/event_1.png" alt="">
+                <span class="event_1">12：00 【事件预警】</span>
+                <p>
+                  <span class="event_1_span">二看 监区厂房</span>
+                  <a class="event_1_a" href="">
+                    事件详情
+                  </a>
+                </p>
+              </p>
+              <p class="event_2_menu">
+                <img src="app/img/event_2.png" alt="">
+                <span class="event_2">11：32 【进出门异常】</span>
+                <p class="event_3_p">
+                  <img src="app/img/video.png" alt="">
+                  <span>秦淮 二监区101监室</span>
+                  <a class="event_1_a2" href="">
+                    事件
+                  </a>
+                  <div class="event_hr">
+                  </div>
+                </p>
+              </p>
+            </li>
+            <li>
+              <span class="import_span_1">历史违规</span>
+              <p>
+                <img src="app/img/event_3.png" alt="">
+                <span class="event_3">2017-0920-8:00</span>
+              </p>
+              <p class="event_1_p">
+                【事件类型名称】
+              </p>
+              <p class="event_1_span1_menu">
+                <span class="event_1_span1">市看，特殊病患区</span>
+                <a class="event_1_span" href="">
+                  事件详情
+                </a>
+              </p>
+              </p>
+              </p>
+              </p>
+            </li>
+            <li>
+              <p class="event_1_span">秦淮，二监区，101监室北</p>
+              <p class="event_1_span event_1_police">值班民警：张三</p>
+              <video src=""></video>
+            </li>
+          </ul>
+        </div>
+      </div>
+</div>

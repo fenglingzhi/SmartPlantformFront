@@ -28,9 +28,10 @@
 
 	<!-- 内容主视区 -->
 	<div id="content">
-		<img src="app/img/s1.png">
+		<!-- <img src="app/img/s1.png"> -->
 		<!-- <input id="time" type="text" /> -->
 	</div>
+	<div id="slider"></div>
 	<!-- 内容主视区 -->
   </body>
 </html>
@@ -42,19 +43,33 @@
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
 <script type="text/javascript">
-	$(function(){
-		/* 模块加载 */
-		// $('#header_nav').load('app/components/header.html');
-		// $('#menu').load('app/components/menu.html')
-		// $('#content').load('app/components/timepicker.html')
-		$('#background').load('app/components/background2.html')
-		/* 模块加载 */
+$(function(){
+	/* 载入页面 */
+	$('#header_nav').load('app/components/header.html');
+	$('#menu').load('app/components/menu.html');
+	$('#content').load('app/components/next2.html');
+	$('#slider').load('app/components/next.html');
+	$('#background').load('app/components/background2.html')
 
-		/* 主体框架布局 */
-		$('#menu').css('height',$(window).height()-100+'px');
-		$('#content').css({'height':$(window).height()-100+'px'});
-		$('#background').css({'width':$(window).width()},{'height':$(window).height()})
-		/* 主体框架布局 */
+	/* 页面缩放 */
+	$(window).resize(function(){
+	    if($("#menu").css("display")=="none"){
+	  		$('#content').css({'width':$(window).width()-$("#slider").width()-60+"px"});
+	    }else {
+	        $('#content').css({'width': $(window).width() - $("#menu").width() - $("#slider").width() - 60 + "px"});
+	        $('#content').css({'height':$(window).height()-90+"px"});
+	        $('#menu').css({'height': $(window).height() - 90 + "px"});
+	        $('#slider').css({'height': $(window).height() - 75 + "px"});
+	        $("#slider").css("overflowY", "scroll");
+	        $("#slider").css("overflowX", "hidden");
+	    }
+	});
 
-	})
+	/* 页面计算 */
+	$('#background').css({'width':$(window).width()},{'height':$(window).height()});
+	$('#content').css({'width':$(window).width()-$("#menu").width()-$("#slider").width()-60+"px"});
+	$('#content').css({'height':$(window).height()-100+"px"});
+	$('#menu').css({'height':$(window).height()-100+"px"});
+	$('#slider').css({'height':$(window).height()-100+"px"});
+});
 </script>

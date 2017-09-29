@@ -1,11 +1,814 @@
-<div class="content_two">
-	<span>这就是第二个页面</span>
-</div>
 <style type="text/css">
-	
-	.content_two{
-		background: rgba(255, 0, 0, 0.2);
-		width: 100%;
-		height: 100%;
-	}
+  .contents_two{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .contents_time{
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+    float: right;
+    margin-right: 1%;
+  }
+  .fxp{
+    width: 100%;
+    /*min-width: 200px;*/
+    position: absolute;
+    /*top: 8px;*/
+    z-index: 10;
+    font-size: 24px;
+    color: white;
+  }
+  .fxp span{
+    color: skyblue;
+    font-size: 14px;
+  }
+  .fxp a{
+    margin-top: 6px;
+    margin-right: 10px;
+    float: right;
+    font-size: 14px;
+    color: white;
+  }
+  .fxp .aactive{
+    color: red;
+  }
+  .qsfx{
+    float: left;
+    margin-top:8px;
+    color: white;
+    font-size: 24px;
+  }
+  .fxf{
+    width: 70%;
+    -webkit-animation:circle 5s infinite linear;/*匀速 循环*/
+  }
+  @-webkit-keyframes circle{
+    0%{ transform:rotate(0deg); }
+    100%{ transform:rotate(360deg); }
+  }
+  .fxdw{
+    color: yellow;
+    position: absolute;
+
+    /*top: 41%;*/
+    /*left: 39%;*/
+  }
+  .fxdw p{
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid yellow;
+  }
+  .fxdw p>span{
+    font-size: 38px;
+  }
+  .fxdw>span{
+    font-size: 12px;
+    text-align: center;
+  }
+  .fxfx{
+    width: 100%;
+    min-width: 200px;
+    z-index: 10;
+    position: absolute;
+    /*top:8px;*/
+    font-size: 24px;
+    color: white;
+  }
+  .fxfx span{
+    color: skyblue;
+    font-size: 14px;
+  }
+  .fxfx a{
+    margin-top: 6px;
+    margin-right: 10px;
+    float: right;
+    font-size: 14px;
+    color: white;
+  }
+  .fxfx .aactive{
+    color: red;
+  }
+  .zdfxrenyuangc{
+    font-size: 24px;
+    color: white;
+    width: 100%;
+  }
+  .zdfxrenyuangc>span{
+    line-height: 34px;
+    font-size: 14px;
+    float: right;
+  }
+  .zdfxrenyuan{
+    margin-top: 20px;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+  .zdfxrenyuans{
+    margin-top:15px;
+    width: 100%;
+  }
+  .zdfxrenyuans span{font-size: 24px}
+  .zdfxrenyuans>div{
+    width: 100%;
+  }
+  .zdfxrenyuans>div>div{
+    height: 35px;
+    line-height: 35px;
+    text-align:center;
+    float: left;
+  }
+  .zdfxrenyuans>div>div:first-child{
+    background-color: orange;
+  }
+  .zdfxrenyuans>div>div:nth-child(2){
+    background-color: yellow
+  }
+  .zdfxrenyuans>div>div:nth-child(3){
+    background-color: green;
+  }
+  .gjfx{
+    font-size: 14px;
+    height: 50%;
+    text-align: center;
+    float: left;
+  }
+  .gjfxf{
+    margin-top: 10px;
+    color: orange;
+    width: 35%;
+  }
+  .gjfxc{
+    margin-top: 10px;
+    color: yellow;
+    width: 15%;
+  }
+  .gjfxt{
+    margin-top: 10px;
+    color: green;
+    width: 50%;
+  }
+  .s-tip{
+
+    height: 28px;
+    line-height: 28px;
+    color: yellow;
+    font-size: 24px;
+  }
+  .s-tip>p{
+    width: 60%;
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #235681;
+  }
+  .wendu{
+    margin-left: 22px;
+    font-size: 18px;
+  }
+  .wendu>p:first-child{
+    color: #ffffff;
+    display: inline-block;
+  }
+  .wendu>p:nth-child(2){
+    color: orange ;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .wendu_tem{
+    font-size: 48px;
+    color: #ffffff;
+  }
+  .col-sm-1,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12{
+    margin: 0;
+  }
+  .ss-1{
+    height:33%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+  }
+  #s2{
+    height: 33%;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+  }
+  #qwe{transform:translate(0,0)}
 </style>
+<body>
+
+<div class="contents_two row">
+  <div class="contents_time">
+    12:00:00&nbsp;2017-09-15
+  </div>
+  <div class="col-sm-4">
+
+    <span class="s-tip">
+      <img src="app/img/dingwei.png" style="vertical-align: middle"/>
+      <p>南京市</p>
+    </span>
+    <div class="wendu">
+      <p>
+        平均温度：32℃
+      </p>
+      <p>
+        超高监室：5
+      </p>
+      <p><span class="wendu_tem">30℃</span>云</p>
+    </div>
+  </div>
+  <div id="ss" class="col-sm-8" style="position: relative;height: 100%;">
+    <div class="row ss-1">
+      <div class="col-sm-3" id="qfxdw" style="position: relative;height: 100%;text-align: center;padding: 0">
+        <p class="qsfx">全市风险</p>
+        <div id="qwe">
+          <img src="app/img/pinfenbg.png" class="fxf"/>
+        </div>
+
+
+        <div class="fxdw">
+          <p><span>40</span>分</p>
+          <span>良好</span>
+        </div>
+      </div>
+      <div class="col-sm-9" style="height: 100%;padding-left: 0;">
+        <div class="col-sm-9 fxp" >
+          全市监所风险
+          &nbsp;
+          <span>2017.04-2017.09</span>
+          <a href="#">按风险</a>
+          <a href="#" class="aactive">按分数</a>
+        </div>
+        <div id="d1" style="width: 100%;height: 100%;">
+          <!--加载柱形图-->
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="s2">
+      <div class="col-sm-3" id="fxzhishu" style="width: 25%;height: 100%;float: left;padding: 0;">
+        <!--加载风险指数-->
+      </div>
+
+      <div class="col-sm-9" style="height: 100%;overflow: hidden;padding-left: 0;">
+        <div class="fxfx col-sm-12">
+          本所风险分析
+          &nbsp;
+          <span>2017.04-2017.09</span>
+          <a class="aactive">高位风险</a>
+          <a>风险趋势</a>
+        </div>
+
+
+        <div id="fxfenxi" style="width: 100%;height: 100%;">
+          <!--加载风险指数1 third-->
+        </div>
+
+        <div id="fxfenxis" style="width: 100%;height: 100%;">
+          <!--加载风险指数2 fourth-->
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="row" id="s3" style="height: 33%;padding-top: 5px; ">
+      <div class="col-sm-12" style="display: none">
+        <div >
+
+        </div>
+      </div>
+
+      <div class="col-sm-12" style="height: 100%">
+        <div class="row" style="height: 100%">
+          <div class="col-sm-4" style="height: 100%;padding: 0">
+            <div id="zdfengxianzb" style="width: 100%;height:100%">
+              <!--加载fiveth-->
+            </div>
+          </div>
+          <div class="col-sm-8" style="height: 100%;padding-left: 0;">
+            <div class="zdfxrenyuangc">
+              重大风险人员构成
+              <span><span></span>押量数据</span>
+            </div>
+            <div class="zdfxrenyuan">
+              重大风险人员
+            </div>
+            <div class="zdfxrenyuans">
+              <div>
+                <div>
+                  <span>320</span>人
+                </div>
+                <div>
+                  <span>180</span>人
+                </div>
+                <div>
+                  <span>652</span>人
+                </div>
+                <div style="clear: both"></div>
+                <div class="gjfx gjfxf">
+                  一级风险
+                </div>
+                <div class="gjfx gjfxc">
+                  二级风险
+                </div>
+                <div class="gjfx gjfxt">
+                  三级风险
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function(){imgFw=$("#qfxdw").width();
+  imgFh=$("#qfxdw").height();
+//  imgW=$(".fxf").width();
+//  imgH=$(".fxf").height();
+//  console.log(imgFw+"px");
+//  console.log(imgFh+"px");
+//  console.log(imgH+"px");
+//  console.log(imgW+"px");
+//  $(".fxf").css({"top":20+(imgFh/2-imgH/2)+"px"});
+//  $(".fxf").css({"left":imgFw/2-imgW/2+"px"});
+
+  wordW=$(".fxdw").width();
+  wordH=$(".fxdw").height();
+
+  $(".fxdw").css({"top":20+(imgFh/2-wordH/2)+"px"});
+  $(".fxdw").css({"left":imgFw/2-wordW/2+"px"});
+
+  var hei=$(".contents_two").height();
+  $("#ss").css({'height':hei-27+"px"})
+  var a=parseInt($(".zdfxrenyuans>div>div:nth-child(1) span").html());
+  var b=parseInt($(".zdfxrenyuans>div>div:nth-child(2) span").html());
+  var c=parseInt($(".zdfxrenyuans>div>div:nth-child(3) span").html());
+  $(".zdfxrenyuans>div>div:nth-child(1)").css({'width':a/(a+b+c)*100+"%"});
+  $(".zdfxrenyuans>div>div:nth-child(2)").css({'width':b/(a+b+c)*100+"%"});
+  $(".zdfxrenyuans>div>div:nth-child(3)").css({'width':c/(a+b+c)*100+"%"});
+  $(".gjfxf").css({'width':a/(a+b+c)*100+"%"});
+  $(".gjfxc").css({'width':b/(a+b+c)*100+"%"});
+  $(".gjfxt").css({'width':c/(a+b+c)*100+"%"});
+
+
+  $(".fxfx a").eq(1).click(function(){
+    event.preventDefault();
+    $(".fxfx a").eq(1).addClass("aactive");
+    $(".fxfx a").eq(0).removeClass("aactive");
+    $("#fxfenxi").css("display","none");
+    $("#fxfenxis").css("display","block");
+
+    first.resize();
+    second.resize();
+    third.resize();
+    fourth.resize();
+    fivith.resize();
+  })
+  $(".fxfx a").eq(0).click(function(){
+    event.preventDefault();
+    $(".fxfx a").eq(0).addClass("aactive");
+    $(".fxfx a").eq(1).removeClass("aactive");
+    $("#fxfenxis").css("display","none");
+    $("#fxfenxi").css("display","block");
+
+    first.resize();
+    second.resize();
+    third.resize();
+    fourth.resize();
+    fivith.resize();
+
+  })
+
+
+  first=echarts.init(document.getElementById("d1"));
+  option_fir = {
+    color: ['#3398DB'],
+    tooltip : {
+      trigger: 'axis',
+      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    grid: {
+      left: 'auto',
+      right: 'auto',
+      bottom: 'auto',
+      top: '30%',
+      containLabel: true
+    },
+    xAxis : [
+      {
+        type : 'category',
+        data : ['市\n看', '戒\n毒', '拘\n留', '二\n看', '二\n拘', '玄\n武',
+          '秦\n淮','栖\n霞','雨\n花','浦\n口','江\n宁','六\n合','溧\n水','高\n淳'],
+        axisLabel: {
+          show: true,
+          textStyle: {
+            fontSize:14,
+            color: 'white'
+          }
+        },
+        axisTick: {
+          show: false
+        }
+      }
+    ],
+    yAxis : [
+      {
+        type : 'value',
+        axisLabel: {
+          show: true,
+          textStyle: {
+            fontSize:10,
+            color: 'white'
+          }
+        }
+      }
+    ],
+    series : [
+      { type: 'bar',
+        itemStyle: {
+          normal: {
+            color: '#001E36'
+          }
+        },
+        silent: true,
+        barWidth: "50%",
+        barGap: '-100%', // Make series be overlap
+        data: [100,100,100,100,100,100,100,100,100,100,100,100,100,100,100]
+      },
+      {
+        itemStyle: {
+          normal: {
+            color: '#0294DF'
+          }
+        },
+        type:'bar',
+        barWidth: '50%',
+        z: 10,
+        data:[77, 66, 55, 44, 99, 22, 11, 22, 33, 44, 55, 66, 77 , 88]
+      }
+    ]
+  };
+  first.setOption(option_fir);
+
+
+  second=echarts.init(document.getElementById("fxzhishu"));
+  option_sec = {
+    title: {
+      text: '风险指数',
+      textStyle:{
+        color:"white",
+        fontSize:"24",
+        fontWeight:"500"
+      }
+    },
+    radar: [
+      {
+        indicator: [
+          { text: '基础\n风险' },
+          { text: '在押\n人员' },
+          { text: '警辅\n外来' },
+          { text: '技术\n安防' },
+          { text: '民警\n执法' }
+        ],
+        center: ['50%', '65%'],
+        radius: 45,
+        startAngle: 90,
+        splitNumber: 4,
+        shape: 'circle',
+        name: {
+          textStyle: {
+            color:'white',
+            fontSize:"10"
+          }
+        },
+        splitArea: {
+          areaStyle: {
+            color: ['rgba(114, 172, 209, 0.2)',
+              '#163B65',
+              '#0F4B7F',
+              '#06659D',],
+            shadowColor: 'rgba(0, 0, 0, 0.3)',
+            shadowBlur: 10
+          }
+        },
+        axisLine: {
+          lineStyle: {
+            color: 'rgba(255, 255, 255, 0.5)'
+          }
+        },
+        splitLine: {
+          lineStyle: {
+            color: 'rgba(255, 255, 255, 0.5)'
+          }
+        }
+      },
+
+    ],
+    series: [
+      {
+        name: '雷达图',
+        type: 'radar',
+        itemStyle: {
+          emphasis: {
+            // color: 各异,
+            lineStyle: {
+              width: 4
+            }
+          }
+        },
+        data: [
+          {
+            value: [100, 8, 0.40, -80, 2000],
+            name: '图一',
+            symbol: 'rect',
+            symbolSize: 5,
+            lineStyle: {
+              normal: {
+                type: 'dashed'
+              }
+            }
+          },
+          {
+            value: [60, 5, 0.30, -100, 1500],
+            name: '图二',
+            symbolSize: 10,
+            areaStyle: {
+              normal: {
+                color: 'rgba(255, 255, 255, 0.5)'
+              }
+            }
+          }
+        ]
+      },
+    ]
+  }
+  second.setOption(option_sec);
+
+
+  third=echarts.init(document.getElementById("fxfenxi"));
+  option_thi = {
+    color: ['#3398DB'],
+    tooltip : {
+      trigger: 'axis',
+      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    grid: {
+      left: 'auto',
+      right: 'auto',
+      bottom: 'auto',
+      top: '30%',
+      containLabel: true
+    },
+    xAxis : [
+      {
+        type : 'category',
+        data : ['风险\n项1', '风险\n项2', '风险\n项3', '风险\n项4', '风险\n项5', '风险\n项6',
+          '风险\n项7','风险\n项8','风险\n项9','风险\n项10'],
+        axisLabel: {
+          show: true,
+          textStyle: {
+            fontSize:14,
+            color: '#fff'
+          }
+        },
+        axisTick: {
+          show: false
+        }
+      }
+    ],
+    yAxis : [
+      {
+        type : 'value',
+        axisLabel: {
+          show: true,
+          textStyle: {
+            fontSize:10,
+            color: 'white'
+          }
+        }
+      }
+    ],
+    series : [
+      { type: 'bar',
+        itemStyle: {
+          normal: {
+            color: '#001E36'
+          }
+        },
+        silent: true,
+        barWidth: "50%",
+        barGap: '-100%', // Make series be overlap
+        data: [100,100,100,100,100,100,100,100,100,100,100,100,100,100,100]
+      },
+      {
+        itemStyle: {
+          normal: {
+            color: '#0294DF'
+          }
+        },
+        type:'bar',
+        barWidth: '50%',
+        z: 10,
+        data:[99,88,77, 66, 55, 44, 99, 22, 11, 22, ]
+      }
+    ]
+  };
+  third.setOption(option_thi);
+
+
+  fourth=echarts.init(document.getElementById("fxfenxis"));
+  option_fou= {
+    tooltip: {
+      trigger: 'asix',
+      axisPointer: {
+        lineStyle: {
+          color: '#ddd'
+        }
+      },
+      backgroundColor: 'rgba(255,255,255,1)',
+      textStyle: {
+        color: '#7588E4'
+      },
+      extraCssText: 'box-shadow: 0 0 5px rgba(0,0,0,0.3)'
+    },
+    grid: {
+      left: '1%',
+      right: '4%',
+      bottom: 'auto',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      data: ['2017.04','2017.05','2017.06','2017.07','2017.08','2017.09'],
+      boundaryGap: false,
+      splitLine: {
+        show: true,
+        interval: 'auto',
+        lineStyle: {
+          color: ['#294461']
+
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#609ee9'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color:"white"
+        }
+      }
+    },
+    yAxis: {
+      type: 'value',
+      splitLine: {
+        lineStyle: {
+          color: ['#294461']
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#609ee9'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 10,
+          color:"white"
+        }
+      }
+    },
+    series: [{
+      type: 'line',
+      smooth: true,
+      showSymbol: false,
+      symbol: 'circle',
+      symbolSize: 6,
+      data: ['80', '50', '60', '90', '20', '60'],
+      areaStyle: {
+        normal: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: 'green'
+          }, {
+            offset: 1,
+            color: 'rgba(22,196,13,0.2)'
+          }], false)
+        }
+      },
+      itemStyle: {
+        normal: {
+          color: 'rgba(22,196,13,0.2)'
+        }
+      },
+      lineStyle: {
+        normal: {
+          width: 2
+        }
+      }
+    }]
+  };
+  fourth.setOption(option_fou);
+
+
+  fivith=echarts.init(document.getElementById("zdfengxianzb"));
+  option_fiv = {
+    title : {
+      text: '重大风险人员占比',
+      textStyle:{
+        color:"white",
+        fontSize:24,
+        fontWeight:"500"
+      }
+    },
+    tooltip : {
+      trigger: 'item',
+      formatter: "{c}人 ({d}%)"
+    },
+    series : [
+      {
+        name: '访问来源',
+        type: 'pie',
+        radius : '60%',
+        center: ['50%', '60%'],
+        labelLine: {
+          normal: {
+            lineStyle: {
+              color: 'rgba(255, 255, 255, 0.3)'
+            },
+            smooth: 0.2,
+            length: 10,
+            length2: 10
+          }
+        },
+        label: {
+          normal: {
+            textStyle: {
+              fontSize: 14,
+              color: 'white'
+            }
+          }
+        },
+        data:[
+          {value:652, name:'重点\n人员'},
+          {value:1152, name:'当前\n在押'},
+        ],
+        itemStyle: {
+          emphasis: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+          }
+        }
+      }
+    ]
+  };
+  fivith.setOption(option_fiv);
+
+
+  window.onresize = function () {
+    //重置容器高宽
+    first.resize();
+    second.resize();
+    third.resize();
+    fourth.resize();
+    fivith.resize();
+  };
+  })
+
+
+</script>
+
+</body>
+
