@@ -1,15 +1,9 @@
-/* #content{
-	width: 100%;
-	margin-left: 200px;
-} */
 #background{
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: -99;
 }
-
-
 #content{
   float:left;
   position:relative;

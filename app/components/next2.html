@@ -1,5 +1,6 @@
 <style type="text/css">
   .contents_two{
+    /*background: rgba(0, 0, 0, 0.3);*/
     width: 100%;
     height: 100%;
     margin: 0;
@@ -35,12 +36,12 @@
     color: red;
   }
   .qsfx{
-    float: left;
-    margin-top:8px;
+    position: absolute;
     color: white;
     font-size: 24px;
   }
   .fxf{
+    position: absolute;
     width: 70%;
     -webkit-animation:circle 5s infinite linear;/*匀速 循环*/
   }
@@ -49,11 +50,9 @@
     100%{ transform:rotate(360deg); }
   }
   .fxdw{
+    text-align: center;
     color: yellow;
     position: absolute;
-
-    /*top: 41%;*/
-    /*left: 39%;*/
   }
   .fxdw p{
     margin: 0;
@@ -205,7 +204,6 @@
     padding-bottom: 15px;
     border-bottom: 1px solid white;
   }
-  #qwe{transform:translate(0,0)}
 </style>
 <body>
 
@@ -229,13 +227,12 @@
       <p><span class="wendu_tem">30℃</span>云</p>
     </div>
   </div>
-  <div id="ss" class="col-sm-8" style="position: relative;height: 100%;">
+  <div id="ss" class="col-sm-8" style="position: relative;height: 100%">
     <div class="row ss-1">
-      <div class="col-sm-3" id="qfxdw" style="position: relative;height: 100%;text-align: center;padding: 0">
+      <div class="col-sm-3" id="qfxdw" style="height: 100%;position: relative;padding: 0">
         <p class="qsfx">全市风险</p>
-        <div id="qwe">
-          <img src="app/img/pinfenbg.png" class="fxf"/>
-        </div>
+        <img src="app/img/pinfenbg.png" class="fxf"/>
+
 
 
         <div class="fxdw">
@@ -253,6 +250,9 @@
         </div>
         <div id="d1" style="width: 100%;height: 100%;">
           <!--加载柱形图-->
+        </div>
+        <div id="d0" style="width: 100%;height: 100%;display: none">
+
         </div>
       </div>
     </div>
@@ -338,25 +338,28 @@
   </div>
 </div>
 <script>
-  $(function(){imgFw=$("#qfxdw").width();
+
+  console.log($(window).height());
+  imgFw=$("#qfxdw").width();
   imgFh=$("#qfxdw").height();
-//  imgW=$(".fxf").width();
-//  imgH=$(".fxf").height();
-//  console.log(imgFw+"px");
-//  console.log(imgFh+"px");
-//  console.log(imgH+"px");
-//  console.log(imgW+"px");
-//  $(".fxf").css({"top":20+(imgFh/2-imgH/2)+"px"});
-//  $(".fxf").css({"left":imgFw/2-imgW/2+"px"});
+  imgW=$(".fxf").width();
+  imgH=$(".fxf").height();
+  fenW=$(".fxdw").width();
+  fenH=$(".fxdw").height();
+  console.log(imgFw+"px");
+  console.log(imgFh+"px");
+  console.log(imgH+"px");
+  console.log(imgW+"px");
+  $(".fxf").css({"left":imgFw/2-imgW/2+"px"});
+  $(".fxf").css({"top":20+(imgFh/2-imgW/2)+"px"});
+  $(".fxdw").css({"left":imgFw/2-fenW/2+"px"});
+  $(".fxdw").css({"top":20+(imgFh/2-fenH/2)+"px"});
 
-  wordW=$(".fxdw").width();
-  wordH=$(".fxdw").height();
 
-  $(".fxdw").css({"top":20+(imgFh/2-wordH/2)+"px"});
-  $(".fxdw").css({"left":imgFw/2-wordW/2+"px"});
 
   var hei=$(".contents_two").height();
-  $("#ss").css({'height':hei-27+"px"})
+  $("#ss").css({'height':hei-27+"px"});
+
   var a=parseInt($(".zdfxrenyuans>div>div:nth-child(1) span").html());
   var b=parseInt($(".zdfxrenyuans>div>div:nth-child(2) span").html());
   var c=parseInt($(".zdfxrenyuans>div>div:nth-child(3) span").html());
@@ -368,6 +371,34 @@
   $(".gjfxt").css({'width':c/(a+b+c)*100+"%"});
 
 
+  $(".fxp a").eq(1).click(function(){
+    event.preventDefault();
+    $(".fxp a").eq(1).addClass("aactive");
+    $(".fxp a").eq(0).removeClass("aactive");
+    $("#d0").css("display","none");
+    $("#d1").css("display","block");
+
+    zero.resize();
+    first.resize();
+    second.resize();
+    third.resize();
+    fourth.resize();
+    fivith.resize();
+  });
+  $(".fxp a").eq(0).click(function(){
+    event.preventDefault();
+    $(".fxp a").eq(0).addClass("aactive");
+    $(".fxp a").eq(1).removeClass("aactive");
+    $("#d1").css("display","none");
+    $("#d0").css("display","block");
+
+    zero.resize();
+    first.resize();
+    second.resize();
+    third.resize();
+    fourth.resize();
+    fivith.resize();
+  });
   $(".fxfx a").eq(1).click(function(){
     event.preventDefault();
     $(".fxfx a").eq(1).addClass("aactive");
@@ -380,7 +411,7 @@
     third.resize();
     fourth.resize();
     fivith.resize();
-  })
+  });
   $(".fxfx a").eq(0).click(function(){
     event.preventDefault();
     $(".fxfx a").eq(0).addClass("aactive");
@@ -396,6 +427,101 @@
 
   })
 
+
+  zero=echarts.init(document.getElementById("d0"));
+  option_zer = {
+    grid: {
+      left: 'auto',
+      right: 'auto',
+      bottom: 'auto',
+      top: '30%',
+      containLabel: true
+    },
+    xAxis:  {
+      type: 'category',
+      data:  ['市\n看', '戒\n毒', '拘\n留', '二\n看', '二\n拘', '玄\n武',
+        '秦\n淮','栖\n霞','雨\n花','浦\n口','江\n宁','六\n合','溧\n水','高\n淳'],
+      axisLabel: {
+        show: true,
+        textStyle: {
+          fontSize:14,
+          color: 'white'
+        }
+      }
+    },
+    yAxis: {
+      type: 'value',
+      axisLabel: {
+        show: true,
+        textStyle: {
+          fontSize:10,
+          color: 'white'
+        }
+      }
+    },
+    series: [
+      {
+        name: '直接访问',
+        type: 'bar',
+        stack: '总量',
+        barWidth: "50%",
+        backgroundColor:"red",
+        itemStyle: {
+          normal: {
+            color: '#AE00DF'
+          }
+        },
+        data: [320, 302, 301, 334, 390, 330, 320,320, 302, 301, 334, 390, 330, 320]
+      },
+      {
+        name: '邮件营销',
+        type: 'bar',
+        stack: '总量',
+        itemStyle: {
+          normal: {
+            color: '#0B48FC'
+          }
+        },
+        data: [120, 132, 101, 134, 90, 230, 210,320, 302, 301, 334, 390, 330, 320]
+      },
+      {
+        name: '联盟广告',
+        type: 'bar',
+        stack: '总量',
+        itemStyle: {
+          normal: {
+            color: '#0190F0'
+          }
+        },
+        data: [220, 182, 191, 234, 290, 330, 310,320, 302, 301, 334, 390, 330, 320]
+      },
+      {
+        name: '视频广告',
+        type: 'bar',
+        stack: '总量',
+        itemStyle: {
+          normal: {
+            color: '#06C7DB'
+          }
+        },
+        data: [150, 212, 201, 154, 190, 330, 410,320, 302, 301, 334, 390, 330, 320]
+      },
+      {
+        name: '搜索引擎',
+        type: 'bar',
+        stack: '总量',
+        borderRadius:"50%",
+        itemStyle: {
+          normal: {
+            color: '#79DE02',
+            barBorderRadius: [20, 20, 0, 0]
+          }
+        },
+        data: [820, 832, 901, 934, 1290, 1330, 1320,820, 832, 901, 934, 1290, 1330, 1320]
+      }
+    ]
+  };
+  zero.setOption(option_zer);
 
   first=echarts.init(document.getElementById("d1"));
   option_fir = {
@@ -457,7 +583,8 @@
       {
         itemStyle: {
           normal: {
-            color: '#0294DF'
+            color: '#0294DF',
+            barBorderRadius: [20, 20, 0, 0]
           }
         },
         type:'bar',
@@ -489,8 +616,8 @@
           { text: '技术\n安防' },
           { text: '民警\n执法' }
         ],
-        center: ['50%', '65%'],
-        radius: 45,
+        center: ['55%', '60%'],
+        radius: 50,
         startAngle: 90,
         splitNumber: 4,
         shape: 'circle',
@@ -624,13 +751,14 @@
       {
         itemStyle: {
           normal: {
-            color: '#0294DF'
+            color: '#77DF00',
+            barBorderRadius: [20, 20, 0, 0]
           }
         },
         type:'bar',
         barWidth: '50%',
         z: 10,
-        data:[99,88,77, 66, 55, 44, 99, 22, 11, 22, ]
+        data:[99,88,77, 66, 55, 44, 99, 22, 11, 22]
       }
     ]
   };
@@ -798,14 +926,16 @@
 
 
   window.onresize = function () {
+    var heis=$('#content').css({'height':$(window).height()-100+"px"});
+    $("#ss").css({'height':heis.height()-20+"px"});
     //重置容器高宽
+    zero.resize();
     first.resize();
     second.resize();
     third.resize();
     fourth.resize();
     fivith.resize();
   };
-  })
 
 
 </script>
