@@ -12,8 +12,9 @@
 	<link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css">
 	<link rel="stylesheet" type="text/css" href="app/css/index.css">
 	<link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   </head>
-  <body>
+  <body>\
   	<!-- 背景 -->
   	<div id="background"></div>
   	<!-- 背景 -->
@@ -23,7 +24,7 @@
 	<!-- 头部导航 -->
 
 	<!-- 侧栏菜单 -->
-	<div id="menu"></div>
+	<!--<div id="menu"></div>-->
 	<!-- 侧栏菜单 -->
 
 	<!-- 内容主视区 -->
@@ -31,45 +32,36 @@
 		<!-- <img src="app/img/s1.png"> -->
 		<!-- <input id="time" type="text" /> -->
 	</div>
-	<div id="slider"></div>
+	<!--<div id="slider"></div>-->
 	<!-- 内容主视区 -->
   </body>
 </html>
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="node_modules/echarts/dist/echarts.min.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
+<script type="text/javascript" src="app/lib/3d_Carousel/index.js"></script>
+<script type="text/javascript" src="app/lib/3d_Carousel/jquery.zySlide.js"></script>
 <script type="text/javascript">
 $(function(){
 	/* 载入页面 */
 	$('#header_nav').load('app/components/header.html');
-	$('#menu').load('app/components/menu.html');
 	$('#content').load('app/components/next2.html');
-	$('#slider').load('app/components/next.html');
-	$('#background').load('app/components/background.html')
-
+	$('#content').load('app/components/risk_people.html');
+	$('#background').load('app/components/background.html');
+//  $("body").css("overflow","scroll");
 	/* 页面缩放 */
 	$(window).resize(function(){
-	    if($("#menu").css("display")=="none"){
-	  		$('#content').css({'width':$(window).width()-$("#slider").width()-60+"px"});
-	    }else {
-	        $('#content').css({'width': $(window).width() - $("#menu").width() - $("#slider").width() - 60 + "px"});
 	        $('#content').css({'height':$(window).height()-90+"px"});
-	        $('#menu').css({'height': $(window).height() - 90 + "px"});
-	        $('#slider').css({'height': $(window).height() - 75 + "px"});
-	        $("#slider").css("overflowY", "scroll");
-	        $("#slider").css("overflowX", "hidden");
-	    }
+      $('#background').css({'width':$(window).width()});
+      $('#background').css({'height':$(window).height()});
+    var heiss=$('#content').css({'height':$(window).height()-90+"px"});
+    $("#ss").css({'height':heiss.height()-50+"px"});
 	});
-
 	/* 页面计算 */
 	$('#background').css({'width':$(window).width()},{'height':$(window).height()});
-	$('#content').css({'width':$(window).width()-$("#menu").width()-$("#slider").width()-60+"px"});
-	$('#content').css({'height':$(window).height()-100+"px"});
-	$('#menu').css({'height':$(window).height()-100+"px"});
-	$('#slider').css({'height':$(window).height()-100+"px"});
+	$('#content').css({'height':$(window).height()-90+"px"});
 });
 </script>
