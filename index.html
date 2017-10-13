@@ -23,7 +23,7 @@
 	<!-- 头部导航 -->
 
 	<!-- 侧栏菜单 -->
-	<div id="menu"></div>
+	<!--<div id="menu"></div>-->
 	<!-- 侧栏菜单 -->
 
 	<!-- 内容主视区 -->
@@ -31,7 +31,7 @@
 		<!-- <img src="app/img/s1.png"> -->
 		<!-- <input id="time" type="text" /> -->
 	</div>
-	<div id="slider"></div>
+	<!--<div id="slider"></div>-->
 	<!-- 内容主视区 -->
   </body>
 </html>
@@ -46,30 +46,25 @@
 $(function(){
 	/* 载入页面 */
 	$('#header_nav').load('app/components/header.html');
-	$('#menu').load('app/components/menu.html');
 	$('#content').load('app/components/next2.html');
-	$('#slider').load('app/components/next.html');
 	$('#background').load('app/components/background.html')
 
 	/* 页面缩放 */
 	$(window).resize(function(){
-	    if($("#menu").css("display")=="none"){
-	  		$('#content').css({'width':$(window).width()-$("#slider").width()-60+"px"});
-	    }else {
-	        $('#content').css({'width': $(window).width() - $("#menu").width() - $("#slider").width() - 60 + "px"});
 	        $('#content').css({'height':$(window).height()-90+"px"});
-	        $('#menu').css({'height': $(window).height() - 90 + "px"});
-	        $('#slider').css({'height': $(window).height() - 75 + "px"});
-	        $("#slider").css("overflowY", "scroll");
-	        $("#slider").css("overflowX", "hidden");
-	    }
+      $('#background').css({'width':$(window).width()});
+      $('#background').css({'height':$(window).height()});
+    var heiss=$('#content').css({'height':$(window).height()-90+"px"});
+    $("#ss").css({'height':heiss.height()-50+"px"});
+    //重置容器高宽
+    zero.resize();
+    myChart.resize();
+    second.resize();
+    fourth.resize();
 	});
-
+  console.log($(window).height());
 	/* 页面计算 */
 	$('#background').css({'width':$(window).width()},{'height':$(window).height()});
-	$('#content').css({'width':$(window).width()-$("#menu").width()-$("#slider").width()-60+"px"});
-	$('#content').css({'height':$(window).height()-100+"px"});
-	$('#menu').css({'height':$(window).height()-100+"px"});
-	$('#slider').css({'height':$(window).height()-100+"px"});
+	$('#content').css({'height':$(window).height()-90+"px"});
 });
 </script>
