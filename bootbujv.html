@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <style>
+    #bj>span a{
+      text-align: center;
+      color: red;
+      text-decoration: none;
+      font-size: 20px;
+      display: inline-block;
+      width: 24%;
+    }
+    #gezi{
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      color: blue;
+    }
+    /*#gezi>div{*/
+      /*margin-top: 2px;*/
+      /*height: 100px;*/
+      /*border: 1px solid #000000;*/
+    /*}*/
+
+  </style>
+</head>
+<body>
+    <p id="bj">
+      <span><a href="#">1x1</a></span>
+      <span><a href="#">2x2</a></span>
+      <span><a href="#">3x3</a></span>
+      <span><a href="#">4x4</a></span>
+    </p>
+    <div id="gezi" class="row">
+      <div style="background-color: skyblue"></div>
+      <div style="background-color: blue"></div>
+      <div style="background-color: green"></div>
+      <div style="background-color: purple"></div>
+      <div style="background-color: yellow"></div>
+      <div style="background-color: black"></div>
+      <div style="background-color: red"></div>
+      <div style="background-color: orange"></div>
+      <div style="background-color: grey"></div>
+      <div style="background-color: brown"></div>
+      <div style="background-color: pink"></div>
+      <div style="background-color: burlywood"></div>
+      <div style="background-color: silver"></div>
+      <div style="background-color: turquoise"></div>
+      <div style="background-color: maroon"></div>
+      <div style="background-color: khaki"></div>
+      <div style="background-color: beige"></div>
+      <div style="background-color: aliceblue"></div>
+      <div style="background-color: chocolate"></div>
+      <div style="background-color: snow"></div>
+      <div style="background-color: olive"></div>
+      <div style="background-color: orchid"></div>
+      <div style="background-color: chartreuse"></div>
+      <div style="background-color: coral"></div>
+      <div style="background-color: navy"></div>
+      <div style="background-color: honeydew"></div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
+<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
+<script>
+
+  $("#gezi div").css({'height':($(window).height()-20)+"px"})
+
+  $("#bj a").eq(0).click(function(){
+    event.preventDefault();
+    $("#gezi div").removeClass("col-sm-3 col-sm-4 col-sm-6");
+    $("#gezi div").css({'height':($(window).height()-20)+"px"})
+  });
+  $("#bj a").eq(1).click(function(){
+    event.preventDefault();
+    $("#gezi div").removeClass("col-sm-3 col-sm-4");
+    $("#gezi div").addClass("col-sm-6");
+    $("#gezi div").css({'height':($(window).height()-20)/2+"px"})
+  });
+  $("#bj a").eq(2).click(function(){
+    event.preventDefault();
+    $("#gezi div").removeClass("col-sm-3 col-sm-6");
+    $("#gezi div").addClass("col-sm-4");
+    $("#gezi div").css({'height':($(window).height()-20)/3+"px"})
+  });
+  $("#bj a").eq(3).click(function(){
+    event.preventDefault();
+    $("#gezi div").removeClass("col-sm-4 col-sm-6");
+    $("#gezi div").addClass("col-sm-3");
+    $("#gezi div").css({'height':($(window).height()-20)/4+"px"})
+  })
+</script>

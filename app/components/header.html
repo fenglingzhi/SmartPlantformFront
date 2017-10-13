@@ -2,181 +2,87 @@
   .headers{
     height:90px;
 		width:100%;
-	}
-	.headers h1{
-		margin: 0;
-		padding: 0;
-	}
-  .header_row{
-    transform:translate(0,30%);
-  }
-
-  #my_click{
+    /*background: url("app/img/top2.png");*/
+    line-height: 90px;
     position: relative;
-    z-index: 101;
-    }
-
-  #exit{
-    /*transform: translate(0%,-18%);*/
-  }
-
-  #my_click:hover{
-    cursor:pointer;
-    width:73%;
-    transition:.5s linear;
-  }
-
-  #my_click>img:hover{
-    cursor:pointer;
-    width:73%;
-    transition:.5s linear;
-  }
-
-  .header_row_2{padding-right:0}
-
-  .container{width:100%}
-  .headers_text{
-    font-size:32px;
-    color:#fff
-  }
-
-  .headers_img{
-    width:56px;
-    height:57px;
-    transform:translate(-10px,-5px);
-  }
-
-  .headers_img_2{
-    padding-left:0px;
-    padding-right:0;
-  }
-
-  .lindang{
-    transform:translate(40px,0);
-    padding-top:1%
-  }
-  .lindang>p{
-    position:absolute;
-    border-radius:30%;
-    color:#fff;
-    background-color:#e4393c;
-    width:35%;
-    right:10%;
-    top:20%;
-    margin:0;
-    padding:0;
-    text-align:center;}
-
-  .headers_img_2>img{
-    transform:translate(35px,0);
-  }
-
-  .headers_img_2_span{
-    width:105px;
-    height:16px;
-    font-size:14px;
-    color: #fff;
-    width:auto;
-    padding:0;
-    transform:translate(50px,60%);
-  }
-
-  #head_input{
-    padding-left:0;
-    padding-right:0;
-    transform:translateY(25%);
-  }
-
-  #head_input>input{
-    width:115px;
-    height:30px;
-    padding:0;
-    line-height:90px;
-    margin-left:0;
-    padding:0;
-    background-color:transparent;
+	}
+  .op{
+    height:90px;
     width:100%;
-    border:.2px solid #6EA4F4
+    background:url("app/img/top2.png");
+    opacity: 0.3;
   }
-
-  #head_input>img{
-    width:8%;
-    position:absolute;
-    top:4px;
-    left:8px;
-    z-index:30;
+  .pos{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
   }
-
-  .header_row_second{
-    margin-right:0;
-    margin-left:0;
+  .headers-img{
+    margin-left: 30px;
+  }
+  .headers_text{
+    font-size:24px;
+    color:#fff;
+  }
+  .headers>div>ul{
+    float: right;
+  }
+  .headers>div>ul li{
+    float: left;
+    margin-right:25px;
+  }
+  .headers>div>ul li:last-child{
+    margin-right: 50px;
   }
 </style>
 <div class="headers">
-	<div class="container">
-    <div class="row header_row">
-      <div class="col-xs-6">
-        <img class="headers_img" src="app/img/login-logo.png" alt="">
-        <span class="headers_text">&nbsp;&nbsp;南 京 市 公 安 监 管 支 队 智 慧 管 理 平 台</span>
-      </div>
-      <div class="col-xs-6">
-        <div class="row header_row_2">
-          <div class="col-xs-7">
-            <div class="row header_row_second">
-              <div id="head_input"  class="col-xs-8">
-                <img src="app/img/sch.png" alt="">
-                <input type="text">
-              </div>
-              <div class="headers_img_2 col-xs-1">
-                <img src="app/img/head.png" alt="">
-              </div>
-              <div class="col-xs-1 headers_img_2_span">
-                <span>姓名</span>
-                <span>职位</span>
-                <span>监所</span>
-              </div>
-            </div>
-          </div>
-          <div class="lindang lindang_1 col-xs-1">
-            <p>1</p>
-            <img src="app/img/lindang.png" alt="">
-          </div>
-          <div class="lindang lindang_2 col-xs-1">
-            <p>2</p>
-            <img src="app/img/lindang.png" alt="">
-          </div>
-          <div class="lindang col-xs-1">
-            <img id="my_click" src="app/img/small.png" alt="">
-          </div>
-          <div id="exit" class="lindang col-xs-1">
-            <img src="app/img/exit.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-    $("#my_click").click(function(){
-      if($("#menu").css("display")=="block"){
-        $("#menu").css("display","none");
-        $("#my_click").attr("src","app/img/big.png");
-        $('#content').css({'width':$(window).width()-$("#slider").width()-60+"px"});
-        console.log($("#content").css("width"))
-      }
-      else
-      {$("#menu").fadeIn();
-        $("#my_click").attr("src","app/img/small.png");
-        $('#content').css({'width':$(window).width()-$("#menu").width()-$("#slider").width()-60+"px"});
+  <div class="op">
 
-      }
-    });
-    $("#head_input>input").focus(function(){
-      $("#head_input>img").hide();
-    });
-    $("#head_input>input").blur(function(){
-      $("#head_input>img").show();
-  });
+  </div>
+  <div class="pos">
+    <img class="headers-img" src="app/img/logo.png">
+    <span class="headers_text">&nbsp;南京市公安监管支队智慧管理平台</span>
+    <ul>
+      <li>
+        <img src="app/img/search.png" alt=""/>
+      </li>
+      <li>
+        <img src="app/img/lindang.png" alt=""/>
+      </li>
+      <li>
+        <img src="app/img/fly2.png" alt=""/>
+      </li>
+      <li>
+        <img src="app/img/head.png"  style="background-color: purple;border-radius: 50%" alt=""/>
+      </li>
+    </ul>
+  </div>
+
+</div>
+<div style="clear: both"></div>
+<script>
+//    $("#my_click").click(function(){
+//      if($("#menu").css("display")=="block"){
+//        $("#menu").css("display","none");
+//        $("#my_click").attr("src","app/img/big.png");
+//        $('#content').css({'width':$(window).width()-$("#slider").width()-60+"px"});
+//        console.log($("#content").css("width"))
+//      }
+//      else
+//      {$("#menu").fadeIn();
+//        $("#my_click").attr("src","app/img/small.png");
+//        $('#content').css({'width':$(window).width()-$("#menu").width()-$("#slider").width()-60+"px"});
+//
+//      }
+//    });
+//    $("#head_input>input").focus(function(){
+//      $("#head_input>img").hide();
+//    });
+//    $("#head_input>input").blur(function(){
+//      $("#head_input>img").show();
+//  });
 
 
 //    $(window).resize(function(){
