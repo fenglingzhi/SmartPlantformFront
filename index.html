@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="utf-8">
-      <title>南京智慧监管平台</title>
-      <link rel="stylesheet" type="text/css" href="app/css/reset.css">
-      <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-      <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
-      <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
-      <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
-      <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css">
-      <link rel="stylesheet" type="text/css" href="app/css/index.css">
-      <link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
+    <meta charset="utf-8">
+    <title>南京智慧监管平台</title>
+    <link rel="stylesheet" type="text/css" href="app/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css">
+	<link rel="stylesheet" type="text/css" href="app/css/index.css">
+	<link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   </head>
-  <body>
+  <body>\
   	<!-- 背景 -->
   	<div id="background"></div>
   	<!-- 背景 -->
@@ -36,20 +37,21 @@
 	<!-- 内容主视区 -->
   </body>
 </html>
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="node_modules/echarts/dist/echarts.min.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
+<script type="text/javascript" src="app/lib/3d_Carousel/index.js"></script>
+<script type="text/javascript" src="app/lib/3d_Carousel/jquery.zySlide.js"></script>
 <script type="text/javascript">
 $(function(){
 	/* 载入页面 */
 	$('#header_nav').load('app/components/header.html');
-	$('#content').load('app/components/next2.html');
-	$('#background').load('app/components/background.html')
-
+//	$('#content').load('app/components/home.html');
+	$('#content').load('app/components/risk_people.html');
+	$('#background').load('app/components/background.html');
 	/* 页面缩放 */
 	$(window).resize(function(){
 		$('#content').css({'height':$(window).height()-90+"px"});
