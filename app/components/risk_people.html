@@ -1,1220 +1,967 @@
 <style type="text/css">
-  .contents_two{
-    /*background: rgba(0, 0, 0, 0.3);*/
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-
-  .container{width:100%}
-
-  .list{float:left;
-    padding:0;
-    margin:0;
-  }
-
-  .list li{
-    float:left;
-    padding:1.1%;
-    transform:translate(550%,0);
-  }
-
-  .list li>a{
-    text-decoration:none;
-    color:#0FD7F3
-  }
-
-  .list li>a:hover{
-    color:#E4DB67
-  }
-
-  .contents_two div.row:nth-child(2){
-    width:91%;
-    height:420px;
-    background-color:#228EBA;
-    opacity:0.8;
-    border-radius:3%;
-    transform:translate(7%,0);
-  }
-
-  #imp_person{
-    width:91%;
-    background-color:#228EBA;
-    opacity:0.8;
-    /*overflow:hidden;*/
-    height:222px;
-    border-radius:3%;
-    margin-top:26px;
-    transform:translate(7%,0);
-  }
-
-  #imp_person>ul{
-    position:relative;
-    transform:translate(0,2%);
-  }
-
-  #imp_person>ul li{
-    width:200px;
-    height:125px;
-    border:1px solid transparent;
-    border-radius:3%;
-    background-color:#224E71;
-    position: absolute;
-    transform:translate(0,30%);
-    z-index:0;
-    cursor:pointer;
-    margin:0;
-    padding:0
-  }
-
-  #imp_person>ul>li>img{
-    width:70px;
-    transform:translate(15%,13%);
-  }
-
-  #imp_person>ul>li:nth-child(1){
-    left:-15%;
-  }
-  #imp_person>ul>li:nth-child(2){
-    left:6%;
-  }
-  #imp_person>ul>li:nth-child(3){
-    left:25%;
-  }
-  #imp_person>ul>li:nth-child(4){
-    left:44%;
-  }
-  #imp_person>ul>li:nth-child(5){
-    left:63%;
-  }
-
-  #imp_person>ul>li:nth-child(6){
-    left:82%;
-  }
-
-  #imp_person>ul>li:nth-child(7){
-    left:101%;
-  }
-
-  .imp_person_title{
-    color:#fff;
-    transform:translate(13%,50%);
-    width:12%;
-    border-radius:15%;
-    background: radial-gradient(#254E73,#1B75B1,#2B97CF);
-    padding:0.5%;
-    font-family:Consolas;
-    font-size:1.7rem;
-  }
-
-  .imp_person_toggle{
-    color:#fff;
-    float:right;
-    width:20%;
-    transform: translate(-10%,-57%);
-  }
-
-  .imp_person_toggle span{
-    border:2px solid #3A4B5D;
-    cursor:pointer;
-    padding: 2% 5%;
-  }
-
-  .imp_person_toggle span:first-child{
-    position:relative;
-    left:6%;
-    transform: translate(1%,0);
-    border-bottom-left-radius:30%;
-    border-right:0;
-    border-top-left-radius:30%;
-  }
-
-  .imp_person_toggle span:nth-child(2){
-    position:relative;
-    left:4%;
-    border-right:0;
-  }
-
-  .imp_person_toggle span:nth-child(3){
-    position:relative;
-    left:2%;
-    border-right:0;
-  }
-
-  .imp_person_toggle span:nth-child(4){
-    border-top-right-radius:30%;
-    border-bottom-right-radius:30%;
-  }
-
-  .imp_person_index{
-    color:#fff;
-    transform:translate(54%,-115%);
-    font-size:1.1rem;
-  }
-  .imp_person_index p{
-    margin-bottom:5px;
-  }
-  .imp_person_index p:nth-child(4){
-    color:#EC0A0D;
-    font-weight:bold;
-  }
-
-
-  .zy-Slide section{ color: #FFFFFF; border-width: 1px; border-style: solid; }
-
-  .zy-Slide{
-    font-size: 12px;
-    position:relative;
-    width:754px;
-    height:292px;
-    margin:0
-  }
-
-  .zy-Slide_div{
-    width:205px;
-    position: relative;
-    /*border:1px solid red ;*/
-    background:#1D4667;
-    padding-top:20px;
-    padding-left:10px;
-  }
-
-  .zy-Slide ul{
-    position: relative;
-    width: 1160px;
-    height: 180px;
-    transform: translate(70px,0);
-    /*border: 1px solid blue;*/
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .zy-Slide li{
-    position:absolute;
-    list-style:none;
-    width:350px;
-    height:115px;
-    top:146px;
-    left:377px;
-    background-color: #228EBA;
-    opacity: 0.8;
-    transform:translate(-145%,20%);
-    z-index:0;
-    cursor:pointer;
-    border-radius:3px;
-  }
-
-  /*.zy-Slide li:first-child div.zy-Slide_div{*/
-  /*height:100px */
-  /*}*/
-
-  .zy-Slide li img{
-    width:100px;
-    height:115px;
-    transform:translate(0,-10px);
-  }
-
-  .zy-Slide section:nth-child(1), .zy-Slide section:nth-child(2),.zy-Slide section:nth-child(3),.zy-Slide section:nth-child(4){position: absolute;
-    top: 50%;
-    width: 39px;
-    height: 40px;
-    margin-top: -20px;
-    cursor: pointer;
-    line-height: 40px;
-    padding-left: 12px;
-    padding-right: 12px; }
-
-  .zy-Slide section:nth-child(1){
-    right:230px;
-    top:20px;
-    width:205px;
-    height:137px;
-    z-index:100;
-    margin-top:10px;
-    background-color:#000;
-    opacity:0;
-  }
-
-  .zy-Slide section:nth-child(2){
-    right: -230px;
-    top: 20px;
-    width: 205px;
-    height: 137px;
-    z-index: 100;
-    margin-top: 10px;
-    background-color: #000;
-    opacity: 0;
-  }
-
-  .zy-Slide section:nth-child(3){
-    right: -460px;
-    top: 20px;
-    width: 205px;
-    height: 137px;
-    z-index: 100;
-    margin-top: 10px;
-    background-color: #000;
-    opacity: 0;
-  }
-
-  .zy-Slide section:nth-child(4){
-    right:460px;
-    top: 20px;
-    width: 205px;
-    height: 137px;
-    z-index: 100;
-    margin-top: 10px;
-    background-color: #000;
-    opacity: 0;
-  }
-
-  .zy-Slide_index{
-    position: absolute;
-    color:#fff;
-    top:10px;
-    left:120px;
-    font-size:1rem;
-  }
-
-  .zy-Slide_index p:nth-child(4){
-    color:red;
-    font-weight:bold;
-  }
-
-  #d111{
-    position: absolute;
-    top: 200px;
-    left: -50px;
-    color: #fff;
-  }
-
-  #d112{
-    position: absolute;
-    width: 60px;
-    height:5px;
-    top: 10px;
-    background-color:#228EBA;
-    opacity:1;
-    z-index: 210;
-  }
-
-  #d113{
-    position: absolute;
-    width: 60px;
-    height:5px;
-    top: 46px;
-    background-color:#228EBA;
-    opacity:1;
-    z-index: 210;
-  }
-
-  #d114{
-    position:absolute;
-    top:-55px;
-    left:-25px;
-    width:100px;
-    text-align: center;
-    color:#ED7000
-  }
-
-  #d114 p{
-    margin-bottom:0;
-  }
-
-  #d114 p:first-child{
-    font-size:3rem;
-    font-weight:bold;
-  }
-
-  #d114 p:nth-child(2)
-  {
-    font-size:1.5rem;
-    font-weight:bold;
-  }
-
-  .arrow {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    z-index:-10;
-    display: inline-block;
-    margin: 10px 10px;
-  }
-  .arrow:before, .arrow:after {
-    content: '';
-    border-color: transparent;
-    border-style: solid;
-    position: absolute;
-    z-index:-10;
-  }
-  .arrow-right:before {
-    border: none;
-    z-index:-10;
-    background-color:#fff;
-    height: 30%;
-    width: 50%;
-    top: 35%;
-    left: 0;
-  }
-  .arrow-right:after {
-    left: 50%;
-    top: 0;
-    border-width:20px 20px;
-    border-left-color:#fff;
-    z-index:-10;
-  }
-
-
-  #Slide1{display:none}
-
-  #Slide2{display:none}
-
-
+	.contents_two {
+		/*background: rgba(0, 0, 0, 0.3);*/
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	
+	.container {
+		width: 100%
+	}
+	
+	.list {
+		float: left;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.list li {
+		float: left;
+		padding: 1.1%;
+		transform: translate(550%, 0);
+	}
+	
+	.list li>a {
+		text-decoration: none;
+		color: #0FD7F3
+	}
+	
+	.list li>a:hover {
+		color: #E4DB67
+	}
+	
+	.contents_two div.row:nth-child(2) {
+		width: 91%;
+		height: 370px;
+		background-color: #228EBA;
+		opacity: 0.8;
+		border-radius: 3%;
+		transform: translate(7%, 0);
+	}
+	
+	#imp_person {
+		width: 91%;
+		background-color: #228EBA;
+		opacity: 0.8;
+		/*overflow:hidden;*/
+		height: 230px;
+		border-radius: 3%;
+		margin-top: 26px;
+		transform: translate(7%, 0);
+	}
+	
+	#imp_person>ul {
+		position: relative;
+		transform: translate(0, 2%);
+	}
+	
+	#imp_person>ul li {
+		width: 200px;
+		height: 125px;
+		border: 1px solid transparent;
+		border-radius: 3%;
+		background-color: #224E71;
+		position: absolute;
+		transform: translate(0, 30%);
+		z-index: 0;
+		cursor: pointer;
+		margin: 0;
+		padding: 0
+	}
+	
+	#imp_person>ul>li>img {
+		width: 70px;
+		transform: translate(15%, 13%);
+	}
+	
+	#imp_person>ul>li:nth-child(1) {
+		left: -15%;
+	}
+	
+	#imp_person>ul>li:nth-child(2) {
+		left: 6%;
+	}
+	
+	#imp_person>ul>li:nth-child(3) {
+		left: 25%;
+	}
+	
+	#imp_person>ul>li:nth-child(4) {
+		left: 44%;
+	}
+	
+	#imp_person>ul>li:nth-child(5) {
+		left: 63%;
+	}
+	
+	#imp_person>ul>li:nth-child(6) {
+		left: 82%;
+	}
+	
+	#imp_person>ul>li:nth-child(7) {
+		left: 101%;
+	}
+	
+	.imp_person_title {
+		color: #fff;
+		transform: translate(13%, 50%);
+		width: 12%;
+		border-radius: 15%;
+		background: radial-gradient(#254E73, #1B75B1, #2B97CF);
+		padding: 0.5%;
+		font-family: Consolas;
+		font-size: 1.7rem;
+	}
+	
+	.imp_person_toggle {
+		color: #fff;
+		float: right;
+		width: 20%;
+		transform: translate(-10%, -57%);
+	}
+	
+	.imp_person_toggle span {
+		border: 2px solid #3A4B5D;
+		cursor: pointer;
+		padding: 2% 5%;
+		position: relative;
+		z-index: 101;
+	}
+	
+	.imp_person_toggle span:first-child {
+		position: relative;
+		left: 6%;
+		transform: translate(1%, 0);
+		border-bottom-left-radius: 30%;
+		border-right: 0;
+		z-index: 101;
+		border-top-left-radius: 30%;
+	}
+	
+	.imp_person_toggle span:nth-child(2) {
+		position: relative;
+		left: 4%;
+		z-index: 101;
+		border-right: 0;
+	}
+	
+	.imp_person_toggle span:nth-child(3) {
+		position: relative;
+		left: 2%;
+		z-index: 101;
+		border-right: 0;
+	}
+	
+	.imp_person_toggle span:nth-child(4) {
+		border-top-right-radius: 30%;
+		border-bottom-right-radius: 30%;
+	}
+	
+	.imp_person_index {
+		color: #fff;
+		transform: translate(54%, -115%);
+		font-size: 1.1rem;
+	}
+	
+	.imp_person_index p {
+		margin-bottom: 5px;
+	}
+	
+	.imp_person_index p:nth-child(4) {
+		color: #EC0A0D;
+		font-weight: bold;
+	}
+	
+	#d111 {
+		position: absolute;
+		top: 200px;
+		left: -50px;
+		color: #fff;
+	}
+	
+	#d112 {
+		position: absolute;
+		width: 60px;
+		height: 5px;
+		top: 10px;
+		background-color: #228EBA;
+		opacity: 1;
+		z-index: 210;
+	}
+	
+	#d113 {
+		position: absolute;
+		width: 60px;
+		height: 5px;
+		top: 46px;
+		background-color: #228EBA;
+		opacity: 1;
+		z-index: 210;
+	}
+	
+	#d114 {
+		position: absolute;
+		top: -55px;
+		left: -25px;
+		width: 100px;
+		text-align: center;
+		color: #ED7000
+	}
+	
+	#d114 p {
+		margin-bottom: 0;
+	}
+	
+	#d114 p:first-child {
+		font-size: 3rem;
+		font-weight: bold;
+	}
+	
+	#d114 p:nth-child(2) {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	
+	.arrow {
+		width: 40px;
+		height: 40px;
+		position: relative;
+		z-index: -10;
+		display: inline-block;
+		margin: 10px 10px;
+	}
+	
+	.arrow:before,
+	.arrow:after {
+		content: '';
+		border-color: transparent;
+		border-style: solid;
+		position: absolute;
+		z-index: -10;
+	}
+	
+	.arrow-right:before {
+		border: none;
+		z-index: -10;
+		background-color: #fff;
+		height: 30%;
+		width: 50%;
+		top: 35%;
+		left: 0;
+	}
+	
+	.arrow-right:after {
+		left: 50%;
+		top: 0;
+		border-width: 20px 20px;
+		border-left-color: #fff;
+		z-index: -10;
+	}
+	
+	.slide_total .img-holder {
+		width: 250px;
+		height: 135px;
+		position: absolute;
+		box-shadow: 0px 1px 6px 3px #ccc;
+		visiblity: hidden;
+		opacity: 1;
+		top: 9%;
+		cursor: pointer;
+		z-index: 99;
+	}
+	
+	.slide_total .img-holder img {
+		margin-top: 5px;
+	}
+	
+	.slide_total {
+		position: relative;
+		height: 160px;
+		width: 1200px;
+		left: 60px;
+		top: 9%;
+		text-indent: 4px;
+		font-weight: bold;
+	}
+	
+	.scrolller-container {
+		width: 800px;
+		height: 15px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		position: relative;
+		top: 150px;
+		left: 130px;
+		cursor: pointer;
+	}
+	
+	.scrolller-container .scroller {
+		width: 100px;
+		height: 15px;
+		background-color: #ddd;
+		border-radius: 10px;
+		position: absolute;
+		left: 0px;
+	}
+	
+	.img-holder {
+		background-color: #225072;
+	}
+	
+	.img-holder>div {
+		transform: translate(45%, -100%);
+	}
+	
+	.img-holder>div p {
+		margin-bottom: 5px;
+		margin-left: 5px;
+		color: #fff
+	}
+	
+	.img-holder>div p:nth-child(4) {
+		color: red
+	}
+	/*/!*#Slide1{display: none}*!/*/
+	/*#Slide2{display: none}*/
+	/*#Slide3{display: none}*/
+	
+	#img-holder1 {
+		left: 27%
+	}
+	
+	#img-holder2 {
+		left: 31%
+	}
+	
+	#img-holder3 {
+		left: 35%
+	}
+	
+	#img-holder4 {
+		left: 38%
+	}
+	
+	#img-holder5 {
+		left: 41%
+	}
+	
+	#img-holder6 {
+		left: 44%
+	}
+	
+	#img-holder7 {
+		left: 47%
+	}
 </style>
+
 <body>
-<div class="container contents_two">
-  <div class="row">
-    <ul class="col-xs-12 list">
-      <li>
-        <a href="">
-          全市
-        </a>
-      </li>
-      <li>
-        <a href="">
-          市看
-        </a>
-      </li>
-      <li>
-        <a href="">
-          戒毒
-        </a>
-      </li>
-      <li>
-        <a href="">
-          拘留
-        </a>
-      </li>
-      <li>
-        <a href="">
-          二看
-        </a>
-      </li>
-      <li>
-        <a href="">
-          二拘
-        </a>
-      </li>
-      <li>
-        <a href="">
-          玄武
-        </a>
-      </li>
-      <li>
-        <a href="">
-          秦淮
-        </a>
-      </li>
-      <li>
-        <a href="">
-          栖霞
-        </a>
-      </li>
-      <li>
-        <a href="">
-          雨花
-        </a>
-      </li>
-      <li>
-        <a href="">
-          浦口
-        </a>
-      </li>
-      <li>
-        <a href="">
-          江宁
-        </a>
-      </li>
-      <li>
-        <a href="">
-          六合
-        </a>
-      </li>
-      <li>
-        <a href="">
-          溧水
-        </a>
-      </li>
-      <li>
-        <a href="">
-          高淳
-        </a>
-      </li>
-    </ul>
-  </div>
+	<div class="container contents_two">
+		<div class="row">
+			<ul class="col-xs-12 list prison_list">
 
-  <div class="row">
-    <div  style="height:100%" class="col-xs-6 row">
-      <div  class="col-xs-5" style="padding:0;height:100%">
-        <div style="width:100%;height:100%" id="imp_person_per1"></div>
-      </div>
-      <div  class="col-xs-7" style="padding:0;height:100%">
-        <div  style="width:100%;height:100%"  id="imp_person_per3"></div>
-        <div id="d111">
-          <div id="d114">
-            <p>950人</p>
-            <p>重大风险人员</p>
-          </div>
-          <div id="d112"></div>
-          <div id="d113"></div>
-          <span class="arrow arrow-right"></span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6" style="padding:0;height:100%">
-      <div style="width:100%;height:100%" id="imp_person_per4"></div>
-    </div>
-  </div>
+			</ul>
+		</div>
 
-  <div class="row" id="imp_person">
-    <div class="imp_person_title">重大风险人员详情</div>
-    <div class="imp_person_toggle">
-        <span>新增</span>
-        <span>一级</span>
-        <span>二级</span>
-        <span>三级</span>
-    </div>
+		<div class="row">
+			<div style="height:100%" class="col-xs-6 row">
+				<div class="col-xs-5" style="padding:0;height:100%">
+					<div style="width:100%;height:100%" id="imp_person_per1"></div>
+				</div>
+				<div class="col-xs-7" style="padding:0;height:100%">
+					<div style="width:100%;height:100%" id="imp_person_per3"></div>
+					<div id="d111">
+						<div id="d114">
+							<p id="major_prisoner_count">950人</p>
+							<p>重大风险人员</p>
+						</div>
+						<div id="d112"></div>
+						<div id="d113"></div>
+						<span class="arrow arrow-right"></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6" style="padding:0;height:100%">
+				<div style="width:100%;height:100%" id="imp_person_per4"></div>
+			</div>
+		</div>
 
-    <div id="Slide1" class="zy-Slide">
-      <!--prev:元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。-->
-      <section>前一张</section>
-      <section>后一张</section>
-      <section>前两张</section>
-      <section>后两张</section>
-      <ul>
-        <!--alt + shift : 可以创建一个矩形选择区域-->
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/1.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：一级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/2.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：一级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/3.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：一级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/4.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：一级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/5.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：一级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/6.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：一级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/7.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：一级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+		<div class="row" id="imp_person">
+			<div class="imp_person_title">重大风险人员详情</div>
+			<div class="imp_person_toggle">
+				<span>新增</span>
+				<span>一级</span>
+				<span>二级</span>
+				<span>三级</span>
+			</div>
 
+			<div class="slide_total" id="Slide1">
+				<!--<div id="img-holder1" class="img-holder">
+					<img src="app/img/text/1.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder2" class="img-holder">
+					<img src="app/img/text/2.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder3" class="img-holder">
+					<img src="app/img/text/3.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder4" class="img-holder">
+					<img src="app/img/text/4.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder5" class="img-holder">
+					<img src="app/img/text/5.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder6" class="img-holder">
+					<img src="app/img/text/6.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder7" class="img-holder">-->
+					<!--<img src="app/img/text/7.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>-->
+			</div>
+			<div class="scrolller-container" style="display: none">
+				<div class="scroller"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var $imgs = $('.slide_total .img-holder');
+		var l = $imgs.length;
+		var radius = 400;
 
-    <div id="Slide2" class="zy-Slide">
-      <!--prev:元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。-->
-      <section>前一张</section>
-      <section>后一张</section>
-      <section>前两张</section>
-      <section>后两张</section>
-      <ul>
-        <!--alt + shift : 可以创建一个矩形选择区域-->
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/1.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：二级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/2.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：二级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/3.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：二级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/4.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：二级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/5.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：二级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/6.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：二级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/7.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：二级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+		TweenMax.set($('.slide_total'), {
+			css: {
+				transformStyle: 'preserve-3d',
+				perspective: 800,
+				perspectiveOrigin: '50% 50%'
+			}
+		});
 
+		var posArray = [];
+		var totalImgToView = 5;
+		var imgMinus = 0.6301;
+		var angle = 0;
+		$imgs.each(function(i, item) {
 
-    <div id="Slide3" class="zy-Slide">
-      <!--prev:元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。-->
-      <section>前一张</section>
-      <section>后一张</section>
-      <section>前两张</section>
-      <section>后两张</section>
-      <ul>
-        <!--alt + shift : 可以创建一个矩形选择区域-->
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/1.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：三级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/2.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：三级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/3.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：三级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/4.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：三级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/5.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：三级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/6.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：三级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="zy-Slide_div">
-            <img src="app/img/text/7.jpg" />
-            <div class="zy-Slide_index">
-              <p>姓名：张三</p>
-              <p>番号：123456</p>
-              <p>监室：102监室</p>
-              <p>风险等级：三级</p>
-              <p>风险原因：狂躁症</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+			angle = i * 0.63;
+			//console.log('angle ',angle);
+			var zPos = -Math.abs(angle * (100));
 
-  </div>
-</div>
-<script>
+			var xPos = Math.sin(angle) * radius;
+			posArray.push({ x: xPos, z: zPos, angle: angle });
+			var imgAlpha = (Math.ceil(0.5 * totalImgToView) * imgMinus) * 100;
+			//imgAlpha = Math.abs(zPos) < imgAlpha ? 1 : 0;
+			TweenMax.to(item, 1, { x: xPos, z: zPos, ease: Expo.easeOut, autoAlpha: 0 });
+		});
 
+		var curImgViewIndex = 0;
+		var targetImgViewIndex = 0;
+		var curIntervalId = 0;
+		var scrollbarDragging = false;
 
+		function rotate() {
+			var minusVal = targetImgViewIndex - curImgViewIndex > 0 ? -0.6301 : 0.6301;
 
-  //-------------------------------------------------------------------------//
-  (function ($) {
-    // 创建构造函数
-    function Slide(ele, options) {
-      this.$ele = $(ele)//this. 构造函数的实例对象
-      this.options = $.extend({
-        speed: 1000,
-        delay: 3000
-      }, options)//拓展
-      this.states = [
-        { '&zIndex': 1, width:230, height:150, top: 0, left:0, $opacity: 0.4 },
-        { '&zIndex': 2, width:230, height:150, top: 0, left:350, $opacity: 0.5 },
-        { '&zIndex': 3, width:230, height:150, top: 0, left:580, $opacity: 0.6 },
-        { '&zIndex': 4, width:230, height:250, top:-30, left:810, $opacity: 1 },
-        { '&zIndex': 3, width:230, height:150, top: 0, left:1040, $opacity: 0.6 },
-        { '&zIndex': 2, width:230, height:150, top: 0, left:1270, $opacity: 0.5 },
-        { '&zIndex': 1, width:230, height:150, top: 0, left:1500, $opacity: 0.4 }
-      ]
-      this.lis = this.$ele.find('li');
-      this.interval
-      // 点击切换到下一张
+			var easeObj;
+			var tweenTime;
+			if(Math.abs(targetImgViewIndex - curImgViewIndex) === 1) {
+				easeObj = Quint.easeOut;
+				tweenTime = 1;
+			} else {
+				easeObj = Linear.easeNone;
+				tweenTime = 0.15;
+			}
 
-      this.$ele.find('section:nth-child(2)').on('click', function (){
-        this.stop()
-        this.next()
-        console.log(this.states[this.states.length-1]["&zIndex"]);
-//        console.log(this.states[i]['&zIndex'])
-        //this.play()
-      }.bind(this))
-      // 点击切换到上一张
-      this.$ele.find('section:nth-child(1)').on('click', function () {
-        this.stop()
-        this.prev()
-        //this.play()
-      }.bind(this))
-      this.move()
-      // 让轮播图开始自动播放
-    }
+			$imgs.each(function(i, item) {
+				var pos = posArray[i];
+				pos.angle = pos.angle + minusVal; //(0.6301*0.06);
+				var angleDistance = pos.angle * 100;
+				var zPos = -Math.abs(angleDistance);
+				var xPos = Math.sin(pos.angle) * radius;
+				var imgAlpha = (Math.ceil(0.5 * totalImgToView) * imgMinus) * 100;
 
+				imgAlpha = Math.abs(zPos) < imgAlpha ? 1 : 0;
+				var rotDeg = Math.round(angleDistance) >= 0 ? -30 : 30;
+				rotDeg = Math.round(angleDistance) === 0 ? 0 : rotDeg;
 
-    function Slide1(ele, options) {
-      this.$ele = $(ele)//this. 构造函数的实例对象
-      this.options = $.extend({
-        speed: 1000,
-        delay: 3000
-      }, options)//拓展
-      this.states = [
-        { '&zIndex': 1, width:230, height:150, top: 0, left:0, $opacity: 0.4 },
-        { '&zIndex': 2, width:230, height:150, top: 0, left:350, $opacity: 0.5 },
-        { '&zIndex': 3, width:230, height:150, top: 0, left:580, $opacity: 0.6 },
-        { '&zIndex': 4, width:230, height:250, top:-30, left:810, $opacity: 1 },
-        { '&zIndex': 3, width:230, height:150, top: 0, left:1040, $opacity: 0.6 },
-        { '&zIndex': 2, width:230, height:150, top: 0, left:1270, $opacity: 0.5 },
-        { '&zIndex': 1, width:230, height:150, top: 0, left:1500, $opacity: 0.4 }
-      ]
-      this.lis = this.$ele.find('li');
-      this.interval
-      // 点击切换到下一张
+				TweenMax.to(item, tweenTime, { x: xPos, z: zPos, ease: easeObj, autoAlpha: imgAlpha, rotationY: rotDeg });
 
-      this.$ele.find('section:nth-child(3)').on('click', function (){
-        this.stop()
-        this.next()
-        //this.play()
-      }.bind(this))
-      // 点击切换到上一张
-      this.$ele.find('section:nth-child(4)').on('click', function () {
-        this.stop()
-        this.prev()
-        //this.play()
-      }.bind(this))
-      this.move()
-      // 让轮播图开始自动播放
-    }
+			});
+			minusVal > 0 ? curImgViewIndex-- : curImgViewIndex++;
 
+			if(curImgViewIndex === targetImgViewIndex) {
+				clearInterval(curIntervalId);
+			}
 
+		}
 
-    Slide.prototype = {
+		function showImgAt(index) {
+			targetImgViewIndex = index;
+			if(targetImgViewIndex === curImgViewIndex) {
+				return;
+			}
+			clearInterval(curIntervalId);
+			curIntervalId = setInterval(function() {
+				rotate();
+			}, 150);
 
+			//update scrollbar
+			if(!scrollbarDragging) {
+				var l = $imgs.length - 1;
+				if(targetImgViewIndex > l) {
+					return;
+				}
+				var curScrollX = Math.abs(Math.round(targetImgViewIndex * (702 / l)));
+				var tweenTime = Math.abs((targetImgViewIndex - curImgViewIndex) * 0.2);
+				TweenMax.to($('.scroller'), tweenTime, { x: curScrollX, ease: Sine.easeOut });
+			}
+		}
 
-      // 原型是一个对象，所以写成一个花括号
+		//CONTROLLER UPDATE
+		var $input = $('.controller input');
+		$input.keyup(function(e) {
+			if(e.keyCode === 13) {
+				showImgAt(parseInt($input.val()))
+			}
+		});
 
-      // move()方法让轮播图到达states指定的状态
-      // <1>当页面打开时将轮播图从中心点展开
-      // <2>当轮播图已经展开时，会滚动轮播图(需要翻转states数组中的数据)
-      move: function () {
-        this.lis.each(function (i, el) {
-          $(el)
-            .css('z-index', this.states[i]['&zIndex'])
-            .finish().animate(this.states[i], this.options.speed)
-            // .stop(true,true).animate(states[i], 1000)
-            .find('img').css('opacity', this.states[i].$opacity)
-        }.bind(this))
-      },
-      // 让轮播图切换到下一张
-      next: function () {
+		//just to do start up animation
+		showImgAt(5);
 
-        this.states.unshift(this.states.pop())
-        this.move()
-      },
-      // 让轮播图滚动到上一张
-      prev: function () {
+		//----------------------- Dragging Utility ----------------------
+		Draggable.create('.scroller', {
+			type: 'x',
+			bounds: { left: 0, top: 0, width: 802, height: 0 },
+			onDrag: function() {
+				var curImgIndex = Math.abs(Math.round(this.x / (802 / l)));
 
-        this.states.push(this.states.shift())
-        this.move()
-      },
-      play: function () {
+				targetImgViewIndex = curImgIndex;
+				if(targetImgViewIndex === curImgViewIndex) {
+					return;
+				}
+				rotate();
 
-        this.interval = setInterval(function () {//这个this指window
-          this.next()
-        }.bind(this), this.options.delay)
-      },
-      // 停止自动播放
-      stop: function (){
-        // var _this = this
-        clearInterval(this.interval)
-      }
+			},
+			onDragStart: function() {
+				scrollbarDragging = true;
+			},
+			onDragEnd: function(e) {
+				scrollbarDragging = false;
+			}
+		});
 
-    }
+		$('.scrolller-container').on('click', function(e) {
+			var curImgIndex = Math.abs(Math.round(e.offsetX / (802 / l)));
+			if(curImgIndex >= $imgs.length) {
+				curImgIndex = $imgs.length - 1;
+			}
+			console.log('boom');
+			showImgAt(curImgIndex);
+		});
 
+		$('.scrolller-container .scroller').on('click', function(e) {
+			e.stopPropagation();
+		});
 
-    Slide1.prototype = {
+		$imgs.on('click', function() {
+			showImgAt($imgs.index($(this)));
+		});
 
+		let token = localStorage.getItem("token");
+		let preReqUrl = "http://10.58.1.134:8080/";
 
-      // 原型是一个对象，所以写成一个花括号
+		//获取所有监所的简称
+		$.ajax({
+			type: "post",
+			url: preReqUrl + "sysmng/sysdepart/getsysdeparts?token=" + token,
+			contentType: "application/json;charset=utf-8",
+			data: JSON.stringify({}),
+			async: false,
+			success: function(resp) {
+				let code = resp.resultCode;
+				let data = resp.data;
+				console.log(resp);
+				if(code == 1) {
+					$(".prison_list").empty();
+					$(".prison_list").append("<li><a href=''>全市</a></li>");
+					for(let i = 0; i < data.length; i++) {
+						$(".prison_list").append("<li><a href=''>{0}</a></li>".replace("{0}", data[i].short_name));
+					}
 
-      // move()方法让轮播图到达states指定的状态
-      // <1>当页面打开时将轮播图从中心点展开
-      // <2>当轮播图已经展开时，会滚动轮播图(需要翻转states数组中的数据)
-      move: function () {
+				} else {
+					alert(resp.resultMsg);
+				}
+			},
+			error: function() {
+				alert("请求异常");
+			}
+		});
 
-        this.lis.each(function (i, el) {
-          $(el)
-            .css('z-index', this.states[i]['&zIndex'])
-            .finish().animate(this.states[i], this.options.speed)
-            // .stop(true,true).animate(states[i], 1000)
-            .find('img').css('opacity', this.states[i].$opacity)
-        }.bind(this))
-      },
-      // 让轮播图切换到下一张
-      next: function () {
+		//获取重大人员风险占比以及进6个月的风险人员的柱状和折线图混合
+		$.ajax({
+			type: "post",
+			url: preReqUrl + "home/homepage/getmajorpersonriskandcharts?token=" + token,
+			contentType: "application/json;charset=utf-8",
+			data: JSON.stringify({}),
+			async: false,
+			success: function(resp) {
+				let code = resp.resultCode;
+				let data = resp.data;
+				console.log(data);
+				if(code == 1) {
+					//重大风险人员占比
+					$("#major_prisoner_count").html(data.major_risk_person_count);
+					per_1 = echarts.init(document.getElementById("imp_person_per1"));
+					option_left = {
+						tooltip: {
+							trigger: 'item',
+							formatter: "{a} <br/>{b}: {c} ({d}%)"
+						},
+						title: {
+							text: '重大风险人员占比',
+							textStyle: {
+								fontSize: 24,
+								color: 'white'
+							},
+							left: '2%'
+						},
+						series: [{
+							name: '重大风险人员占比',
+							type: 'pie',
+							selectedMode: 'single',
+							radius: [0, '50%'],
+							center: ['40%', '55%'],
+							label: {
+								normal: {
+									position: 'inner'
+								}
+							},
+							labelLine: {
+								normal: {
+									show: false
+								}
+							},
+							data: [
+								{ value: data.major_risk_person_count, name: '重大风险' },
+								{ value: data.now_prisoner_count, name: '非重大风险' },
+							]
+						}, ]
+					};
+					per_1.setOption(option_left);
+					per_3 = echarts.init(document.getElementById("imp_person_per3"));
+					option_right = {
+						series: [{
+							name: '访问来源',
+							type: 'pie',
+							selectedMode: 'single',
+							radius: [0, '60%'],
+							center: ['15%', '55%'],
+							label: {
+								normal: {}
+							},
+							labelLine: {
+								normal: {
+									show: false
+								}
+							},
+							data: [{
+									value: data.first_major_risk_count,
+									name: '\r\r\r\r\r' + data.first_major_risk_count + '人\n一级风险人员',
+									label: {
+										normal: {
+											fontSize: 20
+										}
+									},
+									itemStyle: {
+										normal: {
+											color: 'red'
+										}
+									}
+								},
+								{
+									value: data.second_major_risk_count,
+									name: '\r\r\r\r\r' + data.second_major_risk_count + '人\n二级风险人员',
+									label: {
+										normal: {
+											fontSize: 20
+										}
+									},
+									itemStyle: {
+										normal: {
+											color: 'yellow'
+										}
+									}
+								},
+								{
+									value: data.third_major_risk_count,
+									name: '\r\r\r\r\r' + data.third_major_risk_count + '人\n三级风险人员',
+									label: {
+										normal: {
+											fontSize: 20
+										}
+									},
+									itemStyle: {
+										normal: {
+											color: 'skyblue'
+										}
+									}
+								},
+								{
+									value: 1485.89,
+									itemStyle: {
+										normal: {
+											opacity: 0
+										}
+									}
+								},
+							]
+						}]
+					};
+					per_3.setOption(option_right);
 
-        this.states.unshift(this.states.pop())
-        this.move()
-      },
-      // 让轮播图滚动到上一张
-      prev: function () {
+					//6个月的风险人员的柱状和折线图混合
+					let monthList = new Array();
+					for(let i = 0; i < data.mix_barline_xaxis_data.length; i++) {
+						let date = new Date();
+						date.setTime(data.mix_barline_xaxis_data[i]);
+						let formateDate = date.getFullYear() + "-" + (date.getMonth() + 1);
+						monthList.push(formateDate);
+					}
+					console.log(monthList);
+					per_4 = echarts.init(document.getElementById("imp_person_per4"));
+					option_part2 = {
+						tooltip: {
+							trigger: 'axis',
+							axisPointer: { // 坐标轴指示器，坐标轴触发有效
+								type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+							}
+						},
+						title: {
+							text: '年\r\r月',
+							textStyle: {
+								color: 'white'
+							},
+							left: 'right',
+							top: '3%'
+						},
+						grid: {
+							left: '3%',
+							right: '4%',
+							bottom: '3%',
+							containLabel: true
+						},
+						xAxis: [{
+							axisTick: {
+								show: false
+							},
+							axisLine: {
+								lineStyle: {
+									color: '#3F668A'
+								}
+							},
+							axisLabel: {
+								textStyle: {
+									fontSize: 14,
+									color: "white"
+								}
+							},
+							type: 'category',
+							data: monthList
+						}],
+						yAxis: [{
+							axisLabel: {
+								textStyle: {
+									fontSize: 14,
+									color: "white"
+								}
+							},
+							splitLine: {
+								lineStyle: {
+									color: ['#46708B']
+								}
+							},
+							axisLine: {
+								show: false
+							},
+							type: 'value'
+						}],
+						series: [{
+								name: '一级风险人员',
+								type: 'bar',
+								data: data.mix_barline_series_data[0],
+								itemStyle: {
+									normal: {
+										color: '#E9394D'
+									}
+								}
+							},
+							{
+								name: '二级风险人员',
+								type: 'bar',
+								data: data.mix_barline_series_data[1],
+								itemStyle: {
+									normal: {
+										color: '#F6BC00'
+									}
+								}
+							},
+							{
+								name: '三级风险人员',
+								type: 'bar',
+								data: data.mix_barline_series_data[2],
+								itemStyle: {
+									normal: {
+										color: '#00A1FC'
+									}
+								}
+							},
+							{
+								name: '总体',
+								type: 'line',
+								data: data.mix_barline_line_data,
+								itemStyle: {
+									normal: {
+										color: '#B65910'
+									}
+								}
+							}
 
-        this.states.push(this.states.shift())
-        this.move()
-      },
-      play: function () {
+						]
+					};
 
-        this.interval = setInterval(function () {//这个this指window
-          // setInterval、setTimeOut 中的this指向window
+					per_4.setOption(option_part2);
+				} else {
+					alert(resp.resultMsg);
+				}
+			},
+			error: function() {
+				alert("请求异常");
+			}
+		});
 
-          // states.unshift(states.pop())       //从后往前走
-          // states.push(states.shift())     //从前往后走
-          this.next()
-        }.bind(this), this.options.delay)
-      },
-      // 停止自动播放
-      stop: function (){
-        // var _this = this
-        clearInterval(this.interval)
-      }
+		//分页加载重大人员风险详情信息
+		$.ajax({
+			type: "post",
+			url: preReqUrl + "home/homepage/getmajorriskpersondetail?token=" + token,
+			contentType: "application/json;charset=utf-8",
+			async: false,
+			data: JSON.stringify({}),
+			success: function(resp) {
+				let code = resp.resultCode;
+				let data = resp.data;
+				if(code == 1) {
+					let prisonerList = data.prisonerBaseInfos;
+					let prisonerHtml = '';
+					for(let i = 0; i < prisonerList.length; i++) {
+						debugger;
+						let item = prisonerList[i];
+						let tempHtml = '<div id="img-holder{6}"  class="img-holder">\
+															<img src="app/img/text/{0}">\
+															<div>\
+																<p>姓名：{1}</p>\
+																<p>番号：{2}</p>\
+																<p>监室：{3}监室</p>\
+																<p>风险等级：{4}一级</p>\
+																<p>风险原因：{5}</p>\
+															</div>\
+														</div>';
+						prisonerHtml += tempHtml
+																.replace("{0}",item.photo_front)
+																.replace("{1}",item.name)
+																.replace("{2}",item.make_no)
+																.replace("{3}",item.prison_cell_id)
+																.replace("{4}",item.risk_level)
+																.replace("{5}",item.risk_level)
+																.replace("{6}",i+1);
+															
+						
+					}
+					$('#Slide1').append(prisonerHtml)
+				} else {
+					alert(resp.resultMsg);
+				}
+			},
+			error: function() {
+				alert("请求异常");
+			}
+		});
 
-    }
+		window.onresize = function() {
+			$('.contents_two').css({ 'height': $(window).height() - 90 + "px" });
+			$(".contents_two div.row:nth-child(2)").css({ 'height': $(window).height() - $("#imp_person").height() - 186 + "px" })
+			per_1.resize();
+			per_3.resize();
+			per_4.resize();
+		}
 
+    $(".imp_person_toggle>span:nth-child(2)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：一级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
+    });
 
-    $.fn.zySlide = function (options) {
-      this.each(function (i, ele) {
-        new Slide(ele, options)
-      })
-      return this
-    }
+    $(".imp_person_toggle>span:nth-child(3)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：二级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
+    });
 
-    $.fn.zySlide1 = function (options) {
-      this.each(function (i, ele) {
-        new Slide1(ele, options)
-      })
-      return this
-    }
-
-  })(jQuery)
-
-  $.noConflict();
-  jQuery('.zy-Slide').zySlide({ speed:100})
-    .css('border', '0px solid blue');
-
-//  jQuery('.zy-Slide').zySlide1({ speed:100})
-//    .css('border', '0px solid blue');
-
-  per_1=echarts.init(document.getElementById("imp_person_per1"));
-
-  option_left= {
-    tooltip: {
-      trigger: 'item',
-      formatter: "{a} <br/>{b}: {c} ({d}%)"
-    },
-    title:{
-      text:'重大风险人员占比',
-      textStyle:{
-        fontSize:24,
-        color:'white'
-      },
-      left:'2%'
-    },
-    series: [
-      {
-        name:'访问来源',
-
-        type:'pie',
-        selectedMode: 'single',
-        radius: [0, '50%'],
-        center:['40%','55%'],
-        label: {
-          normal: {
-            position: 'inner'
-          }
-        },
-        labelLine: {
-          normal: {
-            show: false
-          }
-        },
-        data:[
-          {value:39, name:'39%'},
-          {value:61, name:'61%'},
-        ]
-      },
-
-    ]
-  };
-
-  per_1.setOption(option_left);
-
-  per_3=echarts.init(document.getElementById("imp_person_per3"));
-
-  option_right= {
-    series: [
-      {
-        name:'访问来源',
-        type:'pie',
-
-        selectedMode: 'single',
-        radius: [0, '60%'],
-        center:['15%','55%'],
-        label: {
-          normal: {
-          }
-        },
-        labelLine: {
-          normal: {
-            show: false
-          }
-        },
-
-        data:[
-          {value:150, name:'\r\r\r\r\r150人\n重大风险人员',
-            label:{
-              normal:{
-                fontSize:20
-              }
-            },
-            itemStyle:{
-              normal:{
-                color:'red',
-
-              }
-            }
-          },
-          {value:500, name:'\r\r\r\r500人\n二级风险人员',
-            label:{
-              normal:{
-                fontSize:20
-              }
-            },
-            itemStyle:{
-              normal:{
-                color:'yellow',
-              },
-            }
-          },
-          {value:300, name:'\r\r\r\r300人\n三级风险人员',
-            label:{
-              normal:{
-                fontSize:20
-              }
-            },
-            itemStyle:{
-              normal:{
-                color:'skyblue',
-              },
-            }
-          },
-          {value:1485.89,
-            itemStyle: {
-              normal: {
-                opacity:0,
-              }
-            }
-          },
-        ]
-      }
-    ]
-  };
-
-  per_3.setOption(option_right);
-
-  per_4=echarts.init(document.getElementById("imp_person_per4"));
-
-  option_part2= {
-    tooltip : {
-      trigger: 'axis',
-      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-      }
-    },
-    title:{
-      text:'年\r\r月',
-      textStyle:{
-        color:'white'
-      },
-      left:'right',
-      top:'3%',
-    },
-    grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
-    },
-    xAxis : [
-      {
-        axisTick: {
-          show: false
-        },
-        axisLine: {
-          lineStyle: {
-            color: '#3F668A'
-          }
-        },
-        axisLabel: {
-          textStyle: {
-            fontSize: 14,
-            color:"white"
-          }
-        },
-        type : 'category',
-        data : ['周一','周二','周三','周四','周五','周六','周日']
-      }
-    ],
-    yAxis : [
-      {
-        axisLabel: {
-          textStyle: {
-            fontSize: 14,
-            color:"white"
-          }
-        },
-        splitLine: {
-          lineStyle: {
-            color: ['#46708B']
-          }
-        },
-        axisLine: {
-          show:false
-        },
-        type : 'value'
-      }
-    ],
-    series : [
-      {
-        name:'直接访问',
-        type:'bar',
-        data:[320, 332, 301, 334, 390, 330, 320],
-        itemStyle:{
-          normal:{
-            color:'#E9394D'
-          }
-        }
-      },
-      {
-        name:'邮件营销',
-        type:'bar',
-        data:[120, 132, 101, 134, 90, 230, 210],
-        itemStyle:{
-          normal:{
-            color:'#F6BC00'
-          }
-        }
-      },
-      {
-        name:'联盟广告',
-        type:'bar',
-        data:[520, 582, 591, 534, 590, 530, 510],
-        itemStyle:{
-          normal:{
-            color:'#00A1FC'
-          }
-        }
-      },
-      {
-        name:'视屏广告',
-        type:'line',
-        data:[933,945,989,967,960,978,950],
-        itemStyle:{
-          normal:{
-            color:'#B65910'
-          }
-        }
-      }
-    ]
-  };
-
-  per_4.setOption(option_part2);
-
-  $(".imp_person_toggle>span:nth-child(2)").click(function(){
-    $("#Slide1").css("display","block");
-    $("#Slide2").css("display","none");
-    $("#Slide3").css("display","none");
-  });
-
-  $(".imp_person_toggle>span:nth-child(3)").click(function(){
-    $("#Slide1").css("display","none");
-    $("#Slide2").css("display","block");
-    $("#Slide3").css("display","none");
-  });
-
-  $(".imp_person_toggle>span:nth-child(4)").click(function(){
-    $("#Slide1").css("display","none");
-    $("#Slide2").css("display","none");
-    $("#Slide3").css("display","block");
-  });
-
-</script>
+    $(".imp_person_toggle>span:nth-child(4)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：三级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
+    });
+	</script>
+	<script type="text/javascript" src="app/lib/js/Draggable.min.js"></script>
+<script type="text/javascript" src="app/lib/js/TweenMax.min.js"></script>
 
 </body>
-

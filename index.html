@@ -43,17 +43,70 @@
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
-<script type="text/javascript" src="app/lib/3d_Carousel/index.js"></script>
-<script type="text/javascript" src="app/lib/3d_Carousel/jquery.zySlide.js"></script>
-<script src="app/js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="app/lib/js/jquery.js"></script>-->
+<!--<script type="text/javascript" >
+$(function() {
+	let token = localStorage.getItem("token");
+	let preReqUrl = "http://10.58.1.134:8080/";
+	$.ajax({
+		type: "post",
+		url: preReqUrl + "home/homepage/getmajorriskpersondetail?token=" + token,
+		contentType: "application/json;charset=utf-8",
+		async: false,
+		data: JSON.stringify({}),
+		success: function(resp) {
+			let code = resp.resultCode;
+			let data = resp.data;
+			console.log(data)
+			if(code == 1) {
+				let prisonerList = data.prisonerBaseInfos;
+				let prisonerHtml = '';
+				for(let i = 0; i < prisonerList.length; i++) {
+					debugger;
+					let item = prisonerList[i];
+					let tempHtml = '<div id="img-holder{6}"  class="img-holder">\
+															<img src="app/img/text/{0}">\
+															<div>\
+																<p>姓名：{1}</p>\
+																<p>番号：{2}</p>\
+																<p>监室：{3}监室</p>\
+																<p>风险等级：{4}一级</p>\
+																<p>风险原因：{5}</p>\
+															</div>\
+														</div>';
+					prisonerHtml += tempHtml
+						.replace("{0}", item.photo_front)
+						.replace("{1}", item.name)
+						.replace("{2}", item.make_no)
+						.replace("{3}", item.prison_cell_id)
+						.replace("{4}", item.risk_level)
+						.replace("{5}", item.risk_level)
+						.replace("{6}", i + 1);
+
+				}
+				$('#Slide1').append(prisonerHtml)
+				console.log($('#Slide1').html())
+			} else {
+				alert(resp.resultMsg);
+			}
+		},
+		error: function() {
+			alert("请求异常");
+		}
+	});
+})
+</script>-->
+
 <script type="text/javascript">
 $(function(){
 	/* 载入页面 */
 	$('#header_nav').load('app/components/header.html');
+
 //	$('#menu').load('app/components/menu.html');
 //	$('#content').load('app/components/home.html');
 //	$('#content').load('app/components/risk_people.html');
-	$('#content').load('app/components/new_person.html');
+//	$('#content').load('app/components/new_person.html');
+
 	$('#background').load('app/components/background.html');
 	/* 页面缩放 */
 	$(window).resize(function(){
@@ -62,18 +115,18 @@ $(function(){
       	$('#background').css({'height':$(window).height()});
 	    var heiss=$('#content').css({'height':$(window).height()-90+"px"});
 	    $("#ss").css({'height':heiss.height()-50+"px"});
-	    //重置容器高宽
-//	    zero.resize();
-//	    myChart.resize();
-//	    second.resize();
-//	    fourth.resize();
+
+      //重置容器高宽
+      zero.resize();
+      myChart.resize();
+      second.resize();
+      fourth.resize();
 	});
-  	console.log($(window).height());
 	/* 页面计算 */
 	$('#background').css({'width':$(window).width()},{'height':$(window).height()});
 	$('#content').css({'height':$(window).height()-90+"px"});
+  $('.contents_two').css({'height':$(window).height()-90+"px"});
+  $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
 });
-
-
 
 </script>
