@@ -1,921 +1,917 @@
 <style type="text/css">
-  .contents_two{
-    /*background: rgba(0, 0, 0, 0.3);*/
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
+	.contents_two {
+		/*background: rgba(0, 0, 0, 0.3);*/
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
 
-  .container{width:100%}
+	.container {
+		width: 100%
+	}
 
-  .list{float:left;
-    padding:0;
-    margin:0;
-  }
+	.list {
+		float: left;
+		padding: 0;
+		margin: 0;
+	}
 
-  .list li{
-    float:left;
-    padding:1.1%;
-    transform:translate(550%,0);
-  }
+	.list li {
+		float: left;
+		padding: 1.1%;
+		transform: translate(550%, 0);
+	}
 
-  .list li>a{
-    text-decoration:none;
-    color:#0FD7F3
-  }
+	.list li>a {
+		text-decoration: none;
+		color: #0FD7F3
+	}
 
-  .list li>a:hover{
-    color:#E4DB67
-  }
+	.list li>a:hover {
+		color: #E4DB67
+	}
 
-  .contents_two div.row:nth-child(2){
-    width:91%;
-    height:370px;
-    background-color:#228EBA;
-    opacity:0.8;
-    border-radius:3%;
-    transform:translate(7%,0);
-  }
+	.contents_two div.row:nth-child(2) {
+		width: 91%;
+		height: 370px;
+		background-color: #228EBA;
+		opacity: 0.8;
+		border-radius: 3%;
+		transform: translate(7%, 0);
+	}
 
-  #imp_person{
-    width:91%;
-    background-color:#228EBA;
-    opacity:0.8;
-    /*overflow:hidden;*/
-    height:230px;
-    border-radius:3%;
-    margin-top:26px;
-    transform:translate(7%,0);
-  }
+	#imp_person {
+		width: 91%;
+		background-color: #228EBA;
+		opacity: 0.8;
+		/*overflow:hidden;*/
+		height: 230px;
+		border-radius: 3%;
+		margin-top: 26px;
+		transform: translate(7%, 0);
+	}
 
-  #imp_person>ul{
-    position:relative;
-    transform:translate(0,2%);
-  }
+	#imp_person>ul {
+		position: relative;
+		transform: translate(0, 2%);
+	}
 
-  #imp_person>ul li{
-    width:200px;
-    height:125px;
-    border:1px solid transparent;
-    border-radius:3%;
-    background-color:#224E71;
-    position: absolute;
-    transform:translate(0,30%);
-    z-index:0;
-    cursor:pointer;
-    margin:0;
-    padding:0
-  }
+	#imp_person>ul li {
+		width: 200px;
+		height: 125px;
+		border: 1px solid transparent;
+		border-radius: 3%;
+		background-color: #224E71;
+		position: absolute;
+		transform: translate(0, 30%);
+		z-index: 0;
+		cursor: pointer;
+		margin: 0;
+		padding: 0
+	}
 
-  #imp_person>ul>li>img{
-    width:70px;
-    transform:translate(15%,13%);
-  }
+	#imp_person>ul>li>img {
+		width: 70px;
+		transform: translate(15%, 13%);
+	}
 
-  #imp_person>ul>li:nth-child(1){
-    left:-15%;
-  }
-  #imp_person>ul>li:nth-child(2){
-    left:6%;
-  }
-  #imp_person>ul>li:nth-child(3){
-    left:25%;
-  }
-  #imp_person>ul>li:nth-child(4){
-    left:44%;
-  }
-  #imp_person>ul>li:nth-child(5){
-    left:63%;
-  }
+	#imp_person>ul>li:nth-child(1) {
+		left: -15%;
+	}
 
-  #imp_person>ul>li:nth-child(6){
-    left:82%;
-  }
+	#imp_person>ul>li:nth-child(2) {
+		left: 6%;
+	}
 
-  #imp_person>ul>li:nth-child(7){
-    left:101%;
-  }
+	#imp_person>ul>li:nth-child(3) {
+		left: 25%;
+	}
 
-  .imp_person_title{
-    color:#fff;
-    transform:translate(13%,50%);
-    width:12%;
-    border-radius:15%;
-    background: radial-gradient(#254E73,#1B75B1,#2B97CF);
-    padding:0.5%;
-    font-family:Consolas;
-    font-size:1.7rem;
-  }
+	#imp_person>ul>li:nth-child(4) {
+		left: 44%;
+	}
 
-  .imp_person_toggle{
-    color:#fff;
-    float:right;
-    width:20%;
-    transform: translate(-10%,-57%);
-  }
+	#imp_person>ul>li:nth-child(5) {
+		left: 63%;
+	}
 
-  .imp_person_toggle span{
-    border:2px solid #3A4B5D;
-    cursor:pointer;
-    padding: 2% 5%;
-    position:relative;
-    z-index:101;
-  }
+	#imp_person>ul>li:nth-child(6) {
+		left: 82%;
+	}
 
-  .imp_person_toggle span:first-child{
-    position:relative;
-    left:6%;
-    transform: translate(1%,0);
-    border-bottom-left-radius:30%;
-    border-right:0;
-    z-index:101;
-    border-top-left-radius:30%;
-  }
+	#imp_person>ul>li:nth-child(7) {
+		left: 101%;
+	}
 
-  .imp_person_toggle span:nth-child(2){
-    position:relative;
-    left:4%;
-    z-index:101;
-    border-right:0;
-  }
+	.imp_person_title {
+		color: #fff;
+		transform: translate(13%, 50%);
+		width: 12%;
+		border-radius: 15%;
+		background: radial-gradient(#254E73, #1B75B1, #2B97CF);
+		padding: 0.5%;
+		font-family: Consolas;
+		font-size: 1.7rem;
+	}
 
-  .imp_person_toggle span:nth-child(3){
-    position:relative;
-    left:2%;
-    z-index:101;
-    border-right:0;
-  }
+	.imp_person_toggle {
+		color: #fff;
+		float: right;
+		width: 20%;
+		transform: translate(-10%, -57%);
+	}
 
-  .imp_person_toggle span:nth-child(4){
-    border-top-right-radius:30%;
-    border-bottom-right-radius:30%;
-  }
+	.imp_person_toggle span {
+		border: 2px solid #3A4B5D;
+		cursor: pointer;
+		padding: 2% 5%;
+		position: relative;
+		z-index: 101;
+	}
 
-  .imp_person_index{
-    color:#fff;
-    transform:translate(54%,-115%);
-    font-size:1.1rem;
-  }
-  .imp_person_index p{
-    margin-bottom:5px;
-  }
-  .imp_person_index p:nth-child(4){
-    color:#EC0A0D;
-    font-weight:bold;
-  }
+	.imp_person_toggle span:first-child {
+		position: relative;
+		left: 6%;
+		transform: translate(1%, 0);
+		border-bottom-left-radius: 30%;
+		border-right: 0;
+		z-index: 101;
+		border-top-left-radius: 30%;
+	}
 
+	.imp_person_toggle span:nth-child(2) {
+		position: relative;
+		left: 4%;
+		z-index: 101;
+		border-right: 0;
+	}
 
-  #d111{
-    position: absolute;
-    top: 200px;
-    left: -50px;
-    color: #fff;
-  }
+	.imp_person_toggle span:nth-child(3) {
+		position: relative;
+		left: 2%;
+		z-index: 101;
+		border-right: 0;
+	}
 
-  #d112{
-    position: absolute;
-    width: 60px;
-    height:5px;
-    top: 10px;
-    background-color:#228EBA;
-    opacity:1;
-    z-index: 210;
-  }
+	.imp_person_toggle span:nth-child(4) {
+		border-top-right-radius: 30%;
+		border-bottom-right-radius: 30%;
+	}
 
-  #d113{
-    position: absolute;
-    width: 60px;
-    height:5px;
-    top: 46px;
-    background-color:#228EBA;
-    opacity:1;
-    z-index: 210;
-  }
+	.imp_person_index {
+		color: #fff;
+		transform: translate(54%, -115%);
+		font-size: 1.1rem;
+	}
 
-  #d114{
-    position:absolute;
-    top:-55px;
-    left:-25px;
-    width:100px;
-    text-align: center;
-    color:#ED7000
-  }
+	.imp_person_index p {
+		margin-bottom: 5px;
+	}
 
-  #d114 p{
-    margin-bottom:0;
-  }
+	.imp_person_index p:nth-child(4) {
+		color: #EC0A0D;
+		font-weight: bold;
+	}
 
-  #d114 p:first-child{
-    font-size:3rem;
-    font-weight:bold;
-  }
+	#d111 {
+		position: absolute;
+		top: 200px;
+		left: -50px;
+		color: #fff;
+	}
 
-  #d114 p:nth-child(2)
-  {
-    font-size:1.5rem;
-    font-weight:bold;
-  }
+	#d112 {
+		position: absolute;
+		width: 60px;
+		height: 5px;
+		top: 10px;
+		background-color: #228EBA;
+		opacity: 1;
+		z-index: 210;
+	}
 
-  .arrow {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    z-index:-10;
-    display: inline-block;
-    margin: 10px 10px;
-  }
-  .arrow:before, .arrow:after {
-    content: '';
-    border-color: transparent;
-    border-style: solid;
-    position: absolute;
-    z-index:-10;
-  }
-  .arrow-right:before {
-    border: none;
-    z-index:-10;
-    background-color:#fff;
-    height: 30%;
-    width: 50%;
-    top: 35%;
-    left: 0;
-  }
-  .arrow-right:after {
-    left: 50%;
-    top: 0;
-    border-width:20px 20px;
-    border-left-color:#fff;
-    z-index:-10;
-  }
+	#d113 {
+		position: absolute;
+		width: 60px;
+		height: 5px;
+		top: 46px;
+		background-color: #228EBA;
+		opacity: 1;
+		z-index: 210;
+	}
 
+	#d114 {
+		position: absolute;
+		top: -55px;
+		left: -25px;
+		width: 100px;
+		text-align: center;
+		color: #ED7000
+	}
 
+	#d114 p {
+		margin-bottom: 0;
+	}
 
+	#d114 p:first-child {
+		font-size: 3rem;
+		font-weight: bold;
+	}
 
-  .slide_total .img-holder {
-    width:250px;
-    height: 135px;
-    position:absolute;
-    box-shadow:0px 1px 6px 3px #ccc;
-    visiblity:hidden;
-    opacity:1;
-    top:9%;
-    cursor:pointer;
-    z-index:99;
-  }
+	#d114 p:nth-child(2) {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
 
-  .slide_total .img-holder img {margin-top:5px;}
+	.arrow {
+		width: 40px;
+		height: 40px;
+		position: relative;
+		z-index: -10;
+		display: inline-block;
+		margin: 10px 10px;
+	}
 
-  .slide_total{
-    position:relative;
-    height:160px;
-    width:1200px;
-    left:60px;
-    top:9%;
-    text-indent:4px;
-    font-weight:bold;
-  }
+	.arrow:before,
+	.arrow:after {
+		content: '';
+		border-color: transparent;
+		border-style: solid;
+		position: absolute;
+		z-index: -10;
+	}
 
-  .scrolller-container{
-    width:800px;
-    height:15px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    position:relative;
-    top:150px;
-    left:130px;
-    cursor:pointer;
-  }
-  .scrolller-container .scroller{
-    width:100px;
-    height:15px;
-    background-color:#ddd;
-    border-radius:10px;
-    position:absolute;
-    left:0px;
-  }
+	.arrow-right:before {
+		border: none;
+		z-index: -10;
+		background-color: #fff;
+		height: 30%;
+		width: 50%;
+		top: 35%;
+		left: 0;
+	}
 
-  .img-holder{
-    background-color: #225072;
-  }
+	.arrow-right:after {
+		left: 50%;
+		top: 0;
+		border-width: 20px 20px;
+		border-left-color: #fff;
+		z-index: -10;
+	}
 
-  .img-holder>div{
-    transform: translate(72%,-100%);
-    width: 58%;
-  }
+	.slide_total .img-holder {
+		width: 250px;
+		height: 135px;
+		position: absolute;
+		box-shadow: 0px 1px 6px 3px #ccc;
+		visiblity: hidden;
+		opacity: 1;
+		top: 9%;
+		cursor: pointer;
+		z-index: 99;
+	}
 
-  .img-holder>div p{
-    margin-bottom:5px;
-    margin-left:5px;
-    color:#fff
-  }
+	.slide_total .img-holder img {
+		margin-top: 5px;
+	}
 
-  .img-holder>div p:nth-child(4){
-    color:red
-  }
+	.slide_total {
+		position: relative;
+		height: 160px;
+		width: 1200px;
+		left: 60px;
+		top: 9%;
+		text-indent: 4px;
+		font-weight: bold;
+	}
 
-  /*/!*#Slide1{display: none}*!/*/
-  /*#Slide2{display: none}*/
-  /*#Slide3{display: none}*/
+	.scrolller-container {
+		width: 800px;
+		height: 15px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		position: relative;
+		top: 150px;
+		left: 130px;
+		cursor: pointer;
+	}
 
-  #img-holder1{left: 27%}
-  #img-holder2{left: 31%}
-  #img-holder3{left: 35%}
-  #img-holder4{left: 38%}
-  #img-holder5{left: 41%}
-  #img-holder6{left: 44%}
-  #img-holder7{left: 47%}
+	.scrolller-container .scroller {
+		width: 100px;
+		height: 15px;
+		background-color: #ddd;
+		border-radius: 10px;
+		position: absolute;
+		left: 0px;
+	}
 
+	.img-holder {
+		background-color: #225072;
+	}
+
+	.img-holder>div {
+		transform: translate(45%, -100%);
+	}
+
+	.img-holder>div p {
+		margin-bottom: 5px;
+		margin-left: 5px;
+		color: #fff
+	}
+
+	.img-holder>div p:nth-child(4) {
+		color: red
+	}
+	/*/!*#Slide1{display: none}*!/*/
+	/*#Slide2{display: none}*/
+	/*#Slide3{display: none}*/
+
+	#img-holder1 {
+		left: 27%
+	}
+
+	#img-holder2 {
+		left: 31%
+	}
+
+	#img-holder3 {
+		left: 35%
+	}
+
+	#img-holder4 {
+		left: 38%
+	}
+
+	#img-holder5 {
+		left: 41%
+	}
+
+	#img-holder6 {
+		left: 44%
+	}
+
+	#img-holder7 {
+		left: 47%
+	}
 </style>
+
 <body>
-<div class="container contents_two">
-  <div class="row">
-    <ul class="col-xs-12 list">
-      <li>
-        <a href="">
-          全市
-        </a>
-      </li>
-      <li>
-        <a href="">
-          市看
-        </a>
-      </li>
-      <li>
-        <a href="">
-          戒毒
-        </a>
-      </li>
-      <li>
-        <a href="">
-          拘留
-        </a>
-      </li>
-      <li>
-        <a href="">
-          二看
-        </a>
-      </li>
-      <li>
-        <a href="">
-          二拘
-        </a>
-      </li>
-      <li>
-        <a href="">
-          玄武
-        </a>
-      </li>
-      <li>
-        <a href="">
-          秦淮
-        </a>
-      </li>
-      <li>
-        <a href="">
-          栖霞
-        </a>
-      </li>
-      <li>
-        <a href="">
-          雨花
-        </a>
-      </li>
-      <li>
-        <a href="">
-          浦口
-        </a>
-      </li>
-      <li>
-        <a href="">
-          江宁
-        </a>
-      </li>
-      <li>
-        <a href="">
-          六合
-        </a>
-      </li>
-      <li>
-        <a href="">
-          溧水
-        </a>
-      </li>
-      <li>
-        <a href="">
-          高淳
-        </a>
-      </li>
-    </ul>
-  </div>
+	<div class="container contents_two">
+		<div class="row">
+			<ul class="col-xs-12 list prison_list">
 
-  <div class="row">
-    <div  style="height:100%" class="col-xs-6 row">
-      <div  class="col-xs-5" style="padding:0;height:100%">
-        <div style="width:100%;height:100%" id="imp_person_per1"></div>
-      </div>
-      <div  class="col-xs-7" style="padding:0;height:100%">
-        <div  style="width:100%;height:100%"  id="imp_person_per3"></div>
-        <div id="d111">
-          <div id="d114">
-            <p>950人</p>
-            <p>重大风险人员</p>
-          </div>
-          <div id="d112"></div>
-          <div id="d113"></div>
-          <span class="arrow arrow-right"></span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6" style="padding:0;height:100%">
-      <div style="width:100%;height:100%" id="imp_person_per4"></div>
-    </div>
-  </div>
+			</ul>
+		</div>
 
-  <div class="row" id="imp_person">
-    <div class="imp_person_title">重大风险人员详情</div>
-    <div class="imp_person_toggle">
-        <span>新增</span>
-        <span>一级</span>
-        <span>二级</span>
-        <span>三级</span>
-    </div>
+		<div class="row">
+			<div style="height:100%" class="col-xs-6 row">
+				<div class="col-xs-5" style="padding:0;height:100%">
+					<div style="width:100%;height:100%" id="imp_person_per1"></div>
+				</div>
+				<div class="col-xs-7" style="padding:0;height:100%">
+					<div style="width:100%;height:100%" id="imp_person_per3"></div>
+					<div id="d111">
+						<div id="d114">
+							<p id="major_prisoner_count">950人</p>
+							<p>重大风险人员</p>
+						</div>
+						<div id="d112"></div>
+						<div id="d113"></div>
+						<span class="arrow arrow-right"></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6" style="padding:0;height:100%">
+				<div style="width:100%;height:100%" id="imp_person_per4"></div>
+			</div>
+		</div>
 
-    <div class="slide_total" id="Slide1">
-      <div id="img-holder1" class="img-holder">
-        <img src="app/img/text/1.jpg">
-        <div>
-          <p>姓名：张三</p>
-          <p>番号：123456</p>
-          <p>监室：102监室</p>
-          <p>风险等级：一级</p>
-          <p>风险原因：狂躁症</p>
-        </div>
-      </div>
-      <div id="img-holder2" class="img-holder">
-        <img src="app/img/text/2.jpg">
-        <div>
-          <p>姓名：张三</p>
-          <p>番号：123456</p>
-          <p>监室：102监室</p>
-          <p>风险等级：一级</p>
-          <p>风险原因：狂躁症</p>
-        </div>
-      </div>
-      <div id="img-holder3" class="img-holder">
-        <img src="app/img/text/3.jpg">
-        <div>
-           <p>姓名：张三</p>
-          <p>番号：123456</p>
-          <p>监室：102监室</p>
-          <p>风险等级：一级</p>
-          <p>风险原因：狂躁症</p>
-        </div>
-      </div>
-      <div id="img-holder4" class="img-holder">
-        <img src="app/img/text/4.jpg">
-        <div>
-           <p>姓名：张三</p>
-          <p>番号：123456</p>
-          <p>监室：102监室</p>
-          <p>风险等级：一级</p>
-          <p>风险原因：狂躁症</p>
-        </div>
-      </div>
-      <div id="img-holder5" class="img-holder">
-        <img src="app/img/text/5.jpg">
-        <div>
-           <p>姓名：张三</p>
-          <p>番号：123456</p>
-          <p>监室：102监室</p>
-          <p>风险等级：一级</p>
-          <p>风险原因：狂躁症</p>
-        </div>
-      </div>
-      <div id="img-holder6" class="img-holder">
-        <img src="app/img/text/6.jpg">
-        <div>
-           <p>姓名：张三</p>
-          <p>番号：123456</p>
-          <p>监室：102监室</p>
-          <p>风险等级：一级</p>
-          <p>风险原因：狂躁症</p>
-        </div>
-      </div>
-      <div id="img-holder7" class="img-holder">
-        <img src="app/img/text/7.jpg">
-        <div>
-           <p>姓名：张三</p>
-          <p>番号：123456</p>
-          <p>监室：102监室</p>
-          <p>风险等级：一级</p>
-          <p>风险原因：狂躁症</p>
-        </div>
-      </div>
-    </div>
-    <div class="scrolller-container" style="display: none">
-      <div class="scroller"></div>
-    </div>
-    </div>
-</div>
-<script>
-  var $imgs = $('.slide_total .img-holder');
-  var l = $imgs.length;
-  var radius = 400;
+		<div class="row" id="imp_person">
+			<div class="imp_person_title">重大风险人员详情</div>
+			<div class="imp_person_toggle">
+				<span>新增</span>
+				<span>一级</span>
+				<span>二级</span>
+				<span>三级</span>
+			</div>
 
+			<div class="slide_total" id="Slide1">
+				<div id="img-holder1" class="img-holder">
+					<img src="app/img/text/1.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder2" class="img-holder">
+					<img src="app/img/text/2.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder3" class="img-holder">
+					<img src="app/img/text/3.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder4" class="img-holder">
+					<img src="app/img/text/4.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder5" class="img-holder">
+					<img src="app/img/text/5.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder6" class="img-holder">
+					<img src="app/img/text/6.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+				<div id="img-holder7" class="img-holder">
+					<img src="app/img/text/7.jpg">
+					<div>
+						<p>姓名：张三</p>
+						<p>番号：123456</p>
+						<p>监室：102监室</p>
+						<p>风险等级：一级</p>
+						<p>风险原因：狂躁症</p>
+					</div>
+				</div>
+			</div>
+			<div class="scrolller-container" style="display: none">
+				<div class="scroller"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var $imgs = $('.slide_total .img-holder');
+		var l = $imgs.length;
+		var radius = 400;
 
-  TweenMax.set($('.slide_total'), {
-    css: {
-      transformStyle: 'preserve-3d',
-      perspective: 800,
-      perspectiveOrigin: '50% 50%'
-    }
-  });
+		TweenMax.set($('.slide_total'), {
+			css: {
+				transformStyle: 'preserve-3d',
+				perspective: 800,
+				perspectiveOrigin: '50% 50%'
+			}
+		});
 
-  var posArray = [];
-  var totalImgToView = 5;
-  var imgMinus = 0.6301;
-  var angle = 0;
-  $imgs.each(function(i, item){
+		var posArray = [];
+		var totalImgToView = 5;
+		var imgMinus = 0.6301;
+		var angle = 0;
+		$imgs.each(function(i, item) {
 
-    angle = i * 0.63;
-    //console.log('angle ',angle);
-    var zPos = - Math.abs(angle * (100 ));
+			angle = i * 0.63;
+			//console.log('angle ',angle);
+			var zPos = -Math.abs(angle * (100));
 
-    var xPos = Math.sin (angle) * radius;
-    posArray.push({x:xPos,z:zPos,angle:angle});
-    var imgAlpha = (Math.ceil(0.5 * totalImgToView) * imgMinus) * 100;
-    //imgAlpha = Math.abs(zPos) < imgAlpha ? 1 : 0;
-    TweenMax.to(item,1, {x:xPos,z:zPos,ease:Expo.easeOut,autoAlpha:0});
-  });
+			var xPos = Math.sin(angle) * radius;
+			posArray.push({ x: xPos, z: zPos, angle: angle });
+			var imgAlpha = (Math.ceil(0.5 * totalImgToView) * imgMinus) * 100;
+			//imgAlpha = Math.abs(zPos) < imgAlpha ? 1 : 0;
+			TweenMax.to(item, 1, { x: xPos, z: zPos, ease: Expo.easeOut, autoAlpha: 0 });
+		});
 
+		var curImgViewIndex = 0;
+		var targetImgViewIndex = 0;
+		var curIntervalId = 0;
+		var scrollbarDragging = false;
 
-  var curImgViewIndex = 0;
-  var targetImgViewIndex = 0;
-  var curIntervalId = 0;
-  var scrollbarDragging = false;
+		function rotate() {
+			var minusVal = targetImgViewIndex - curImgViewIndex > 0 ? -0.6301 : 0.6301;
 
-  function rotate(){
-    var minusVal = targetImgViewIndex - curImgViewIndex > 0 ? -0.6301 : 0.6301;
+			var easeObj;
+			var tweenTime;
+			if(Math.abs(targetImgViewIndex - curImgViewIndex) === 1) {
+				easeObj = Quint.easeOut;
+				tweenTime = 1;
+			} else {
+				easeObj = Linear.easeNone;
+				tweenTime = 0.15;
+			}
 
-    var easeObj;
-    var tweenTime;
-    if(Math.abs(targetImgViewIndex - curImgViewIndex) === 1){
-      easeObj = Quint.easeOut;
-      tweenTime = 1;
-    }else {
-      easeObj = Linear.easeNone;
-      tweenTime = 0.15;
-    }
+			$imgs.each(function(i, item) {
+				var pos = posArray[i];
+				pos.angle = pos.angle + minusVal; //(0.6301*0.06);
+				var angleDistance = pos.angle * 100;
+				var zPos = -Math.abs(angleDistance);
+				var xPos = Math.sin(pos.angle) * radius;
+				var imgAlpha = (Math.ceil(0.5 * totalImgToView) * imgMinus) * 100;
 
-    $imgs.each(function(i, item){
-      var pos = posArray[i];
-      pos.angle = pos.angle + minusVal ;  //(0.6301*0.06);
-      var angleDistance = pos.angle * 100;
-      var zPos = - Math.abs(angleDistance);
-      var xPos =  Math.sin (pos.angle) * radius;
-      var imgAlpha = (Math.ceil(0.5 * totalImgToView) * imgMinus) * 100;
+				imgAlpha = Math.abs(zPos) < imgAlpha ? 1 : 0;
+				var rotDeg = Math.round(angleDistance) >= 0 ? -30 : 30;
+				rotDeg = Math.round(angleDistance) === 0 ? 0 : rotDeg;
 
-      imgAlpha = Math.abs(zPos) < imgAlpha ? 1 : 0;
-      var rotDeg = Math.round(angleDistance) >= 0 ? -30 : 30;
-      rotDeg = Math.round(angleDistance) === 0 ? 0 : rotDeg;
+				TweenMax.to(item, tweenTime, { x: xPos, z: zPos, ease: easeObj, autoAlpha: imgAlpha, rotationY: rotDeg });
 
+			});
+			minusVal > 0 ? curImgViewIndex-- : curImgViewIndex++;
 
-      TweenMax.to(item, tweenTime,  {x:xPos,z:zPos,ease:easeObj,autoAlpha:imgAlpha,rotationY:rotDeg});
+			if(curImgViewIndex === targetImgViewIndex) {
+				clearInterval(curIntervalId);
+			}
 
+		}
+
+		function showImgAt(index) {
+			targetImgViewIndex = index;
+			if(targetImgViewIndex === curImgViewIndex) {
+				return;
+			}
+			clearInterval(curIntervalId);
+			curIntervalId = setInterval(function() {
+				rotate();
+			}, 150);
+
+			//update scrollbar
+			if(!scrollbarDragging) {
+				var l = $imgs.length - 1;
+				if(targetImgViewIndex > l) {
+					return;
+				}
+				var curScrollX = Math.abs(Math.round(targetImgViewIndex * (702 / l)));
+				var tweenTime = Math.abs((targetImgViewIndex - curImgViewIndex) * 0.2);
+				TweenMax.to($('.scroller'), tweenTime, { x: curScrollX, ease: Sine.easeOut });
+			}
+		}
+
+		//CONTROLLER UPDATE
+		var $input = $('.controller input');
+		$input.keyup(function(e) {
+			if(e.keyCode === 13) {
+				showImgAt(parseInt($input.val()))
+			}
+		});
+
+		//just to do start up animation
+		showImgAt(5);
+
+		//----------------------- Dragging Utility ----------------------
+		Draggable.create('.scroller', {
+			type: 'x',
+			bounds: { left: 0, top: 0, width: 802, height: 0 },
+			onDrag: function() {
+				var curImgIndex = Math.abs(Math.round(this.x / (802 / l)));
+
+				targetImgViewIndex = curImgIndex;
+				if(targetImgViewIndex === curImgViewIndex) {
+					return;
+				}
+				rotate();
+
+			},
+			onDragStart: function() {
+				scrollbarDragging = true;
+			},
+			onDragEnd: function(e) {
+				scrollbarDragging = false;
+			}
+		});
+
+		$('.scrolller-container').on('click', function(e) {
+			var curImgIndex = Math.abs(Math.round(e.offsetX / (802 / l)));
+			if(curImgIndex >= $imgs.length) {
+				curImgIndex = $imgs.length - 1;
+			}
+			console.log('boom');
+			showImgAt(curImgIndex);
+		});
+
+		$('.scrolller-container .scroller').on('click', function(e) {
+			e.stopPropagation();
+		});
+
+		$imgs.on('click', function() {
+			showImgAt($imgs.index($(this)));
+		});
+
+		let token = localStorage.getItem("token");
+		let preReqUrl = "http://10.58.1.134:8080/";
+
+		//获取所有监所的简称
+		$.ajax({
+			type: "post",
+			url: preReqUrl + "sysmng/sysdepart/getsysdeparts?token=" + token,
+			contentType: "application/json;charset=utf-8",
+			data: JSON.stringify({}),
+			async: false,
+			success: function(resp) {
+				let code = resp.resultCode;
+				let data = resp.data;
+				console.log(resp);
+				if(code == 1) {
+					$(".prison_list").empty();
+					$(".prison_list").append("<li><a href=''>全市</a></li>");
+					for(let i = 0; i < data.length; i++) {
+						$(".prison_list").append("<li><a href=''>{0}</a></li>".replace("{0}", data[i].short_name));
+					}
+
+				} else {
+					alert(resp.resultMsg);
+				}
+			},
+			error: function() {
+				alert("请求异常");
+			}
+		});
+
+		//获取重大人员风险占比以及进6个月的风险人员的柱状和折线图混合
+		$.ajax({
+			type: "post",
+			url: preReqUrl + "home/homepage/getmajorpersonriskandcharts?token=" + token,
+			contentType: "application/json;charset=utf-8",
+			data: JSON.stringify({}),
+			async: false,
+			success: function(resp) {
+				let code = resp.resultCode;
+				let data = resp.data;
+				console.log(data);
+				if(code == 1) {
+					//重大风险人员占比
+					$("#major_prisoner_count").html(data.major_risk_person_count);
+					per_1 = echarts.init(document.getElementById("imp_person_per1"));
+					option_left = {
+						tooltip: {
+							trigger: 'item',
+							formatter: "{a} <br/>{b}: {c} ({d}%)"
+						},
+						title: {
+							text: '重大风险人员占比',
+							textStyle: {
+								fontSize: 24,
+								color: 'white'
+							},
+							left: '2%'
+						},
+						series: [{
+							name: '重大风险人员占比',
+							type: 'pie',
+							selectedMode: 'single',
+							radius: [0, '50%'],
+							center: ['40%', '55%'],
+							label: {
+								normal: {
+									position: 'inner'
+								}
+							},
+							labelLine: {
+								normal: {
+									show: false
+								}
+							},
+							data: [
+								{ value: data.major_risk_person_count, name: '重大风险' },
+								{ value: data.now_prisoner_count, name: '非重大风险' },
+							]
+						}, ]
+					};
+					per_1.setOption(option_left);
+					per_3 = echarts.init(document.getElementById("imp_person_per3"));
+					option_right = {
+						series: [{
+							name: '访问来源',
+							type: 'pie',
+							selectedMode: 'single',
+							radius: [0, '60%'],
+							center: ['15%', '55%'],
+							label: {
+								normal: {}
+							},
+							labelLine: {
+								normal: {
+									show: false
+								}
+							},
+							data: [{
+									value: data.first_major_risk_count,
+									name: '\r\r\r\r\r' + data.first_major_risk_count + '人\n一级风险人员',
+									label: {
+										normal: {
+											fontSize: 20
+										}
+									},
+									itemStyle: {
+										normal: {
+											color: 'red'
+										}
+									}
+								},
+								{
+									value: data.second_major_risk_count,
+									name: '\r\r\r\r\r' + data.second_major_risk_count + '人\n二级风险人员',
+									label: {
+										normal: {
+											fontSize: 20
+										}
+									},
+									itemStyle: {
+										normal: {
+											color: 'yellow'
+										}
+									}
+								},
+								{
+									value: data.third_major_risk_count,
+									name: '\r\r\r\r\r' + data.third_major_risk_count + '人\n三级风险人员',
+									label: {
+										normal: {
+											fontSize: 20
+										}
+									},
+									itemStyle: {
+										normal: {
+											color: 'skyblue'
+										}
+									}
+								},
+								{
+									value: 1485.89,
+									itemStyle: {
+										normal: {
+											opacity: 0
+										}
+									}
+								},
+							]
+						}]
+					};
+					per_3.setOption(option_right);
+
+					//6个月的风险人员的柱状和折线图混合
+					let monthList = new Array();
+					for(let i = 0; i < data.mix_barline_xaxis_data.length; i++) {
+						let date = new Date();
+						date.setTime(data.mix_barline_xaxis_data[i]);
+						let formateDate = date.getFullYear() + "-" + (date.getMonth() + 1);
+						monthList.push(formateDate);
+					}
+					console.log(monthList);
+					per_4 = echarts.init(document.getElementById("imp_person_per4"));
+					option_part2 = {
+						tooltip: {
+							trigger: 'axis',
+							axisPointer: { // 坐标轴指示器，坐标轴触发有效
+								type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+							}
+						},
+						title: {
+							text: '年\r\r月',
+							textStyle: {
+								color: 'white'
+							},
+							left: 'right',
+							top: '3%'
+						},
+						grid: {
+							left: '3%',
+							right: '4%',
+							bottom: '3%',
+							containLabel: true
+						},
+						xAxis: [{
+							axisTick: {
+								show: false
+							},
+							axisLine: {
+								lineStyle: {
+									color: '#3F668A'
+								}
+							},
+							axisLabel: {
+								textStyle: {
+									fontSize: 14,
+									color: "white"
+								}
+							},
+							type: 'category',
+							data: monthList
+						}],
+						yAxis: [{
+							axisLabel: {
+								textStyle: {
+									fontSize: 14,
+									color: "white"
+								}
+							},
+							splitLine: {
+								lineStyle: {
+									color: ['#46708B']
+								}
+							},
+							axisLine: {
+								show: false
+							},
+							type: 'value'
+						}],
+						series: [{
+								name: '一级风险人员',
+								type: 'bar',
+								data: data.mix_barline_series_data[0],
+								itemStyle: {
+									normal: {
+										color: '#E9394D'
+									}
+								}
+							},
+							{
+								name: '二级风险人员',
+								type: 'bar',
+								data: data.mix_barline_series_data[1],
+								itemStyle: {
+									normal: {
+										color: '#F6BC00'
+									}
+								}
+							},
+							{
+								name: '三级风险人员',
+								type: 'bar',
+								data: data.mix_barline_series_data[2],
+								itemStyle: {
+									normal: {
+										color: '#00A1FC'
+									}
+								}
+							},
+							{
+								name: '总体',
+								type: 'line',
+								data: data.mix_barline_line_data,
+								itemStyle: {
+									normal: {
+										color: '#B65910'
+									}
+								}
+							}
+
+						]
+					};
+
+					per_4.setOption(option_part2);
+				} else {
+					alert(resp.resultMsg);
+				}
+			},
+			error: function() {
+				alert("请求异常");
+			}
+		});
+
+		window.onresize = function() {
+			$('.contents_two').css({ 'height': $(window).height() - 90 + "px" });
+			$(".contents_two div.row:nth-child(2)").css({ 'height': $(window).height() - $("#imp_person").height() - 186 + "px" })
+			per_1.resize();
+			per_3.resize();
+			per_4.resize();
+		}
+
+    $(".imp_person_toggle>span:nth-child(2)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：一级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
     });
-    minusVal > 0 ? curImgViewIndex-- : curImgViewIndex++;
 
-    if(curImgViewIndex === targetImgViewIndex){
-      clearInterval(curIntervalId);
-    }
+    $(".imp_person_toggle>span:nth-child(3)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：二级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
+    });
 
-
-  }
-
-  function showImgAt(index){
-    targetImgViewIndex = index;
-    if(targetImgViewIndex === curImgViewIndex){
-      return;
-    }
-    clearInterval(curIntervalId);
-    curIntervalId = setInterval(function(){
-      rotate();
-    },150);
-
-    //update scrollbar
-    if(!scrollbarDragging){
-      var l = $imgs.length-1;
-      if(targetImgViewIndex > l){
-        return;
-      }
-      var curScrollX = Math.abs(Math.round(targetImgViewIndex * (702 / l ) ) );
-      var tweenTime = Math.abs((targetImgViewIndex - curImgViewIndex) * 0.2);
-      TweenMax.to($('.scroller'),tweenTime,{x:curScrollX,ease:Sine.easeOut});
-    }
-  }
-
-
-  //CONTROLLER UPDATE
-  var $input = $('.controller input');
-  $input.keyup(function(e){
-    if(e.keyCode === 13){
-      showImgAt(parseInt($input.val()))
-    }
-  });
-
-  //just to do start up animation
-  showImgAt(1);
-
-
-
-
-  //----------------------- Dragging Utility ----------------------
-  Draggable.create('.scroller',{type:'x',bounds:{left:0,top:0,width:802,height:0},onDrag:function(){
-    var curImgIndex = Math.abs(Math.round(this.x / (802/l)));
-
-    targetImgViewIndex = curImgIndex;
-    if(targetImgViewIndex === curImgViewIndex){
-      return;
-    }
-    rotate();
-
-  },onDragStart:function(){
-    scrollbarDragging = true;
-  },onDragEnd:function(e){
-    scrollbarDragging = false;
-  }});
-
-  $('.scrolller-container').on('click',function(e){
-    var curImgIndex = Math.abs(Math.round(e.offsetX / (802/l)));
-    if(curImgIndex >= $imgs.length){
-      curImgIndex = $imgs.length - 1;
-    }console.log('boom');
-    showImgAt(curImgIndex);
-  });
-
-  $('.scrolller-container .scroller').on('click', function(e){
-    e.stopPropagation();
-  });
-
-
-  $imgs.on('click',function(){
-    showImgAt($imgs.index($(this)));
-  });
-
-  per_1=echarts.init(document.getElementById("imp_person_per1"));
-
-  option_left= {
-    tooltip: {
-      trigger: 'item',
-      formatter: "{a} <br/>{b}: {c} ({d}%)"
-    },
-    title:{
-      text:'重大风险人员占比',
-      textStyle:{
-        fontSize:24,
-        color:'white'
-      },
-      left:'2%'
-    },
-    series: [
-      {
-        name:'访问来源',
-
-        type:'pie',
-        selectedMode: 'single',
-        radius: [0, '50%'],
-        center:['40%','55%'],
-        label: {
-          normal: {
-            position: 'inner'
-          }
-        },
-        labelLine: {
-          normal: {
-            show: false
-          }
-        },
-        data:[
-          {value:39, name:'39%'},
-          {value:61, name:'61%'},
-        ]
-      },
-    ]
-  };
-
-  per_1.setOption(option_left);
-
-  per_3=echarts.init(document.getElementById("imp_person_per3"));
-
-  option_right= {
-    series: [
-      {
-        name:'访问来源',
-        type:'pie',
-
-        selectedMode: 'single',
-        radius: [0, '60%'],
-        center:['15%','55%'],
-        label: {
-          normal: {
-          }
-        },
-        labelLine: {
-          normal: {
-            show: false
-          }
-        },
-
-        data:[
-          {value:150, name:'\r\r\r\r\r150人\n重大风险人员',
-            label:{
-              normal:{
-                fontSize:20
-              }
-            },
-            itemStyle:{
-              normal:{
-                color:'red'
-
-              }
-            }
-          },
-          {value:500, name:'\r\r\r\r500人\n二级风险人员',
-            label:{
-              normal:{
-                fontSize:20
-              }
-            },
-            itemStyle:{
-              normal:{
-                color:'yellow'
-              },
-            }
-          },
-          {value:300, name:'\r\r\r\r300人\n三级风险人员',
-            label:{
-              normal:{
-                fontSize:20
-              }
-            },
-            itemStyle:{
-              normal:{
-                color:'skyblue'
-              }
-            }
-          },
-          {value:1485.89,
-            itemStyle: {
-              normal: {
-                opacity:0
-              }
-            }
-          },
-        ]
-      }
-    ]
-  };
-
-  per_3.setOption(option_right);
-
-  per_4=echarts.init(document.getElementById("imp_person_per4"));
-
-  option_part2= {
-    tooltip : {
-      trigger: 'axis',
-      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-      }
-    },
-    title:{
-      text:'年\r\r月',
-      textStyle:{
-        color:'white'
-      },
-      left:'right',
-      top:'3%'
-    },
-    grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
-    },
-    xAxis : [
-      {
-        axisTick: {
-          show: false
-        },
-        axisLine: {
-          lineStyle: {
-            color: '#3F668A'
-          }
-        },
-        axisLabel: {
-          textStyle: {
-            fontSize: 14,
-            color:"white"
-          }
-        },
-        type : 'category',
-        data : ['周一','周二','周三','周四','周五','周六','周日']
-      }
-    ],
-    yAxis : [
-      {
-        axisLabel: {
-          textStyle: {
-            fontSize: 14,
-            color:"white"
-          }
-        },
-        splitLine: {
-          lineStyle: {
-            color: ['#46708B']
-          }
-        },
-        axisLine: {
-          show:false
-        },
-        type : 'value'
-      }
-    ],
-    series : [
-      {
-        name:'直接访问',
-        type:'bar',
-        data:[320, 332, 301, 334, 390, 330, 320],
-        itemStyle:{
-          normal:{
-            color:'#E9394D'
-          }
-        }
-      },
-      {
-        name:'邮件营销',
-        type:'bar',
-        data:[120, 132, 101, 134, 90, 230, 210],
-        itemStyle:{
-          normal:{
-            color:'#F6BC00'
-          }
-        }
-      },
-      {
-        name:'联盟广告',
-        type:'bar',
-        data:[520, 582, 591, 534, 590, 530, 510],
-        itemStyle:{
-          normal:{
-            color:'#00A1FC'
-          }
-        }
-      },
-      {
-        name:'视屏广告',
-        type:'line',
-        data:[933,945,989,967,960,978,950],
-        itemStyle:{
-          normal:{
-            color:'#B65910'
-          }
-        }
-      }
-    ]
-  };
-
-  per_4.setOption(option_part2);
-
-  window.onresize = function () {
-    $('.contents_two').css({'height':$(window).height()-90+"px"});
-    $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
-    per_1.resize();
-    per_3.resize();
-    per_4.resize();
-  }
-
-
-  $(".imp_person_toggle>span:nth-child(2)").click(function(){
-    $(".img-holder>div p:nth-child(4)").text("风险等级：一级");
-    $(this).css("backgroundColor","#1C4564");
-    $(this).siblings().css("backgroundColor","");
-  });
-
-  $(".imp_person_toggle>span:nth-child(3)").click(function(){
-    $(".img-holder>div p:nth-child(4)").text("风险等级：二级");
-    $(this).css("backgroundColor","#1C4564");
-    $(this).siblings().css("backgroundColor","");
-  });
-
-  $(".imp_person_toggle>span:nth-child(4)").click(function(){
-   $(".img-holder>div p:nth-child(4)").text("风险等级：三级");
-    $(this).css("backgroundColor","#1C4564");
-    $(this).siblings().css("backgroundColor","");
-  });
-
-
-
-</script>
+    $(".imp_person_toggle>span:nth-child(4)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：三级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
+    });
+	</script>
 
 </body>
-
