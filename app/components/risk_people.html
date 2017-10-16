@@ -299,7 +299,8 @@
   }
 
   .img-holder>div{
-    transform:translate(45%,-100%);
+    transform: translate(72%,-100%);
+    width: 58%;
   }
 
   .img-holder>div p{
@@ -517,8 +518,6 @@
     </div>
 </div>
 <script>
-
-
   var $imgs = $('.slide_total .img-holder');
   var l = $imgs.length;
   var radius = 400;
@@ -605,7 +604,7 @@
 
     //update scrollbar
     if(!scrollbarDragging){
-      var l = $imgs.length - 1;
+      var l = $imgs.length-1;
       if(targetImgViewIndex > l){
         return;
       }
@@ -625,7 +624,7 @@
   });
 
   //just to do start up animation
-  showImgAt(5);
+  showImgAt(1);
 
 
 
@@ -662,7 +661,6 @@
   $imgs.on('click',function(){
     showImgAt($imgs.index($(this)));
   });
-
 
   per_1=echarts.init(document.getElementById("imp_person_per1"));
 
@@ -898,16 +896,24 @@
 
 
   $(".imp_person_toggle>span:nth-child(2)").click(function(){
-    $(".img-holder>div p:nth-child(4)").text("风险等级：一级")
+    $(".img-holder>div p:nth-child(4)").text("风险等级：一级");
+    $(this).css("backgroundColor","#1C4564");
+    $(this).siblings().css("backgroundColor","");
   });
 
   $(".imp_person_toggle>span:nth-child(3)").click(function(){
-    $(".img-holder>div p:nth-child(4)").text("风险等级：二级")
+    $(".img-holder>div p:nth-child(4)").text("风险等级：二级");
+    $(this).css("backgroundColor","#1C4564");
+    $(this).siblings().css("backgroundColor","");
   });
 
   $(".imp_person_toggle>span:nth-child(4)").click(function(){
-   $(".img-holder>div p:nth-child(4)").text("风险等级：三级")
+   $(".img-holder>div p:nth-child(4)").text("风险等级：三级");
+    $(this).css("backgroundColor","#1C4564");
+    $(this).siblings().css("backgroundColor","");
   });
+
+
 
 </script>
 
