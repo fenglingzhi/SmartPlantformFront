@@ -43,15 +43,15 @@
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
-<script type="text/javascript" src="app/lib/3d_Carousel/index.js"></script>
-<script type="text/javascript" src="app/lib/3d_Carousel/jquery.zySlide.js"></script>
-<script src="app/js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="app/lib/js/jquery.js"></script>-->
+<script type="text/javascript" src="app/lib/js/Draggable.min.js"></script>
+<script type="text/javascript" src="app/lib/js/TweenMax.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	/* 载入页面 */
 	$('#header_nav').load('app/components/header.html');
-	$('#content').load('app/components/home.html');
-//	$('#content').load('app/components/risk_people.html');
+//	$('#content').load('app/components/home.html');
+	$('#content').load('app/components/risk_people.html');
 	$('#background').load('app/components/background.html');
 	/* 页面缩放 */
 	$(window).resize(function(){
@@ -60,18 +60,13 @@ $(function(){
       	$('#background').css({'height':$(window).height()});
 	    var heiss=$('#content').css({'height':$(window).height()-90+"px"});
 	    $("#ss").css({'height':heiss.height()-50+"px"});
-	    //重置容器高宽
-	    zero.resize();
-	    myChart.resize();
-	    second.resize();
-	    fourth.resize();
 	});
   	console.log($(window).height());
 	/* 页面计算 */
 	$('#background').css({'width':$(window).width()},{'height':$(window).height()});
-	$('#content').css({'height':$(window).height()-90+"px"});
+//	$('#content').css({'height':$(window).height()-90+"px"});
+  $('.contents_two').css({'height':$(window).height()-90+"px"});
+  $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
 });
-
-
 
 </script>
