@@ -45,12 +45,13 @@
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
 <script type="text/javascript" src="app/lib/3d_Carousel/index.js"></script>
 <script type="text/javascript" src="app/lib/3d_Carousel/jquery.zySlide.js"></script>
+<script src="app/js/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	/* 载入页面 */
 	$('#header_nav').load('app/components/header.html');
-	$('#content').load('app/components/home.html');
-//	$('#content').load('app/components/risk_people.html');
+//	$('#content').load('app/components/home.html');
+	$('#content').load('app/components/risk_people.html');
 	$('#background').load('app/components/background.html');
 	/* 页面缩放 */
 	$(window).resize(function(){
@@ -66,9 +67,11 @@ $(function(){
 	    fourth.resize();
 	});
   	console.log($(window).height());
-
 	/* 页面计算 */
 	$('#background').css({'width':$(window).width()},{'height':$(window).height()});
 	$('#content').css({'height':$(window).height()-90+"px"});
 });
+
+
+
 </script>
