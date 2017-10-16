@@ -60,8 +60,12 @@ $(function(){
       	$('#background').css({'height':$(window).height()});
 	    var heiss=$('#content').css({'height':$(window).height()-90+"px"});
 	    $("#ss").css({'height':heiss.height()-50+"px"});
+      //重置容器高宽
+      zero.resize();
+      myChart.resize();
+      second.resize();
+      fourth.resize();
 	});
-  	console.log($(window).height());
 	/* 页面计算 */
 	$('#background').css({'width':$(window).width()},{'height':$(window).height()});
 	$('#content').css({'height':$(window).height()-90+"px"});
