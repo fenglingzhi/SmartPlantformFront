@@ -23,9 +23,9 @@
 	<div id="header_nav"></div>
 	<!-- 头部导航 -->
 
-	<!-- 侧栏菜单 -->
-	<!--<div id="menu"></div>-->
-	<!-- 侧栏菜单 -->
+	<!-- 悬浮栏 -->
+	<div id="menu"></div>
+	<!-- 悬浮栏 -->
 
 	<!-- 内容主视区 -->
 	<div id="content">
@@ -50,8 +50,10 @@
 $(function(){
 	/* 载入页面 */
 	$('#header_nav').load('app/components/header.html');
-	$('#content').load('app/components/home.html');
+//	$('#menu').load('app/components/menu.html');
+//	$('#content').load('app/components/home.html');
 //	$('#content').load('app/components/risk_people.html');
+	$('#content').load('app/components/new_person.html');
 	$('#background').load('app/components/background.html');
 	/* 页面缩放 */
 	$(window).resize(function(){
@@ -61,10 +63,10 @@ $(function(){
 	    var heiss=$('#content').css({'height':$(window).height()-90+"px"});
 	    $("#ss").css({'height':heiss.height()-50+"px"});
 	    //重置容器高宽
-	    zero.resize();
-	    myChart.resize();
-	    second.resize();
-	    fourth.resize();
+//	    zero.resize();
+//	    myChart.resize();
+//	    second.resize();
+//	    fourth.resize();
 	});
   	console.log($(window).height());
 	/* 页面计算 */

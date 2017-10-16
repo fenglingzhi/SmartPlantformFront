@@ -1,0 +1,675 @@
+<style>
+  .person{
+    width:90%;
+    height: 90%;
+    border: 1px solid red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .col-sm-1,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12{
+    padding: 0;
+  }
+  .per-left{
+    height: 100%;
+    border: 1px solid yellow;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px
+  }
+  .per-mid{
+    height: 100%;
+    border: 1px solid yellow;
+  }
+  .per-right{
+    height: 100%;
+    border: 1px solid yellow;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px
+  }
+  .per-mid>div{
+    width: 100%;
+    height: 20%;
+    border:1px solid skyblue;
+    background-color: rgba(35,54,78,.6)
+  }
+  .per-mid>div>div>p{
+    margin: 0px;
+  }
+  .per-mid>div>div>p:first-child{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: white;
+  }
+  .per-mid>div>div{
+    position: relative;
+  }
+  .per-mid>div>div>p:last-child{
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    font-size: 36px;
+    color: white;
+  }
+  .left-fx{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: white;
+    font-size: 24px;
+    border: 1px solid #31A2BF;
+    padding: 3px;
+    padding-left:7px ;
+    padding-right:7px ;
+    border-radius: 5px;
+    box-shadow: inset 0 0 15px 3px #169ACB;
+  }
+  .left-img{
+    position: absolute;
+    width: 60%;
+    -webkit-animation:circle 5s infinite linear;/*匀速 循环*/
+  }
+  @-webkit-keyframes circle{
+    0%{ transform:rotate(0deg); }
+    100%{ transform:rotate(360deg); }
+  }
+  .left-dw{
+    text-align: center;
+    color: yellow;
+    position: absolute;
+  }
+  .left-dw p{
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid yellow;
+  }
+  .left-dw p>span{
+    font-size: 38px;
+  }
+  .left-dw>span{
+    font-size: 12px;
+    text-align: center;
+  }
+  .man-wo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: auto 0;
+  }
+ .man-wo>p{
+   float: left;
+   color: white;
+   font-size: 22px;
+ }
+  .man-wo>p:first-child{
+    margin-left:23% ;
+    margin-right: 50px;
+  }
+  .man{
+    color: #02D9FA;
+  }
+  .woman{
+
+  }
+</style>
+
+<body>
+  <div class="person row">
+    <div class="col-sm-3 per-left">
+      <div id="left-df" style="width: 100%;height: 59%;position: relative;">
+        <p class="left-fx">全市风险</p>
+        <img src="app/img/pinfenbg.png" class="left-img"/>
+        <div class="left-dw">
+          <p><span>40</span>分</p>
+          <span>良好</span>
+        </div>
+        <div class="man-wo">
+          <p class="man"><span>男</span><span>55</span></p>
+          <p class="woman"><span>女</span><span>49</span></p>
+        </div>
+      </div>
+      <hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>
+      <div style="width: 100%;height: 40%;">
+
+      </div>
+    </div>
+
+
+
+    <div  class="col-sm-2 per-mid">
+      <div>
+        <div style="width: 50%;height: 100%;float: left">
+          <p>正常收押</p>
+          <p>
+            15<span></span>
+          </p>
+        </div>
+        <div style="width: 50%;height: 100%;float: left">
+          <div style="width: 100%;height: 100%" id="mid-1"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="width: 50%;height: 100%;float: left">
+          <p>三类案件收押</p>
+          <p>
+            15<span></span>
+          </p>
+        </div>
+        <div style="width: 50%;height: 100%;float: left">
+          <div style="width: 100%;height: 100%" id="mid-2"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="width: 50%;height: 100%;float: left">
+          <p>风险收押</p>
+          <p>
+            15<span></span>
+          </p>
+        </div>
+        <div style="width: 50%;height: 100%;float: left">
+          <div style="width: 100%;height: 100%" id="mid-3"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="width: 50%;height: 100%;float: left">
+          <p>重要罪犯嫌疑人</p>
+          <p>
+            15<span></span>
+          </p>
+        </div>
+        <div style="width: 50%;height: 100%;float: left">
+          <div style="width: 100%;height: 100%" id="mid-4"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="width: 50%;height: 100%;float: left">
+          <p>风险人员</p>
+          <p>
+            15<span></span>
+          </p>
+        </div>
+        <div style="width: 50%;height: 100%;float: left">
+          <div style="width: 100%;height: 100%" id="mid-5"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div  class="col-sm-7 per-right">
+      <div style="width: 100%;height:50%"></div>
+      <hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>
+      <div style="width: 100%;height:49%"></div>
+    </div>
+
+
+  </div>
+</body>
+<script>
+
+  imgFw=$("#left-df").width();
+  imgFh=$("#left-df").height();
+  imgW=$(".left-img").width();
+  imgH=$(".left-img").height();
+  fenW=$(".left-dw").width();
+  fenH=$(".left-dw").height();
+  //  console.log(imgFw+"px");
+  //  console.log(imgFh+"px");
+  //  console.log(imgH+"px");
+  //  console.log(imgW+"px");
+  $(".left-img").css({"left":imgFw/2-imgW/2+"px"});
+  $(".left-img").css({"top":10+(imgFh/2-imgW/2)+"px"});
+  $(".left-dw").css({"left":imgFw/2-fenW/2+"px"});
+  $(".left-dw").css({"top":10+(imgFh/2-fenH/2)+"px"});
+
+
+  mid_one=echarts.init(document.getElementById("mid-1"));
+  option_one = {
+    title: {
+      text: '44%',
+      x: 'center',
+      y: 'center',
+      textStyle: {
+        fontWeight: 'normal',
+        color: "#0bb6f0",
+        fontSize: 20
+      }
+    },
+    color: ['#45EB23'],
+    tooltip: {
+      show: false,
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      show: false,
+      itemGap: 12,
+      data: ['01', '02']
+    },
+    toolbox: {
+      show: false,
+      feature: {
+        mark: {
+          show: true
+        },
+        dataView: {
+          show: true,
+          readOnly: false
+        },
+        restore: {
+          show: true
+        },
+        saveAsImage: {
+          show: true
+        }
+      }
+    },
+    series: [{
+      name: 'Line 1',
+      type: 'pie',
+      clockWise: false,
+      radius: [35, 38],
+      itemStyle: {
+        normal: {
+          label: {
+            show: false
+          },
+          labelLine: {
+            show: false
+          },
+          shadowBlur: 40,
+          shadowColor: 'rgba(40, 40, 40, 0.5)',
+        }
+      },
+      hoverAnimation: false,
+      data: [{
+        value: 56,
+        itemStyle: {
+          normal: {
+            color: '#214F73',//未完成的圆环的颜色
+            label: {
+              show: false
+            },
+            labelLine: {
+              show: false
+            }
+          },
+          emphasis: {
+            color: 'rgba(44,59,70,1)'//未完成的圆环的颜色
+          }
+        }
+      }, {
+        value: 44
+      }
+
+      ]
+    },
+
+
+    ]
+  };
+  mid_one.setOption(option_one);
+
+  mid_two=echarts.init(document.getElementById("mid-2"));
+  option_two = {
+    title: {
+      text: '24%',
+      x: 'center',
+      y: 'center',
+      textStyle: {
+        fontWeight: 'normal',
+        color: "#0bb6f0",
+        fontSize: 20
+      }
+    },
+    color: ['#E2EE23', '#313443', '#fff'],
+    tooltip: {
+      show: false,
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      show: false,
+      itemGap: 12,
+      data: ['01', '02']
+    },
+    toolbox: {
+      show: false,
+      feature: {
+        mark: {
+          show: true
+        },
+        dataView: {
+          show: true,
+          readOnly: false
+        },
+        restore: {
+          show: true
+        },
+        saveAsImage: {
+          show: true
+        }
+      }
+    },
+    series: [{
+      name: 'Line 1',
+      type: 'pie',
+      clockWise: false,
+      radius: [35, 38],
+      itemStyle: {
+        normal: {
+          label: {
+            show: false
+          },
+          labelLine: {
+            show: false
+          },
+          shadowBlur: 40,
+          shadowColor: 'rgba(40, 40, 40, 0.5)'
+        }
+      },
+      hoverAnimation: false,
+      data: [{
+        value: 76,
+        itemStyle: {
+          normal: {
+            color: '#214F73',//未完成的圆环的颜色
+            label: {
+              show: false
+            },
+            labelLine: {
+              show: false
+            }
+          },
+          emphasis: {
+            color: 'rgba(44,59,70,1)'//未完成的圆环的颜色
+          }
+        }
+      }, {
+        value: 24
+      }
+
+      ]
+    },
+
+
+    ]
+  };
+  mid_two.setOption(option_two);
+
+  mid_three=echarts.init(document.getElementById("mid-3"));
+  option_three = {
+    title: {
+      text: '44%',
+      x: 'center',
+      y: 'center',
+      textStyle: {
+        fontWeight: 'normal',
+        color: "#0bb6f0",
+        fontSize: 20
+      }
+    },
+    color: ['#EDA826', '#313443', '#fff'],
+    tooltip: {
+      show: false,
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      show: false,
+      itemGap: 12,
+      data: ['01', '02']
+    },
+    toolbox: {
+      show: false,
+      feature: {
+        mark: {
+          show: true
+        },
+        dataView: {
+          show: true,
+          readOnly: false
+        },
+        restore: {
+          show: true
+        },
+        saveAsImage: {
+          show: true
+        }
+      }
+    },
+    series: [{
+      name: 'Line 1',
+      type: 'pie',
+      clockWise: false,
+      radius: [35, 38],
+      itemStyle: {
+        normal: {
+          label: {
+            show: false
+          },
+          labelLine: {
+            show: false
+          },
+          shadowBlur: 40,
+          shadowColor: 'rgba(40, 40, 40, 0.5)',
+        }
+      },
+      hoverAnimation: false,
+      data: [{
+        value: 66,
+        itemStyle: {
+          normal: {
+            color: '#214F73',//未完成的圆环的颜色
+            label: {
+              show: false
+            },
+            labelLine: {
+              show: false
+            }
+          },
+          emphasis: {
+            color: 'rgba(44,59,70,1)'//未完成的圆环的颜色
+          }
+        }
+      }, {
+        value: 34,
+      }
+
+      ]
+    },
+
+
+    ]
+  };
+  mid_three.setOption(option_three);
+
+  mid_four=echarts.init(document.getElementById("mid-4"));
+  option_four = {
+    title: {
+      text: '64%',
+      x: 'center',
+      y: 'center',
+      textStyle: {
+        fontWeight: 'normal',
+        color: "#0bb6f0",
+        fontSize: 20
+      }
+    },
+    color: ['#ED2525', '#313443', '#fff'],
+    tooltip: {
+      show: false,
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      show: false,
+      itemGap: 12,
+      data: ['01', '02']
+    },
+    toolbox: {
+      show: false,
+      feature: {
+        mark: {
+          show: true
+        },
+        dataView: {
+          show: true,
+          readOnly: false
+        },
+        restore: {
+          show: true
+        },
+        saveAsImage: {
+          show: true
+        }
+      }
+    },
+    series: [{
+      name: 'Line 1',
+      type: 'pie',
+      clockWise: false,
+      radius: [35, 38],
+      itemStyle: {
+        normal: {
+          label: {
+            show: false
+          },
+          labelLine: {
+            show: false
+          },
+          shadowBlur: 40,
+          shadowColor: 'rgba(40, 40, 40, 0.5)',
+        }
+      },
+      hoverAnimation: false,
+      data: [{
+        value: 36,
+        itemStyle: {
+          normal: {
+            color: '#214F73',//未完成的圆环的颜色
+            label: {
+              show: false
+            },
+            labelLine: {
+              show: false
+            }
+          },
+          emphasis: {
+            color: 'rgba(44,59,70,1)'//未完成的圆环的颜色
+          }
+        }
+      }, {
+        value: 64,
+      }
+
+      ]
+    },
+
+
+    ]
+  };
+  mid_four.setOption(option_four);
+
+  mid_five=echarts.init(document.getElementById("mid-5"));
+  option_five = {
+    title: {
+      text: '54%',
+      x: 'center',
+      y: 'center',
+      textStyle: {
+        fontWeight: 'normal',
+        color: "#0bb6f0",
+        fontSize: 20
+      }
+    },
+    color: ['#A126E5', '#313443', '#fff'],
+    tooltip: {
+      show: false,
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      show: false,
+      itemGap: 12,
+      data: ['01', '02']
+    },
+    toolbox: {
+      show: false,
+      feature: {
+        mark: {
+          show: true
+        },
+        dataView: {
+          show: true,
+          readOnly: false
+        },
+        restore: {
+          show: true
+        },
+        saveAsImage: {
+          show: true
+        }
+      }
+    },
+    series: [{
+      name: 'Line 1',
+      type: 'pie',
+      clockWise: false,
+      radius: [35, 38],
+      itemStyle: {
+        normal: {
+          label: {
+            show: false
+          },
+          labelLine: {
+            show: false
+          },
+          shadowBlur: 40,
+          shadowColor: 'rgba(40, 40, 40, 0.5)'
+        }
+      },
+      hoverAnimation: false,
+      data: [{
+        value: 46,
+        itemStyle: {
+          normal: {
+            color: '#214F73',//未完成的圆环的颜色
+            label: {
+              show: false
+            },
+            labelLine: {
+              show: false
+            }
+          },
+          emphasis: {
+            color: 'rgba(44,59,70,1)'//未完成的圆环的颜色
+          }
+        }
+      }, {
+        value: 54
+      }
+
+      ]
+    },
+
+
+    ]
+  };
+  mid_five.setOption(option_five);
+</script>

@@ -9,14 +9,14 @@
   float:left;
   width:100%;
   padding-bottom: 50px;
+  position: relative;
 }
-/*#menu{*/
-	/*width:135px;*/
-	/*margin-top:20px;*/
-	/*margin-bottom:27px;*/
-	/*transform: translate(0,-20px);*/
-	/*float:left;*/
-/*}*/
+#menu{
+  position: absolute;
+	width:100%;
+  float:left;
+  z-index: 5;
+}
 /*#slider{*/
   /*width:230px;*/
   /*float:left;*/

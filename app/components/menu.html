@@ -1,245 +1,85 @@
 <style type="text/css">
-  /*.menus{*/
-    /*background: rgba(255,192,203,.5);*/
-  /*}*/
-  .hide_date{display:none}
-
-  .menu_img{
-    width:25%;
+  .menus{
+    background: rgba(255,255,255,0.5);
+    width: 100%;
+    height: 110px;
+    text-align: center;
+    position: relative;
+    color: white;
   }
-
-  .menus>ul:first-child li{
-    width:124px;
-    height:108px;
-    line-height:54px;
-    text-align:center;
-    padding-top:5%;
-    padding-bottom:5%;
+  .menus>div{
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom: 0;margin:auto;
+  width: 615px;
+  height: 100px
   }
-
-
-  .menus>ul li>img{
-    cursor:pointer;
-    vertical-align:middle
+  .menus ul>li:nth-child(1){
+    float: left;
+    width: 100px;
+    height: 80px;
   }
-
-  .menus>ul li{
-    cursor:pointer;
-    vertical-align:middle;
+  .menus ul>li:nth-child(5){
+    margin-left: 20px;
+    float: left;
+    width: 100px;
+    height: 80px;
   }
-
-  #big_date{position:relative;
-  z-index:10}
-
-  #menu>.menus>ul li>p{
-    color:#fff;
-    font-size:20px;
-    cursor:pointer;
-    transform:translate(0,-20%)
+  .menus ul>li:nth-child(2),.menus ul>li:nth-child(4){
+    margin-left: 20px;
+    float: left;
+    width: 110px;
+    height: 85px;
   }
-
-  .menus>ul li>p:last-child{
-    padding-bottom:0;
-    margin-bottom:0;
+  .menus ul>li:nth-child(3){
+    margin-left: 20px;
+    float: left;
+    width: 115px;
+    height: 90px;
   }
-
-  #date_1{
-    transform:translate(85%,-155%);
-    background-color:#1461CB;
-    position:relative;
-    z-index:9;
-    padding-top:1%;
-    padding-bottom:3%;
-    text-align:center;
+  .menus li div{
+    background-color: black;
+    width: 100%;
+    height: 60%;
+    border: 1px solid transparent;
   }
-  #date_1>ul>li{
-    padding-left:1%;
-    margin-right:3%;
-    margin-left:3%;
-    margin-top:3%;
-    padding:0;
-    height:50px;
-    line-height:50px;
-    cursor:pointer;
-    color:#fff
-  }
-  #date_2{
-    transform:translate(175%,-155%);
-    background-color:#1974F6;
-    padding-top:1%;
-    padding-bottom:3%;
-    text-align:center;
-  }
-  #date_2>ul>li{
-    margin-right:3%;
-    margin-left:3%;
-    margin-top:3%;
-    padding:0;
-    height:50px;
-    line-height:50px;
-    cursor:pointer;
-    color:#fff
+  .active{
+    border: 10px solid skyblue;
+    box-shadow: 0 0 8px 3px #1675CB;
   }
 </style>
 
 
-<div class="menus">
-  <!--<div class="nav">-->
-    <!--<div class="link" onclick="goto('app/components/next.html')"  style="margin-top: 0;">跳转到下一个页面</div>-->
-  <!--</div>-->
-  <!--<div class="nav">-->
-    <!--<div class="link" onclick="goto('app/components/next2.html')">跳转到下一个页面</div>-->
-  <!--</div>-->
-  <ul>
-    <li>
-      <img class="menu_img" src="app/img/home.png" alt="">
-      <p>首&nbsp;&nbsp;页</p>
-    </li>
-    <li>
-      <img class="menu_img" src="app/img/teach.png" alt="">
-      <p>业务指导</p>
-    </li>
-    <li>
-      <img class="menu_img" src="app/img/check.png" alt="">
-      <p>日常监督</p>
-    </li>
-    <li id="big_date">
-      <img class="menu_img" src="app/img/date.png" alt="">
-      <p>大数据</p>
-    </li>
-    <li>
-      <img class="menu_img" src="app/img/search.png" alt="">
-      <p>综合查询</p>
-    </li>
-    <li>
-      <img class="menu_img" src="app/img/study.png" alt="">
-      <p>学习帮助</p>
-    </li>
-    <li>
-      <img class="menu_img" src="app/img/do.png" alt="">
-      <p>设置维护</p>
-    </li>
-  </ul>
-  <div id="date_1">
+<div class="menus" style="position: relative">
+  <div>
     <ul>
       <li>
-          二级菜单名称
+        <p>页面一</p>
+        <div  class="active"></div>
       </li>
       <li>
-          二级菜单名称
+        <p>页面二</p>
+        <div></div>
       </li>
       <li>
-          二级菜单名称
+        <p>页面三</p>
+        <div  class="active"></div>
       </li>
       <li>
-          二级菜单名称
+        <p>页面四</p>
+        <div></div>
       </li>
       <li>
-          二级菜单名称
+        <p>页面五</p>
+        <div  class="active"></div>
       </li>
     </ul>
   </div>
-  <div id="date_2">
-    <ul>
-      <li>
-          三级菜单名称
-      </li>
-      <li>
-          三级菜单名称
-      </li>
-      <li>
-          三级菜单名称
-      </li>
-      <li>
-          三级菜单名称
-      </li>
-      <li>
-          三级菜单名称
-      </li>
-    </ul>
-  </div>
+
 </div>
 
-
 <script type="text/javascript">
-//  function goto(path){
-//    $('#content').load(path)
-//  }
-  $(function(){
-    $("#date_1").addClass("hide_date");
-    $("#date_2").addClass("hide_date");
-  });
-  $("#date_1>ul li:first-child").mouseover(function(){
-    $("#date_2").css("transform","translate(185%,-255%)");
-  });
-  $("#date_1>ul li:nth-child(2)").mouseover(function(){
-    $("#date_2").css("transform","translate(185%,-245%)")
-  })
-  $("#date_1>ul li:nth-child(3)").mouseover(function(){
-    $("#date_2").css("transform","translate(185%,-230%)")
-  })
-  $("#date_1>ul li:nth-child(4)").mouseover(function(){
-    $("#date_2").css("transform","translate(185%,-268%)")
-  })
-  $("#date_1>ul li:nth-child(5)").mouseover(function(){
-    $("#date_2").css("transform","translate(185%,-255%)")
-  })
 
-  $("#big_date").click(function(){
-      if($("#date_1").css("display")==="block"){
-        $("#date_1").addClass("hide_date");
-        $("#date_2").addClass("hide_date");
-        $("#big_date").css("backgroundColor","rgba(1, 76, 143, 0.6)");
-      }
-      else
-      {$("#date_1").removeClass("hide_date");
-        }
-  }
-  );
-
-  $("#big_date").mouseout(function(){
-    $("#date_1").addClass("hide_date");
-    $("#date_2").addClass("hide_date");
-  });
-
-  $(".menus>ul li").mouseout(function(){
-    $(this).not("#big_date").css("backgroundColor","")
-  });
-
-  $("#date_1 li").mouseover(function(){
-    $("#date_1").removeClass("hide_date");
-    $("#date_2").addClass("hide_date");
-  });
-
-  $("#date_2 li").mouseover(function(){
-    $("#date_1").removeClass("hide_date");
-    $("#date_2").removeClass("hide_date");
-  });
-
-  $("#date_1>ul li").click(function(){
-    $(this).css("background","#014C8F");
-    $(this).siblings().css("backgroundColor","");
-      $("#date_2").removeClass("hide_date");
-      $("#date_2").removeClass("hide_date");
-    }
-      );
-
-  $("#date_2>ul li").click(function(){
-      $("#date_2").addClass("hide_date");
-      $("#date_1").addClass("hide_date");
-      $("#big_date").css("backgroundColor","")
-    }
-   );
-
-  $("#date_2>ul li").mouseover(function(){
-    $(this).css("background","#014C8F");
-    $(this).siblings().css("backgroundColor","");
-  }
-);
-
-  $("#menu li").mouseover(function(){
-    $(this).css("backgroundColor","rgba(1,76,143,.6)");
-    console.log($(this).css("backgroundColor"));
-    $(this).siblings().css("backgroundColor","");
-  })
 </script>
