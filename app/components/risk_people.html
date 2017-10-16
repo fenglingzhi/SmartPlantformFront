@@ -723,7 +723,7 @@
 									},
 									itemStyle: {
 										normal: {
-											color: 'red',
+											color: 'red'
 										}
 									}
 								},
@@ -737,8 +737,8 @@
 									},
 									itemStyle: {
 										normal: {
-											color: 'yellow',
-										},
+											color: 'yellow'
+										}
 									}
 								},
 								{
@@ -751,15 +751,15 @@
 									},
 									itemStyle: {
 										normal: {
-											color: 'skyblue',
-										},
+											color: 'skyblue'
+										}
 									}
 								},
 								{
 									value: 1485.89,
 									itemStyle: {
 										normal: {
-											opacity: 0,
+											opacity: 0
 										}
 									}
 								},
@@ -791,7 +791,7 @@
 								color: 'white'
 							},
 							left: 'right',
-							top: '3%',
+							top: '3%'
 						},
 						grid: {
 							left: '3%',
@@ -943,17 +943,23 @@
 			per_4.resize();
 		}
 
-		$(".imp_person_toggle>span:nth-child(2)").click(function() {
-			$(".img-holder>div p:nth-child(4)").text("风险等级：一级")
-		});
+    $(".imp_person_toggle>span:nth-child(2)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：一级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
+    });
 
-		$(".imp_person_toggle>span:nth-child(3)").click(function() {
-			$(".img-holder>div p:nth-child(4)").text("风险等级：二级")
-		});
+    $(".imp_person_toggle>span:nth-child(3)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：二级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
+    });
 
-		$(".imp_person_toggle>span:nth-child(4)").click(function() {
-			$(".img-holder>div p:nth-child(4)").text("风险等级：三级")
-		});
+    $(".imp_person_toggle>span:nth-child(4)").click(function(){
+      $(".img-holder>div p:nth-child(4)").text("风险等级：三级");
+      $(this).css("backgroundColor","#1C4564");
+      $(this).siblings().css("backgroundColor","");
+    });
 	</script>
 	<script type="text/javascript" src="app/lib/js/Draggable.min.js"></script>
 <script type="text/javascript" src="app/lib/js/TweenMax.min.js"></script>
