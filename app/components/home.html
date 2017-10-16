@@ -171,7 +171,7 @@
     color: #ffffff;
     display: inline-block;
   }
-  .wendu>p:nth-child(2){
+  .wendu>p:nth-child(3){
     color: orange ;
     display: inline-block;
     margin-left: 10px;
@@ -214,6 +214,20 @@
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
   }
+  #qfxdw p,.second-fir p{
+    z-index: 5;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    border: 1px solid #31A2BF;
+    padding: 3px;
+    padding-left:5px ;
+    padding-right:5px ;
+    font-size: 24px;
+    color:white;
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px 5px #169ACB;
+  }
   #fxzhishu{
     height: 100%;
     padding: 0;
@@ -229,25 +243,33 @@
 <body>
 
 <div class="contents_two row">
-  <div class="col-sm-4">
-
-    <span class="s-tip">
+  <div class="col-sm-4" style="position: relative;height: 100%">
+    <div style="position: absolute;bottom: 0;left: 20px">
+      <span class="s-tip">
       <img src="app/img/dingwei.png" style="vertical-align: middle"/>
       <p>南京市</p>
     </span>
-    <div class="wendu">
-      <p>
-        平均温度：32℃
-      </p>
-      <p>
-        超高监室：5
-      </p>
-      <p><span class="wendu_tem">30℃</span>云</p>
+      <div class="wendu">
+        <p>
+          平均温度：32℃
+        </p>
+        <br/>
+        <p>
+          超高监室：5
+        </p>
+        <p><span class="wendu_tem">30℃</span>云</p>
+
+
+
+      </div>
     </div>
+    <div id="main" style="width:100%;height: 100%;background:cornflowerblue;margin: 0;"></div>
   </div>
+
   <div id="ss" class="col-sm-8" style="height: 100%">
     <div class="row ss-1">
       <div class="col-sm-3" id="qfxdw">
+        <p>全市风险</p>
         <div class="col-sm-12" id="qfxdws"  style="width: 100%;height: 100%">
 
         </div>
@@ -262,6 +284,7 @@
 
     <div class="row" id="s2">
       <div class="col-sm-3 second-fir" >
+        <p>风险指数</p>
         <div class="col-sm-12" id="fxzhishu">
           <!--加载风险指数-->
         </div>
@@ -280,17 +303,51 @@
 
     </div>
 
-    <div class="row" id="s3" style="height: 50%;padding-top: 5px; ">
-      <div class="col-sm-12" style="display: none">
-        <div >
 
-        </div>
-      </div>
-
-    </div>
   </div>
 </div>
 <script>
+
+  $.get('app/data/nanjing.json', function(nanjingJson) {
+    //echarts.registerMap('省份汉语名称', 省份拼音+Json);
+    echarts.registerMap('nanjing', nanjingJson);
+    var chart = echarts.init(document.getElementById('main'));
+    chart.setOption({
+      series : [ {
+        type:'map',
+        //map的值也是，省份汉语名称
+        map: 'nanjing',
+        right:'15%',
+        top: 'bottom',
+        width: '55%',
+        showLegendSymbol:true,
+        label: {
+          normal: {
+            show: true,//显示省份标签
+            textStyle:{
+              color:"#fff",
+              fontSize :9//字体大小
+            }//省份标签字体颜色
+          }
+        },
+        itemStyle: {
+          normal: {
+            borderType : 'solid',
+            borderWidth:2,//区域边框宽度
+            borderColor: '#0E81BE',//区域边框颜色
+            areaColor:"#204973",//区域颜色
+            opacity:0.8
+          }
+        }
+      }]
+    });
+    window.onresize = function () {
+      chart.resize();
+    }
+  });
+
+
+
 
 
   zero=echarts.init(document.getElementById("qfxdws"));
@@ -298,14 +355,6 @@
     tooltip : {
       formatter: "{a} <br/>{b} : {c}%"
     },
-    title:{
-      text: '全市风险',
-      textStyle:{
-        fontSize:24,
-        color:'white'
-      }
-    },
-
     series: [
       {   z:1111,
         axisLine: {
@@ -664,14 +713,6 @@
 
   second=echarts.init(document.getElementById("fxzhishu"));
   option_sec = {
-    title: {
-      text: '风险指数',
-      textStyle:{
-        color:"white",
-        fontSize:"24",
-        fontWeight:"500"
-      }
-    },
     radar: [
       {
         indicator: [
@@ -877,6 +918,7 @@
     var heis=$('#content').css({'height':$(window).height()-90+"px"});
     $("#ss").css({'height':heis.height()-50+"px"});
     //重置容器高宽
+    chart.resize();
     zero.resize();
     myChart.resize();
     second.resize();
