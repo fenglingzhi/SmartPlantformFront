@@ -1,0 +1,129 @@
+
+.person{
+  width:90%;
+  height: 90%;
+  border: 1px solid red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12{
+  padding: 0;
+}
+.per-left{
+  height: 100%;
+  border: 1px solid yellow;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px
+}
+.per-mid{
+  height: 100%;
+  border: 1px solid yellow;
+}
+.per-right{
+  height: 100%;
+  border: 1px solid yellow;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px
+}
+.per-mid>div{
+  width: 100%;
+  height: 20%;
+  border:1px solid skyblue;
+  background-color: rgba(35,54,78,.6)
+}
+.per-mid>div>div>p{
+  margin: 0px;
+}
+.per-mid>div>div>p:first-child{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  color: white;
+}
+.per-mid>div>div{
+  position: relative;
+}
+.per-mid>div>div>p:last-child{
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  font-size: 36px;
+  color: white;
+}
+.left-fx{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+  font-size: 24px;
+  border: 1px solid #31A2BF;
+  padding: 3px;
+  padding-left:7px ;
+  padding-right:7px ;
+  border-radius: 5px;
+  box-shadow: inset 0 0 15px 3px #169ACB;
+}
+.left-img{
+  position: absolute;
+  width: 60%;
+  -webkit-animation:circle 5s infinite linear;/*匀速 循环*/
+}
+@-webkit-keyframes circle{
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(360deg); }
+}
+.left-dw{
+  text-align: center;
+  color: yellow;
+  position: absolute;
+}
+.left-dw p{
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid yellow;
+}
+.left-dw p>span{
+  font-size: 38px;
+}
+.left-dw>span{
+  font-size: 12px;
+  text-align: center;
+}
+.man-wo{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin: auto 0;
+}
+.man-wo>p{
+  float: left;
+  color: white;
+  font-size: 22px;
+}
+.man-wo>p:first-child{
+  margin-left:23% ;
+  margin-right: 50px;
+}
+.man{
+  color: #02D9FA;
+}
+.woman{
+
+}

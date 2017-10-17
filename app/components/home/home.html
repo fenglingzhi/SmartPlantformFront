@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="app/components/home/home.css">
+
+<div class="contents_two row">
+  <div class="col-sm-4" style="position: relative;height: 100%">
+    <div style="position: absolute;bottom: 0;left: 20px">
+				<span class="s-tip">
+          <img src="app/img/dingwei.png" style="vertical-align: middle"/>
+          <p class="cur_prison_name">南京市</p>
+        </span>
+      <div class="wendu">
+        <p>
+          平均温度：<span class="avg_wendu">32℃</span>
+        </p>
+        <br/>
+        <p>
+          超高监室：<span class="high_prison_count">5</span>
+        </p>
+        <p><span class="wendu_tem">30℃</span>云</p>
+
+      </div>
+    </div>
+    <div id="main" style="width:100%;height: 100%;background:cornflowerblue;margin: 0;"></div>
+  </div>
+
+  <div id="ss" class="col-sm-8" style="height: 100%">
+    <div class="row ss-1">
+      <div class="col-sm-3" id="qfxdw">
+        <p>全市风险</p>
+        <div class="col-sm-12" id="qfxdws" style="width: 100%;height: 100%">
+
+        </div>
+      </div>
+      <div class="col-sm-9" style="height: 100%;background-color: #2A5D77;border-top-right-radius: 7px;border-bottom-right-radius: 7px;">
+        <div id="myChart" style="width: 100%;height: 100%;">
+          <!--加载柱形图-->
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row" id="s2">
+      <div class="col-sm-3 second-fir">
+        <p>风险指数</p>
+        <div class="col-sm-12" id="fxzhishu">
+          <!--加载风险指数-->
+        </div>
+      </div>
+
+      <div class="col-sm-9" style="height: 100%;background-color: #2A5D77;border-top-right-radius: 7px;border-bottom-right-radius: 7px;">
+
+        <div id="fxfenxis" style="width: 100%;height: 100%;padding-bottom: 10px">
+          <!--加载风险指数2 fourth-->
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="app/components/home/home.js"></script>

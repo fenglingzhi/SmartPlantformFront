@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>南京智慧监管平台</title>
-    <link rel="stylesheet" type="text/css" href="app/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
-    <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css">
-	<link rel="stylesheet" type="text/css" href="app/css/index.css">
-	<link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
+<head>
+  <meta charset="utf-8">
+  <title>南京智慧监管平台</title>
+  <link rel="stylesheet" type="text/css" href="app/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css">
+  <link rel="stylesheet" type="text/css" href="app/css/index.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-  </head>
-  <body>
-  	<!-- 背景 -->
-  	<div id="background"></div>
-  	<!-- 背景 -->
+</head>
+<body>
+<!-- 背景 -->
+<div id="background"></div>
+<!-- 背景 -->
 
-  	<!-- 头部导航 -->
-	<div id="header_nav"></div>
-	<!-- 头部导航 -->
+<!-- 头部导航 -->
+<div id="header_nav"></div>
+<!-- 头部导航 -->
 
-	<!-- 侧栏菜单 -->
-	<!--<div id="menu"></div>-->
-	<!-- 侧栏菜单 -->
+<!-- 悬浮栏 -->
+<div id="menu"></div>
+<!-- 悬浮栏 -->
 
-	<!-- 内容主视区 -->
-	<div id="content">
-		<!-- <img src="app/img/s1.png"> -->
-		<!-- <input id="time" type="text" /> -->
-	</div>
+<!-- 内容主视区 -->
+<div id="content">
+  <!-- <img src="app/img/s1.png"> -->
+  <!-- <input id="time" type="text" /> -->
+</div>
 
-	<!--<div id="slider"></div>-->
-	<!-- 内容主视区 -->
-  </body>
+<!--<div id="slider"></div>-->
+<!-- 内容主视区 -->
+</body>
 </html>
 <script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -44,33 +44,37 @@
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
 <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
 <!--<script type="text/javascript" src="app/lib/js/jquery.js"></script>-->
-<script type="text/javascript" src="app/lib/js/Draggable.min.js"></script>
-<script type="text/javascript" src="app/lib/js/TweenMax.min.js"></script>
+
 <script type="text/javascript">
-$(function(){
-	/* 载入页面 */
-	$('#header_nav').load('app/components/header.html');
-	$('#content').load('app/components/home.html');
-//	$('#content').load('app/components/risk_people.html');
-	$('#background').load('app/components/background.html');
-	/* 页面缩放 */
-	$(window).resize(function(){
-		$('#content').css({'height':$(window).height()-90+"px"});
-      	$('#background').css({'width':$(window).width()});
-      	$('#background').css({'height':$(window).height()});
-	    var heiss=$('#content').css({'height':$(window).height()-90+"px"});
-	    $("#ss").css({'height':heiss.height()-50+"px"});
+  $(function(){
+    /* 载入页面 */
+    $('#header_nav').load('app/components/header.html');
+
+//	$('#menu').load('app/components/menu/menu.html');
+//	$('#content').load('app/components/home/home.html');
+//    $('#content').load('app/components/risk_people/risk_people.html');
+	$('#content').load('app/components/new_person/new_person.html');
+
+    $('#background').load('app/components/background.html');
+    /* 页面缩放 */
+    $(window).resize(function(){
+      $('#content').css({'height':$(window).height()-90+"px"});
+      $('#background').css({'width':$(window).width()});
+      $('#background').css({'height':$(window).height()});
+      var heiss=$('#content').css({'height':$(window).height()-90+"px"});
+      $("#ss").css({'height':heiss.height()-50+"px"});
+
       //重置容器高宽
       zero.resize();
       myChart.resize();
       second.resize();
       fourth.resize();
-	});
-	/* 页面计算 */
-	$('#background').css({'width':$(window).width()},{'height':$(window).height()});
-	$('#content').css({'height':$(window).height()-90+"px"});
-  $('.contents_two').css({'height':$(window).height()-90+"px"});
-  $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
-});
+    });
+    /* 页面计算 */
+    $('#background').css({'width':$(window).width()},{'height':$(window).height()});
+    $('#content').css({'height':$(window).height()-90+"px"});
+    $('.contents_two').css({'height':$(window).height()-90+"px"});
+    $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
+  });
 
 </script>
