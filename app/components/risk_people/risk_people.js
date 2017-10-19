@@ -21,7 +21,7 @@ var radius = 400;
         let prisonerList = data.prisonerBaseInfos;
         let prisonerHtml = '';
         for(let i = 0; i < prisonerList.length; i++) {
-          debugger;
+          // debugger;
           let item = prisonerList[i];
           let tempHtml = '<div id="img-holder{6}"  class="img-holder">\
 															<img src="app/img/text/{0}">\
@@ -41,10 +41,8 @@ var radius = 400;
             .replace("{4}",item.risk_level)
             .replace("{5}",item.risk_level)
             .replace("{6}",i+1);
-
-
         }
-        $('#Slide1').append(prisonerHtml);
+        // $('#Slide1').append(prisonerHtml);
       } else {
         alert(resp.resultMsg);
       }
@@ -55,7 +53,7 @@ var radius = 400;
   });
 
 
-  TweenMax.set($('.slide_total'), {
+TweenMax.set($('.slide_total'), {
     css: {
       transformStyle: 'preserve-3d',
       perspective: 800,
