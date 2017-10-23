@@ -1,0 +1,154 @@
+#crimal_dangerous{
+  height: 60px;
+  margin-top: 50px;
+}
+.p-dw {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  top: 3%;
+  left: 20px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #169ACB;
+  box-shadow: inset 0 0 15px 3px #169ACB;
+  border-radius: 10px;
+}
+.crimal_dorm_video_wrap{
+  height: 770px;
+  background: rgba(48, 85, 128, 0.55);
+  margin-left: 40px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+.crimal_dorm_video{
+  background: #000;
+  border-radius: 10px;
+  border: 10px solid #084398;
+  width: 100%;
+  height: 300px;
+  margin-top: 80px;
+}
+.tab{
+  overflow: auto;
+  margin: 14px 0;
+}
+.tab_conten:first-child{
+  border-radius: 15px 0 0 15px;
+  border-right: 0px;
+}
+.tab_conten:last-child{
+  border-radius: 0 15px 15px 0;
+  border-left: 0px;
+}
+.tab_conten{
+  width: 100px;
+  color: #fff;
+  float: left;
+  border: 1px solid #424854;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+.place_man{
+  height: 320px;
+  background: #1d557d;
+}
+.place_man_img_wrap{
+  margin-top: 50px;
+  padding: 0;
+}
+.place_photo{
+  height: 200px;
+  border: 1px solid #40c1e0;
+}
+.place_photo img{
+  width:100%;
+  height:100%;
+}
+.title{
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+.name{
+  display: inline-block;
+  border: 1px solid #40c1e0;
+  border-radius: 12px;
+  padding: 4px;
+  font-size: 16px;
+}
+.crimal_info_form_l{
+  overflow: auto;
+  margin-bottom: 10px;
+}
+.crimal_info_form_l .title{
+  /*width: 100px;*/
+  font-size: 18px;
+  border: 1px solid #40c1e0;
+  border-radius: 6px 0 0 6px;
+  background: rgba(255, 255, 255, 0.36);
+  float: left;
+  margin: 0;
+  height: 40px;
+  line-height: 40px;
+}
+.crimal_info_form_l .content{
+  /*width: 160px;*/
+  float: left;
+  border-radius: 0 6px 6px 0;
+  border: 1px solid #40c1e0;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+}
+.crimal_dorm_list{
+  height: 770px;
+  background: rgba(48, 85, 128, 0.55);
+  margin-left: 40px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+.crimal_card_list{
+  overflow: auto;
+  border: 1px solid #40c1e0;
+  height: 700px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 12px 0px #000;
+}
+.card_wrap{
+  height: auto;
+  margin-top: 30px;
+}
+.card_wrap img{
+  width:100%;
+  height: 200px;
+}
+.card_border{
+  background: rgba(25, 41, 71, 0.5);
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px;
+}
+.card_border p{
+  text-indent: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.levle{
+  height: 30px;
+  background: red;
+  border-radius: 20px;
+  margin: 8px 20px;
+  border: 5px solid #fff;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+

@@ -1,0 +1,281 @@
+/*=========================== 菜单 ====================================*/
+.basic_info_body{
+  overflow: auto;
+  width: 750px;
+}
+.history_body{
+  width: 1080px;
+}
+.basic_info{
+  height: 400px;
+  overflow: auto;
+  padding: 0 20px;
+  margin-bottom: 0px;
+}
+.basic_info .img{
+  width: 136px;
+  height: 184px;
+  background: url(../../img/crimal_1_03.jpg) center no-repeat;
+  float: left;
+}
+#crimal_dangerous{
+  height: 60px;
+}
+.crimal_info{
+  width: 520px;
+  margin-left: 150px;
+}
+.crimal_info_form_wrap{
+  overflow: auto;
+  margin-bottom: 10px;
+}
+.crimal_info_form_l{
+  float: left;
+}
+.crimal_info_form_l{
+  margin-left: 20px;
+  float: left;
+}
+.crimal_info_form_l:after{
+  clear: both;
+  content: '';
+}
+.crimal_info_form_wrap .title{
+  width: 60px;
+  height: 40px;
+  border: 1px solid #3fe3fe;
+  border-right: none;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  border-radius: 10px 0 0 10px;
+  background: #0486de;
+}
+.crimal_info_form_wrap .content{
+  width: 178px;
+  height: 40px;
+  border: 1px solid #3fe3fe;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 0 10px 10px 0;
+  margin-left: 60px;
+}
+.crimal_other_info table{
+  margin-top: 30px;
+}
+.crimal_other_info th,td {
+  border-right: 1px solid #3fe3fe;
+  border-bottom: 1px solid #3fe3fe;
+}
+.crimal_other_info th,td{
+  color: #fff;
+}
+.crimal_other_info table{
+  border-collapse: separate;
+}
+.crimal_other_info th,td{
+  height: 54px;
+  line-height: 54px;
+}
+.crimal_other_info th{
+  width: 60px;
+  background: #0486de;
+  text-align: center;
+}
+.crimal_other_info td{
+  width: 162px;
+  text-align: center;
+}
+.crimal_charts_wrap{
+  box-shadow: inset 0px 0px 20px 0px #000000;
+  height: 280px;
+  border-radius: 5px;
+  background: rgba(66, 85, 164, 0.3);
+  margin: -10px 20px 25px;
+  width: 324px;
+}
+#crimal_risk_tend{
+  height: 280px;
+}
+#crimal_character_tend{
+  height: 280px;
+}
+.history_flow .img{
+  height: 560px;
+  border-radius: 10px;
+  /*border: 1px solid #3fe3fe;*/
+  background: url(../../img/guiji.png) center no-repeat;
+  box-shadow: inset 0px 0px 30px 0 #000;
+}
+.time_shaft{
+  height: 70px;
+  margin-top: 30px;
+}
+.day{
+  color: #fff;
+  font-size: 14px;
+  margin-left: 4px;
+}
+.day span{
+  margin-left: 12px;
+}
+.time_line{
+  height: 46px;
+  background: url(../../img/time_line.png) no-repeat;
+  background-size: 100% 100%;
+}
+.history_flow .title_flow{
+  color: #fff;
+  line-height: 40px;
+}
+.log_wrap{
+  height: 640px;
+  /* border: 1px solid #3fe3fe; */
+  box-shadow: inset 0px 0px 30px 0 #000;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding-top: 1px;
+}
+.log_wrap .log_title{
+  height: 30px;
+  background: #03a8f6;
+  border-bottom: 1px solid #3fe3fe;
+  color: #fff;
+  line-height: 30px;
+  border-radius: 9px 9px 0 0;
+  text-indent: 20px;
+}
+.log_wrap ul{
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  overflow: auto;
+  height: 380px;
+}
+.log_wrap ul li{
+  height: 50px;
+  line-height: 30px;
+  /*border-bottom: 1px solid #0482e1;*/
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.log_wrap ul li:hover{
+  cursor: pointer;
+  box-shadow: 0 0 4px 1px #3fe3fe;
+  border-radius: 4px;
+}
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+.log_wrap ul::-webkit-scrollbar{
+  width: 5px;
+  height: 6px;
+  background-color: rgba(0,0,0,);
+  border-radius: 10px;
+}
+/*定义滚动条的轨道，内阴影及圆角*/
+.log_wrap ul::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0);
+}
+/*定义滑块，内阴影及圆角*/
+.log_wrap ul::-webkit-scrollbar-thumb{
+  width: 5px;
+  height: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #a3d3f8;
+}
+.log_wrap ul .content{
+  margin-left: 50px;
+  overflow: hidden;
+  height: 50px;
+  line-height: 24px;
+  border-radius: 0 4px 4px 0;
+  background: rgba(0, 0, 0, 0.31);
+}
+.log_wrap ul .content p{
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  text-indent: 20px;
+}
+.red_color{
+  color: #ff3a3a;
+}
+.yellow_color{
+  color: #f2ff25;
+}
+.green_color{
+  color: #25ff2f;
+}
+.orange_color{
+  color: #ff7a21;
+}
+.blue_color{
+  color: #4aecff;
+}
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+body::-webkit-scrollbar{
+  width: 5px;
+  height: 6px;
+  background-color: rgba(0,0,0,.3);
+  border-radius: 10px;
+}
+/*定义滚动条的轨道，内阴影及圆角*/
+body::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  border-radius: 10px;
+  background-color: rgba(0,0,0,.3);
+}
+/*定义滑块，内阴影及圆角*/
+body::-webkit-scrollbar-thumb{
+  width: 5px;
+  height: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #a3d3f8;
+}
+.chart_title{
+  background: rgba(139, 182, 243, 0.2);
+  width: auto;
+  height: 50px;
+  width: 150px;
+  margin-top: 26px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  margin: 15px;
+}
+.chart_title:hover{
+  background: rgba(255,255,255,.2);
+}
+.chart_title:active{
+  background: rgba(255,255,255,.1);
+}
+.card {
+  background: rgba(27, 80, 124, 0.5);
+  margin-bottom: 15px;
+  /*box-shadow: 0px 0px 15px -3px #42496b;*/
+  border-radius: 0;
+  border-radius: 10px;
+  margin: 40px 0;
+  overflow: hidden;
+}
+.crimal_detail_video {
+  height: 200px;
+  border: 1px solid #000;
+  margin: 20px 20px 10px 20px;
+}
+.time{
+  float: left;
+  width: 50px;
+  height:50px;
+  text-align: center;
+  border-radius: 4px 0 0 4px;
+  background: rgba(239, 250, 255, 0.3);
+  line-height: 50px;
+}

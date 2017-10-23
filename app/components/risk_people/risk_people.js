@@ -2,6 +2,12 @@ $(function () {
   let token = localStorage.getItem("token");
   let preReqUrl = "http://10.58.1.134:8080/";
 
+  var total_model=$(".total_1").width();
+  var total_model2=$("#imp_person_per1").width();
+  var total_model3=$(".total_1_2").width();
+  console.log(total_model);
+
+  $("#imp_person_row2").css({"width":total_model-(total_model2+total_model3)+"px"});
 
 var $imgs = $('.slide_total .img-holder');
 var l = $imgs.length;
@@ -46,18 +52,16 @@ var radius = 400;
       } else {
         alert(resp.resultMsg);
       }
+      TweenMax.set($('.slide_total'), {
+        css: {
+          transformStyle: 'preserve-3d',
+          perspective: 800,
+          perspectiveOrigin: '50% 50%'
+        }
+      });
     },
     error: function() {
       alert("请求异常");
-    }
-  });
-
-
-TweenMax.set($('.slide_total'), {
-    css: {
-      transformStyle: 'preserve-3d',
-      perspective: 800,
-      perspectiveOrigin: '50% 50%'
     }
   });
 
@@ -235,17 +239,18 @@ $.ajax({
       $("#major_prisoner_count").html(data.major_risk_person_count);
       per_1 = echarts.init(document.getElementById("imp_person_per1"));
       option_left = {
+        backgroundColor:"rgba(34, 142, 186, .41)",
         tooltip: {
           trigger: 'item',
           formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
         title: {
-          text: '重大风险人员占比',
           textStyle: {
-            fontSize: 24,
+            fontSize: 20,
             color: 'white'
           },
-          left: '2%'
+          left: '2%',
+          top:'2%',
         },
         series: [{
           name: '重大风险人员占比',
@@ -272,6 +277,7 @@ $.ajax({
       per_1.setOption(option_left);
       per_3 = echarts.init(document.getElementById("imp_person_per3"));
       option_right = {
+        backgroundColor:"rgba(34, 142, 186, .41)",
         series: [{
           name: '访问来源',
           type: 'pie',
@@ -352,19 +358,12 @@ $.ajax({
       console.log(monthList);
       per_4 = echarts.init(document.getElementById("imp_person_per4"));
       option_part2 = {
+        backgroundColor:"transparent",
         tooltip: {
           trigger: 'axis',
           axisPointer: { // 坐标轴指示器，坐标轴触发有效
             type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
           }
-        },
-        title: {
-          text: '年\r\r月',
-          textStyle: {
-            color: 'white'
-          },
-          left: 'right',
-          top: '3%'
         },
         grid: {
           left: '3%',
@@ -461,6 +460,14 @@ $.ajax({
   }
 });
 
+  var trans=$(".contents_two div.row:nth-child(2)").css("height");
+  var trans_new=parseInt(trans);
+  var fixed=2;
+  var trans_new2=-(trans_new/fixed+46);
+  $("#d111").css({'top':trans_new2+'px'});
+
+  $('.contents_two').css({ 'height': $(window).height() - 90 + "px" });
+  $(".contents_two div.row:nth-child(2)").css({ 'height': $(window).height() - $("#imp_person").height() - 186 + "px" })
 
 window.onresize = function() {
   $('.contents_two').css({ 'height': $(window).height() - 90 + "px" });
@@ -468,6 +475,11 @@ window.onresize = function() {
   per_1.resize();
   per_3.resize();
   per_4.resize();
+  var trans=$(".contents_two div.row:nth-child(2)").css("height");
+  var trans_new=parseInt(trans);
+  var fixed=2;
+  var trans_new2=-(trans_new/fixed+46);
+  $("#d111").css({'top':trans_new2+'px'});
 }
 
 $(".imp_person_toggle>span:nth-child(2)").click(function(){

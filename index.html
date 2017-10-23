@@ -4,17 +4,33 @@
   <meta charset="utf-8">
   <title>南京智慧监管平台</title>
   <link rel="stylesheet" type="text/css" href="app/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-  <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
-  <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
-  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css">
-  <link rel="stylesheet" type="text/css" href="app/css/index.css">
+  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css"> -->
   <link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
-  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="app/css/index.css">
+  <!-- <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script> -->
 </head>
 <body>
+<img id="button3" src="app/img/button3.png" alt=""/>
+<div id="click_js">
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p class="actittc">南京市看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+  <p>某某某看守所</p>
+</div>
 <!-- 背景 -->
 <div id="background"></div>
 <!-- 背景 -->
@@ -39,26 +55,57 @@
 <!-- 内容主视区 -->
 </body>
 </html>
-<script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="node_modules/echarts/dist/echarts.min.js"></script>
-<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
-<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script>
-<script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script>
-<!--<script type="text/javascript" src="app/lib/js/jquery.js"></script>-->
+<script type="text/javascript" src="app/lib/jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="app/lib/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
+<!-- <script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script> -->
+<!-- <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script> -->
+<!-- <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script> -->
+<!-- <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script> -->
+
 
 <script type="text/javascript">
   $(function(){
+    $.ajaxSetup ({ cache: false });
     /* 载入页面 */
+    /*头部导航*/
     $('#header_nav').load('app/components/header.html');
-
-//	$('#menu').load('app/components/menu/menu.html');
-//	$('#content').load('app/components/home/home.html');
-//  $('#mustbe').load('app/components/mustbe.html');
+//    $('#mustbe').load('app/components/mustbe.html');
+    /*菜单-切换主页*/
+    $('#menu').load('app/components/menu/menu.html');
+    /*左侧菜单*/
+    $('#content').load('app/components/left_drop.html');
+    /*首页*/
+//    $('#content').load('app/components/home/home.html');
+    /*风险人员*/
 //    $('#content').load('app/components/risk_people/risk_people.html');
-	$('#content').load('app/components/new_person/new_person.html');
-//  $('#content').load('app/components/escort_all/escort_all.html');
-
+    /*押量-新收人员*/
+//    $('#content').load('app/components/new_person/new_person.html');
+    /*押解总量*/
+//    $('#content').load('app/components/escort_all/escort_all.html');
+    /*基础风险2-监所*/
+//	  $('#content').load('app/components/base_analys/base_analys.html');
+    /*基础风险-全市*/
+	  $('#content').load('app/components/base_rank/base_rank.html');
+    /*监室*/
+//    $('#content').load('app/components/crimal_dorm/crimal_dorm.html');
+    /*在押人员详情*/
+//    $('#content').load('app/components/crimal_detail/crimal_detail.html');
+    /*设施设备2-监所*/
+//    $('#content').load('app/components/equipment/equipment.html');
+    /*设施设备1-全市*/
+//	  $('#content').load('app/components/risk_rank/risk_rank.html');
+    /*民警执法2-监所*/
+//	  $('#content').load('app/components/post_risk/post_risk.html');
+    /*民警执法1-全市*/
+//    $('#content').load('app/components/police_law/police_law.html');
+    /*在押人员-全市*/
+//	  $('#content').load('app/components/violating/violating.html');
+    /*在押人员-监狱2*/
+//    $('#content').load('app/components/prisoner_risk/prisoner_risk.html');
+    /*工作提醒*/
+//    $('#content').load('app/components/work_remind/work_remind.html');
+    /*背景特效*/
     $('#background').load('app/components/background.html');
     /* 页面缩放 */
     $(window).resize(function(){
@@ -79,5 +126,24 @@
     $('.contents_two').css({'height':$(window).height()-90+"px"});
     $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
   });
+  $("#button3").click(function(){
+    $(this).css("right","0");
+//    $("#click_js").css("opacity","1");
+    $("#click_js").css("display","block")
+  })
+  $("#click_js").mousedown(function(){
+//    $(this).css("opacity","0");
+    $("#click_js").css("display","none");
+    $("#button3").css("right","-118px")
+  })
+  //  $("#click_js").mouseover(function(){
+  //    console.log("over")
+  //  })
+  //  $("#click_js").mouseout(function(){
+  //    console.log("out");
+  //    $("#click_js").css("opacity","0");
+  //    $("#click_js").css("display","none")
+  //    $("#button3").css("right","-118px")
+  //  })
 
 </script>

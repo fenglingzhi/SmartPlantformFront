@@ -1,0 +1,96 @@
+#violating{
+  width:90%;
+  height: 90%;
+  /*border: 1px solid red;*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+  /*background-color: rgba(255,255,255,0.1);*/
+}
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12{
+  padding: 0;
+}
+#violating>div:first-child{
+  height: 48%;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  /*border: 3px solid white;*/
+}
+#violating>div:last-child{
+  height: 48%;
+  /*border: 3px solid white;*/
+}
+#vio-bottom>div{
+  float: left;
+}
+#vio-bottom>div:first-child{
+  /*background-color: rgba(0,0,0,0.4);*/
+  border-radius: 10px;
+  margin: 0;
+  width: 49%;
+  height: 100%;
+  /*border: 3px solid yellow;*/
+}
+#vio-bottom>div:last-child{
+  /*background-color: rgba(0,0,0,0.4);*/
+  margin: 0;
+  width: 49%;
+  height: 100%;
+  /*border: 3px solid yellow;*/
+}
+#vio-bottom>div:first-child>div:first-child{
+  background-color: rgba(31,102,183,.3);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  /*border: 2px solid skyblue;*/
+}
+#vio-bottom>div:first-child>div:last-child{
+  background-color: rgba(0,0,0,0.4);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  /*border: 2px solid skyblue;*/
+}
+#vio-bottom>div:last-child>div:first-child{
+  background-color: rgba(31,102,183,.3);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  /*border: 2px solid skyblue;*/
+}
+#vio-bottom>div:last-child>div:last-child{
+  background-color: rgba(0,0,0,0.4);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  /*border: 2px solid skyblue;*/
+}
+
+.p-dw{
+  z-index: 5;
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  top: 3%;
+  left: 20px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #169ACB;
+  box-shadow: inset 0 0 15px 3px #169ACB;
+  border-radius: 10px;
+}

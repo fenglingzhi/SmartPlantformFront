@@ -1,50 +1,262 @@
 <link rel="stylesheet" href="app/components/escort_all/escort_all.css">
-<img id="button1" src="app/img/button1.png" alt=""/>
-<!--<img id="button2" src="app/img/button2.png" alt=""/>-->
-<img id="button3" src="app/img/button3.png" alt=""/>
-
 <div class="escort row">
-
   <div class="col-sm-3 left-lf">
-    <div style="width:100%;height: 50%;border: 1px solid #FEC3FE"></div>
-    <div style="width:100%;height: 50%;border: 1px solid #FEC3FE"></div>
-  </div>
-
-
-  <div class="col-sm-5 mid-left">
-    <div style="width:100%;height: 32%;border: 1px solid #FEC3FE;">
-      <div class="col-sm-4" style="height: 100%;border: 1px solid #67EE39"></div>
-      <div class="col-sm-8" style="height: 100%;border: 1px solid #67EE39"></div>
+    <div id="left-df" style="width: 100%;height: 50%;position: relative;">
+      <p class="left-fx">新收人员</p>
+      <p class="left-zb">·设计押量占比</p>
+      <p class="left-rs">·压量人数</p>
+      <img src="app/img/escort_all/button4.png" class="left-img"/>
+      <div style="width: 100%;height:100%;" id="d1">
+      </div>
+      <div class="left-dw">
+        <p><span>40</span>分</p>
+        <span>良好</span>
+      </div>
+      <div class="man-wo">
+        <p class="man"><span>男</span><span>55</span></p>
+        <p class="woman"><span>女</span><span>49</span></p>
+      </div>
     </div>
-    <hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>
-    <div style="width:100%;height: 32%;border: 1px solid #FEC3FE">
-      <div class="col-sm-4" style="height: 100%;border: 1px solid #67EE39"></div>
-      <div class="col-sm-8" style="height: 100%;border: 1px solid #67EE39"></div>
-    </div>
-    <hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>
-    <div style="width:100%;height: 34%;border: 1px solid #FEC3FE">
-      <div class="col-sm-4" style="height: 100%;border: 1px solid #67EE39"></div>
-      <div class="col-sm-8" style="height: 100%;border: 1px solid #67EE39"></div>
+
+    <div id="title_1" style="width:100%;height: 49%;"></div>
+    <div class="imp_person_toggle">
+      <span>实时统计</span>
+      <span>周统计</span>
+      <span>月统计</span>
     </div>
   </div>
 
-  <div class="col-sm-2 right-right" style="margin-right: 1%;">
-    <div style="width:100%;height: 32%;border: 1px solid #FEC3FE"></div>
-    <hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>
-    <div style="width:100%;height: 33%;border: 1px solid #FEC3FE"></div>
-    <hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>
-    <div style="width:100%;height: 33%;border: 1px solid #FEC3FE"></div>
+
+  <div class="col-sm-4 mid-left">
+    <div style="width:100%;height: 33%;">
+      <div class="col-sm-4 mid_left_1_2" style="height: 100%;border-bottom:1px">
+        <p class="mid_left_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>10</span>
+          <div class="mid_left_progress">
+            <div class="mid_left_now_progress"></div>
+            <div class="mid_left_progress_head">
+              <span>
+                <img src="app/img/escort_all/arrow.png" alt=""/>
+                <span class="mid_left_progress_num">65%</span>
+              </span>
+            </div>
+          </div>
+        </p>
+      </div>
+      <div class="col-sm-8 mid_left_1_3" id="top_1" style="overflow:hidden;height: 100%;border-left:none;"></div>
+      <div class="imp_person_toggle1">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
+    <!--<hr class="top_1_hr">-->
+    <div style="width:100%;height: 33%;">
+      <div class="col-sm-4 mid_left_2_2" style="height: 100%;">
+        <p class="mid_left_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>80</span>
+        <div class="mid_left_progress_2">
+          <div class="mid_left_now_progress_2"></div>
+          <div class="mid_left_progress_head_2">
+              <span>
+                <img src="app/img/escort_all/arrow.png" alt=""/>
+                <span class="mid_left_progress_num">30%</span>
+              </span>
+          </div>
+        </div>
+        </p>
+      </div>
+      <div class="col-sm-8 mid_left_2_3" id="middle_1" style="overflow:hidden;height: 100%;"></div>
+      <div class="imp_person_toggle1">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
+    <!--<hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>-->
+    <div style="width:100%;height: 33%;">
+      <div class="col-sm-4 mid_left_3_2" style="height: 100%;">
+        <p class="mid_left_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>60</span>
+        <div class="mid_left_progress_3">
+          <div class="mid_left_now_progress_3"></div>
+          <div class="mid_left_progress_head_3">
+              <span>
+                <img src="app/img/escort_all/arrow1.png" alt=""/>
+                <span class="mid_left_progress_num">85%</span>
+              </span>
+          </div>
+        </div>
+        </p>
+      </div>
+      <div class="col-sm-8 mid_left_3_3" id="bottom_1"  style="overflow:hidden;height: 100%;"></div>
+      <div class="imp_person_toggle1">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 right-right mid-right" style="margin-right: 1%">
+    <div class="right-right-1" style="width:100%;height: 33%;">
+      <div class="right-right-1-1 col-sm-12" style="height:100%;">
+        <p class="mid_right_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>30</span>
+          <div class="mid_left_progress">
+            <div class="mid_left_now_progress_4"></div>
+            <div class="mid_left_progress_head_4">
+                <span>
+                  <img src="app/img/escort_all/arrow.png" alt=""/>
+                  <span class="mid_left_progress_num">25%</span>
+                </span>
+            </div>
+          </div>
+        </p>
+      </div>
+      <div class="right-right-1_2" id="top_2" style="width:0;height:100%;"></div>
+      <div class="imp_person_toggle2">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
+    <div class="right-right-2" style="width:100%;height: 33%;">
+      <div class="col-sm-12" class="right-right-2-1" style="background:rgba(31, 56, 76, 0.63);;width:100%;height: 100%;">
+        <p class="mid_right_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>10</span>
+
+          <div class="mid_left_progress">
+            <div class="mid_left_now_progress_5"></div>
+            <div class="mid_left_progress_head_5">
+                  <span>
+                    <img src="app/img/escort_all/arrow.png" alt=""/>
+                    <span class="mid_left_progress_num">70%</span>
+                  </span>
+            </div>
+          </div>
+
+        </p>
+      </div>
+      <div class="right-right-2-2" id="mid_2" style="width:0;height:100%;"></div>
+      <div class="imp_person_toggle2">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
+    <div class="right-right-3" style="width:100%;height: 33%;">
+      <div class="col-sm-12" class="right-3-1" style="background:rgba(31, 56, 76, 0.63);width:100%;height: 100%;">
+
+        <p class="mid_right_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>80</span>
+
+          <div class="mid_left_progress">
+            <div class="mid_left_now_progress_6"></div>
+            <div class="mid_left_progress_head_6">
+                    <span>
+                      <img src="app/img/escort_all/arrow.png" alt=""/>
+                      <span class="mid_left_progress_num">40%</span>
+                    </span>
+            </div>
+          </div>
+
+        </p>
+
+      </div>
+      <div class="right-right-3-2" id="bottom_2" style="width:0;height:100%;"></div>
+      <div class="imp_person_toggle2">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
   </div>
 
 
-  <div class="col-sm-2 right-right">
-    <div style="width:100%;height: 32%;border: 1px solid #FEC3FE"></div>
-    <hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>
-    <div style="width:100%;height: 33%;border: 1px solid #FEC3FE"></div>
-    <hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>
-    <div style="width:100%;height: 33%;border: 1px solid #FEC3FE"></div>
-  </div>
+  <div class="col-sm-4 right-right last-right">
+    <div style="width:100%;height: 33%;">
+      <div class="right-right-1_1" style="background:rgba(31, 56, 76, 0.63);width:100%;height:100%;">
+        <p class="mid_right_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>50</span>
 
+        <div class="mid_left_progress">
+          <div class="mid_left_now_progress_7"></div>
+          <div class="mid_left_progress_head_7">
+                    <span>
+                      <img src="app/img/escort_all/arrow.png" alt=""/>
+                      <span class="mid_left_progress_num">40%</span>
+                    </span>
+          </div>
+        </div>
+
+        </p>
+      </div>
+      <div class="last-right-next" id="top_3" style="width:0;margin-left:100px;height:100%;"></div>
+      <div class="imp_person_toggle3">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
+    <div style="width:100%;height: 33%;">
+      <div class="right-right-2_1" style="background:rgba(31, 56, 76, 0.63);width:100%;height:100%;">
+        <p class="mid_right_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>90</span>
+
+        <div class="mid_left_progress">
+          <div class="mid_left_now_progress_8"></div>
+          <div class="mid_left_progress_head_8">
+                    <span>
+                      <img src="app/img/escort_all/arrow.png" alt=""/>
+                      <span class="mid_left_progress_num">35%</span>
+                    </span>
+          </div>
+        </div>
+
+        </p>
+      </div>
+      <div id="mid_3" style="width:0;margin-left:100px;height:100%;"></div>
+      <div class="imp_person_toggle3">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
+    <div style="width:100%;height: 33%;">
+      <div class="right-right-3_1" style="background:rgba(31, 56, 76, 0.63);width:100%;height:100%;">
+        <p class="mid_right_1_2_img">
+          <img src="app/img/escort_all/button4.png">
+          <span>90</span>
+
+        <div class="mid_left_progress">
+          <div class="mid_left_now_progress_9"></div>
+          <div class="mid_left_progress_head_9">
+            <span>
+              <img src="app/img/escort_all/arrow.png" alt=""/>
+              <span class="mid_left_progress_num">76%</span>
+            </span>
+          </div>
+        </div>
+
+        </p>
+      </div>
+      <div id="bottom_3" style="width:0;margin-left:100px;height:100%;"></div>
+      <div class="imp_person_toggle3">
+        <span>实时统计</span>
+        <span>周统计</span>
+        <span>月统计</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 
