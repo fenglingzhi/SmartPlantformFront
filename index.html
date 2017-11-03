@@ -16,79 +16,7 @@
 </head>
 <body>
 <!-- 左侧菜单 -->
-<img src="app/img/left-button.png" id="tik">
-<ul id="left-drop">
-  <li>
-    <p><img src="app/img/yewu.png" alt=""/></p>
-    <p>业务指导</p>
-  </li>
-  <li>
-    <p><img src="app/img/dudao.png" alt=""/></p>
-    <p>日常督导</p>
-  </li>
-  <li>
-    <p><img src="app/img/shuhjv.png" alt=""/></p>
-    <p>大数据应用</p>
-  </li>
-  <li>
-    <p><img src="app/img/chaxun.png" alt=""/></p>
-    <p>综合查询</p>
-  </li>
-  <li>
-    <p><img src="app/img/xuexi.png" alt=""/></p>
-    <p>帮助学习</p>
-  </li>
-  <li>
-    <p><img src="app/img/weihu.png" alt=""/></p>
-    <p>为维护设置</p>
-  </li>
-</ul>
-<ul id="left-drop-rig">
-  <li>
-    <span>实时监控</span>
-    <span>录像回放</span><br/>
-    <span>视频点名</span>
-  </li>
-  <li>
-    <span>督导单</span><br/>
-    <span>现场检查</span>
-  </li>
-  <li>
-    <span>监所综合风险</span>
-    <span>民警岗位履职情况</span>
-    <span>在押人员分析</span><br/>
-    <span>人员构成分析</span>
-    <span>其他分析</span>
-  </li>
-  <li>
-    <span>监所管理</span>
-    <span>民警类</span>
-    <span>在押人员类</span><br/>
-    <span>安防报警类</span>
-    <span>日常督查类</span>
-  </li>
-  <li>
-    <!--<span>五所基础风险</span>-->
-    <!--<span>五警执法风险</span><br/>-->
-    <!--<span>五押人员风险</span>-->
-    <!--<span>五防安防设备风险</span>-->
-  </li>
-  <li>
-    <span>用户管理</span>
-    <span>角色管理</span>
-    <span>岗位管理</span>
-    <span>用户权限管理</span>
-    <span>地图管理</span>
-    <span>设备管理</span>
-    <span>设备点位管理</span>
-    <span>报警联动设置</span>
-    <span>应急预案设置</span>
-    <span>风险评估因素及模型设置</span>
-    <span>排班</span>
-    <span>字典维护</span>
-    <span>平台日志</span>
-  </li>
-</ul>
+
 <!-- 左侧菜单 -->
 
 <!-- 背景 -->
@@ -111,8 +39,8 @@
 
 <!-- tab切换 -->
 <div id="mustbe"></div>
-<!-- 监所搜索 -->
-<div id="check "></div>
+<div id="check"></div>
+<div id="left_drop"></div>
 <!-- 内容主视区 -->
 </body>
 </html>
@@ -134,11 +62,12 @@
     $('#header_nav').load('app/components/header.html');
 //    $('#mustbe').load('app/components/mustbe.html');
     /*菜单-切换主页*/
+//    $('#menu').load('app/components/menu/menu.html');
     $('#menu').load('app/components/menus/menus.html');
-    /* 监所搜索 */
     $('#check').load('app/components/botrig_check.html');
+
     /*左侧菜单*/
-//    $('#content').load('app/components/left_drop.html');
+    $('#left_drop').load('app/components/left_drop.html');
     /*首页*/
     $('#content').load('app/components/home/home.html');
     /*风险人员*/
@@ -191,41 +120,5 @@
     $('.contents_two').css({'height':$(window).height()-90+"px"});
     $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
   });
-
-/*左侧边栏的点击事件*/
-	$('#tik').click(function(){
-    $("#left-drop").css("width","100px");
-    $("#left-drop").addClass("ad");
-    $("#left-drop").css("border","1px solid skyblue");
-    $("#left-drop-rig").css("width","800px");
-  })
-  $('#left-drop-rig>li span').click(function(){
-    $("#left-drop").css("width","0");
-    $("#left-drop").css("border","1px solid transparent");
-    $("#left-drop-rig>li").css("width","0px");
-    $('#content').load('app/components/video_1/video_1.html');
-  })
-  $('#left-drop>li').hover(function(){
-    if($('#left-drop').hasClass("ad")==true){
-      console.log(1);
-      dropInx=$(this).index();
-      console.log(dropInx);
-      $("#left-drop-rig>li").eq(dropInx).css("width","630px").siblings().css("width","0px");
-    }
-  })
-  $('#left-drop-rig>li').bind("mouseleave",function(){
-    $("#left-drop").css("width","0");
-    $("#left-drop").removeClass("ad");
-    $("#left-drop").css("border","1px solid transparent");
-    $("#left-drop-rig>li").css("width","0px");
-  })
-/*左侧边栏的定位*/
-  ldw=function(){
-    leDw=$(window).height();
-    $("#tik").css({"top":leDw/2-32+"px"});
-    $("#left-drop").css({"top":leDw/2-210+"px"});
-    $("#left-drop-rig").css({"top":leDw/2-210+"px"});
-  }
-  ldw();
 
 </script>

@@ -1,7 +1,8 @@
 <style>
   #left-drop{
     position: absolute;
-    top: 100px;
+    z-index: 10;
+    /*top: 100px;*/
     left: 0px;
     color: white;
     font-size: 16px;
@@ -11,12 +12,13 @@
     overflow: hidden;
     /*border: 1px solid skyblue;*/
     transition: width 1s linear;
+    border-radius: 10px;
   }
   #left-drop>li{
-     height: 70px;
-     width: 100px;
+    height: 70px;
+    width: 100px;
     background-color: #000000;
-   }
+  }
   #left-drop>li:not(:last-child){
     border-bottom: 1px solid #838699;
   }
@@ -29,17 +31,55 @@
     margin: 0;
   }
   #tik{
-    width: 50px;
-    height:50px;
-    background-color: skyblue;
     position: absolute;
-    left: 0;
+    left: 1px;
+    z-index: 9;
+  }
+
+
+  #left-drop-rig{
+    width: 0px;
+    height: 420px;
+    position: absolute;
+    z-index: 5;
+    top:300px;
+    left: 101px;
+    color: white;
+    font-size: 16px;
+    /*text-align: center;*/
+    /*overflow: hidden;*/
+    /*transition: width 1s linear;*/
+    /*border: 1px solid red;*/
+  }
+  #left-drop-rig>li{
+    width: 0px;
+    height: 70px;
+    /*border: 1px solid red;*/
+    overflow: hidden;
+  }
+  #left-drop-rig>li>span{
+    margin-top: 2px;
+    text-align: center;
+    display: inline-block;
+    /*margin: 0;*/
+    color: white;
+    /*float: left;*/
+    /*width: 108px;*/
+    height: 34px;
+    padding-left: 4px;
+    padding-right: 4px;
+    line-height: 34px;
+    border: 1px solid transparent;
+    margin-left: 2px;
+    background-color: rgba(0,0,0,0.95);
+  }
+  #left-drop-rig>li>span:hover{
+    border: 1px solid skyblue;
+    background-color: rgba(99,99,99,0.95);
   }
 </style>
 
-<div id="tik">
-
-</div>
+<img src="app/img/left-button.png" id="tik">
 <ul id="left-drop">
   <li>
     <p><img src="app/img/yewu.png" alt=""/></p>
@@ -66,28 +106,87 @@
     <p>为维护设置</p>
   </li>
 </ul>
+<ul id="left-drop-rig">
+  <li>
+    <span>实时监控</span>
+    <span>录像回放</span><br/>
+    <span>视频点名</span>
+  </li>
+  <li>
+    <span>督导单</span><br/>
+    <span>现场检查</span>
+  </li>
+  <li>
+    <span>监所综合风险</span>
+    <span>民警岗位履职情况</span>
+    <span>在押人员分析</span><br/>
+    <span>人员构成分析</span>
+    <span>其他分析</span>
+  </li>
+  <li>
+    <span>监所管理</span>
+    <span>民警类</span>
+    <span>在押人员类</span><br/>
+    <span>安防报警类</span>
+    <span>日常督查类</span>
+  </li>
+  <li>
+    <!--<span>五所基础风险</span>-->
+    <!--<span>五警执法风险</span><br/>-->
+    <!--<span>五押人员风险</span>-->
+    <!--<span>五防安防设备风险</span>-->
+  </li>
+  <li>
+    <span>用户管理</span>
+    <span>角色管理</span>
+    <span>岗位管理</span>
+    <span>用户权限管理</span>
+    <span>地图管理</span>
+    <span>设备管理</span>
+    <span>设备点位管理</span>
+    <span>报警联动设置</span>
+    <span>应急预案设置</span>
+    <span>风险评估因素及模型设置</span>
+    <span>排班</span>
+    <span>字典维护</span>
+    <span>平台日志</span>
+  </li>
+</ul>
 
 <script>
-$(function () {
-
-
-
+  /*左侧边栏的点击事件*/
   $('#tik').click(function(){
-    $(this).css("display","none");
     $("#left-drop").css("width","100px");
+    $("#left-drop").addClass("ad");
     $("#left-drop").css("border","1px solid skyblue");
+    $("#left-drop-rig").css("width","800px");
   })
-
+  $('#left-drop-rig>li span').click(function(){
+    $("#left-drop").css("width","0");
+    $("#left-drop").css("border","1px solid transparent");
+    $("#left-drop-rig>li").css("width","0px");
+    $('#content').load('app/components/video_1/video_1.html');
+  })
+  $('#left-drop>li').hover(function(){
+    if($('#left-drop').hasClass("ad")==true){
+      console.log(1);
+      dropInx=$(this).index();
+      console.log(dropInx);
+      $("#left-drop-rig>li").eq(dropInx).css("width","630px").siblings().css("width","0px");
+    }
+  })
+  $('#left-drop-rig>li').bind("mouseleave",function(){
+    $("#left-drop").css("width","0");
+    $("#left-drop").removeClass("ad");
+    $("#left-drop").css("border","1px solid transparent");
+    $("#left-drop-rig>li").css("width","0px");
+  })
+  /*左侧边栏的定位*/
   ldw=function(){
-    leDw=$(window).height()-90;
-    $("#tik").css({"top":leDw/2-25+"px"});
+    leDw=$(window).height();
+    $("#tik").css({"top":leDw/2-32+"px"});
     $("#left-drop").css({"top":leDw/2-210+"px"});
+    $("#left-drop-rig").css({"top":leDw/2-210+"px"});
   }
   ldw();
-
-  window.onresize=function(){
-    ldw();
-  }
-
-})
 </script>
