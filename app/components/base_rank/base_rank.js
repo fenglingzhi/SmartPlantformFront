@@ -1,89 +1,95 @@
 $(function(){
 
+/*左上柱状图*/
 lft=echarts.init(document.getElementById("lft"));
-option_lft = {
-  color: ['#3398DB'],
-  tooltip : {
-    trigger: 'axis',
-    axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-      type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-    }
-  },
-  grid: {
-    left: '3%',
-    right: '5%',
-    bottom: '5%',
-    top: '30%',
-    containLabel: true
-  },
-  xAxis : [
-    {
-      type : 'category',
-      data : ['市\n看', '戒\n毒', '拘\n留', '二\n看', '二\n拘', '玄\n武',
-        '秦\n淮','栖\n霞','雨\n花','浦\n口','江\n宁','六\n合','溧\n水','高\n淳'],
-      axisLabel: {
-        show: true,
-        textStyle: {
-          fontSize:14,
-          color: 'white'
-        }
-      },
-      axisLine: {
-        show: false
-      },
-      axisTick: {
-        show: false
+  option_lft= {
+    color: ['#3398DB'],
+    tooltip : {
+      trigger: 'axis',
+      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
       }
-    }
-  ],
-  yAxis : [
-    {
-      axisLine: {
-        show: false
-      },
-      axisTick: {
-        show: false
-      },
-      type : 'value',
-      // show:false,
-      axisLabel: {
-        show: true,
-        textStyle: {
-          fontSize:10,
-          color: 'white'
-        }
-      }
-    }
-  ],
-  series : [
-    {
-      name: '分数',
-      itemStyle: {
-        normal: {
-          color: '#0294DF',
-          barBorderRadius: [20, 20, 0, 0]
-        }
-      },
-      type:'bar',
-      markLine: {
-        lineStyle: {
-          normal: {
-            color: '#B64A4A',
-            type: 'solid'
+    },
+    grid: {
+      left: '3%',
+      right: '5%',
+      bottom: '5%',
+      top: '30%',
+      containLabel: true
+    },
+    xAxis : [
+      {
+        type : 'category',
+        data : ['监所1', '监所2', '监所3', '监所4', '监所5', '监所6',
+          '监所7','监所8','监所9','监所10','监所11','监所12','监所13'],
+        axisLabel: {
+          show: true,
+          textStyle: {
+            fontSize:14,
+            color: 'white'
           }
         },
-        data: [{
-          yAxis: 60
-        }]
-      },
-      barWidth: '30%',
-      z: 10,
-      data:[77, 66, 55, 44, 99, 22, 11, 22, 33, 44, 55, 66, 77 , 88]
-    }
-  ]
-};
+        axisLine: {
+          show: false
+        },
+        axisTick: {
+          show: false
+        }
+      }
+    ],
+    yAxis : [
+      {
+        axisLine: {
+          show: false
+        },
+        axisTick: {
+          show: false
+        },
+        type : 'value',
+        // show:false,
+        axisLabel: {
+          show: true,
+          textStyle: {
+            fontSize:10,
+            color: 'white'
+          }
+        }
+      }
+    ],
+    series : [
+      {
+        name: '分数',
+        itemStyle: {
+          normal: {
+            color: function(params) {
+              var colorList = [
+                '#10B3E6','#10B3E6','orange','orange','#10B3E6','#10B3E6','#10B3E6',
+              ];
+              return colorList[params.dataIndex]
+            },
+            barBorderRadius: [20, 20, 0, 0]
+          }
+        },
+        type:'bar',
+        markLine: {
+          lineStyle: {
+            normal: {
+              color: '#B64A4A',
+              type: 'solid'
+            }
+          },
+          data: [{
+            yAxis: 60
+          }]
+        },
+        barWidth: '30%',
+        z: 10,
+        data:[77, 66, 55, 44, 99, 22, 11, 22, 33, 44, 55, 66, 77 ]
+      }
+    ]
+  };
 lft.setOption(option_lft);
-
+/*左下折线图*/
 lfb=echarts.init(document.getElementById("lfb"));
 option_lfb = {
   tooltip : {
@@ -100,7 +106,7 @@ option_lfb = {
     itemWidth: 15,
     itemHeight: 10,
     itemGap: 13,
-    data:['重点犯数量1','重点犯数量2','重点犯数量3'],
+    data:['监所押量','违规督导单','警力配比'],
     top:'10%',
     right:'5%',
     textStyle:{
@@ -155,7 +161,7 @@ option_lfb = {
     }
   }],
   series: [{
-    name: '重点犯数量1',
+    name: '监所押量',
     type: 'line',
     smooth: true,
     lineStyle: {
@@ -183,7 +189,7 @@ option_lfb = {
     },
     data: [96.3,96.4,97.5,95.6,98.1,94.8,89.6,94.1,80.1,52.4,75.8,94.7]
   }, {
-    name: '重点犯数量2',
+    name: '违规督导单',
     type: 'line',
     smooth: true,
     lineStyle: {
@@ -211,7 +217,7 @@ option_lfb = {
     },
     data: [97.3,99.2,99.3,100.0,99.6,90.6,80.0,91.5,69.8,67.5,90.4,84.9]
   }, {
-    name: '重点犯数量3',
+    name: '警力配比',
     type: 'line',
     smooth: true,
     lineStyle: {
@@ -241,7 +247,7 @@ option_lfb = {
   }, ]
 };
 lfb.setOption(option_lfb);
-
+/*右上玫瑰图*/
 rtt=echarts.init(document.getElementById("rtt"));
 option_rtt = {
   tooltip : {
@@ -259,65 +265,32 @@ option_rtt = {
   },
   calculable : true,
   series : [
-    // {
-    //     name:'半径模式',
-    //     type:'pie',
-    //     radius : [20, 110],
-    //     center : ['25%', '50%'],
-    //     roseType : 'radius',
-    //     label: {
-    //         normal: {
-    //             show: false
-    //         },
-    //         emphasis: {
-    //             show: true
-    //         }
-    //     },
-    //     lableLine: {
-    //         normal: {
-    //             show: false
-    //         },
-    //         emphasis: {
-    //             show: true
-    //         }
-    //     },
-    //     data:[
-    //         {value:10, name:'rose1'},
-    //         {value:5, name:'rose2'},
-    //         {value:15, name:'rose3'},
-    //         {value:25, name:'rose4'},
-    //         {value:20, name:'rose5'},
-    //         {value:35, name:'rose6'},
-    //         {value:30, name:'rose7'},
-    //         {value:40, name:'rose8'}
-    //     ]
-    // },
     {
       name:'面积模式',
       type:'pie',
-      radius : [30, 110],
+      radius : [100, 200],
       center : ['50%', '60%'],
 
       roseType : 'area',
       data:[
-        {value:10, name:'rose1'},
-        {value:5 , name:'rose2'},
-        {value:15, name:'rose3'},
-        {value:25, name:'rose4'},
-        {value:40, name:'rose8'}
+        {value:10, name:'监所押量'},
+        {value:5 , name:'违规督导单'},
+        {value:15, name:'警力配比'},
+        {value:25, name:'重大风险\r\n人员数量'}
       ],
       label: {
         normal: {
           textStyle: {
-            fontSize:22
+            fontSize:16
           }
         }
-      }
+      },
+      color:['#2EC8CA','#B6A2DF','#5BB1F0','#E5AB7D'],
     }
   ]
 };
 rtt.setOption(option_rtt);
-
+  /*右下从左到右玫瑰图1*/
 bot_left=echarts.init(document.getElementById("bot-left"));
 option_botleft={
   tooltip : {
@@ -338,16 +311,15 @@ option_botleft={
     {
       name:'面积模式',
       type:'pie',
-      radius : [10, 30],
+      radius : [30, 60],
       center : ['50%', '40%'],
 
       roseType : 'area',
       data:[
-        {value:210, name:'one1'},
-        {value:115 , name:'one2'},
-        {value:15, name:'one3'},
-        {value:165, name:'one4'},
-        {value:80, name:'one5'}
+        {value:210, name:'押量'},
+        {value:115 , name:'督导单'},
+        {value:15, name:'警力\n配比'},
+        {value:165, name:'风险人\n员数量'}
       ],
       labelLine: {
         normal: {
@@ -365,12 +337,13 @@ option_botleft={
             fontSize:14
           }
         }
-      }
+      },
+      color:['#2EC8CA','#B6A2DF','#5BB1F0','#E5AB7D'],
     }
   ]
 }
 bot_left.setOption(option_botleft);
-
+  /*右下从左到右玫瑰图2*/
 bot_mid=echarts.init(document.getElementById("bot-mid"));
 option_botmid={
   tooltip : {
@@ -391,15 +364,14 @@ option_botmid={
     {
       name:'面积模式',
       type:'pie',
-      radius : [10, 30],
+      radius : [30, 60],
       center : ['50%', '40%'],
       roseType : 'area',
       data:[
-        {value:210, name:'one1'},
-        {value:165 , name:'one2'},
-        {value:225, name:'one3'},
-        {value:35, name:'one4'},
-        {value:117, name:'one5'}
+        {value:210, name:'押量'},
+        {value:165 , name:'督导单'},
+        {value:225, name:'警力\n配比'},
+        {value:35, name:'风险人\n员数量'}
       ],
       labelLine: {
         normal: {
@@ -417,12 +389,13 @@ option_botmid={
             fontSize:14
           }
         }
-      }
+      },
+      color:['#2EC8CA','#B6A2DF','#5BB1F0','#E5AB7D'],
     }
   ]
 }
 bot_mid.setOption(option_botmid);
-
+  /*右下从左到右玫瑰图3*/
 bot_right=echarts.init(document.getElementById("bot-right"));
 option_botright={
   tooltip : {
@@ -443,16 +416,15 @@ option_botright={
     {
       name:'面积模式',
       type:'pie',
-      radius : [10, 30],
+      radius : [30, 60],
       center : ['50%', '40%'],
 
       roseType : 'area',
       data:[
-        {value:110, name:'one1'},
-        {value:55 , name:'one2'},
-        {value:15, name:'one3'},
-        {value:235, name:'one4'},
-        {value:97, name:'one5'}
+        {value:110, name:'押量'},
+        {value:55 , name:'督导单'},
+        {value:15, name:'警力\n配比'},
+        {value:235, name:'风险人\n员数量'}
       ],
       labelLine: {
         normal: {
@@ -470,7 +442,8 @@ option_botright={
             fontSize:14
           }
         }
-      }
+      },
+      color:['#2EC8CA','#B6A2DF','#5BB1F0','#E5AB7D']
     }
   ]
 }

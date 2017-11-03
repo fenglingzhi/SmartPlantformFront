@@ -1,8 +1,364 @@
 $(function() {
+
+  //内容尺寸计算
   var total_height = $(".police_law").height();
-
   $(".police_law_son>div:first-child").css({"height": total_height + "px"});
+  //内容尺寸计算
 
+
+
+  //左边排名图
+  per_0 = echarts.init(document.getElementById("ranking"));
+  var data = [53, 85, 60, 45, 53,53,53,53,53,53,53,53,53];
+  var xMax = 100;
+  var axisColor = '#fff';
+  option_ranking= {
+    tooltip: {
+      show: false,
+      formatter: "{b} <br> {c}名"
+
+    },
+
+    xAxis: [{
+      axisTick: {
+        show: false
+        // color:'#fff',
+      },
+      axisLine: {
+        show: false
+      },
+      axisLabel: {
+        show: false
+        //color:'#fff',
+      },
+      splitLine: {
+        show: false
+        // color:'#fff',
+      }
+    }],
+    yAxis: [{
+      type: 'category',
+      data: ['监所', '监所', '监所', '监所', '监所','监所','监所','监所', '监所', '监所', '监所','监所','监所'],
+
+      axisTick: {
+        // color:'#fff',
+        show: false
+      },
+      axisLine: {
+        //  color:'#fff',
+        show: false
+      },
+      axisLabel: {
+        textStyle: {
+          color: '#fff'
+        }
+      }
+
+    }],
+    series: [{
+      name: ' ',
+      type: 'bar',
+      barWidth: 16,
+      silent: true,
+      itemStyle: {
+        normal: {
+          color: '#0B2A54',
+          barBorderRadius: [0, 5, 5, 0]
+
+        }
+
+      },
+      barGap: '-100%',
+      barCategoryGap: '50%',
+      data: data.map(function(d) {
+        return xMax
+      }),
+    }, {
+      name: ' ',
+      type: 'bar',
+      barWidth: 16,
+      label: {
+        normal: {
+          show: false,
+          position: 'top',
+          formatter: '{c}%'
+        }
+      },
+      data: [{
+        value: 30,
+        itemStyle: {
+          normal: {
+            barBorderRadius: [0, 10, 10, 0],
+            color: {
+              type: 'bar',
+              colorStops: [{
+                offset: 0,
+                color: '#0985C6' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: '#0985C6' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+
+            }
+          }
+        }
+      },
+        {
+        value: 20,
+        itemStyle: {
+          // normal:{color:'#b250ff',barBorderRadius:[0,10,10,0],}
+          normal: {
+            barBorderRadius: [0, 10, 10, 0],
+            color: {
+              type: 'bar',
+              colorStops: [{
+                offset: 0,
+                color: '#0985C6' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: '#0985C6' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+
+            }
+          }
+        }
+      },
+        {
+        value: 50,
+        itemStyle: {
+          // normal:{color:'#4f9aff',barBorderRadius:[0,10,10,0],}
+          normal: {
+            barBorderRadius: [0, 10, 10, 0],
+            color: {
+              type: 'bar',
+              colorStops: [{
+                offset: 1,
+                color: '#0985C6' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: '#0985C6' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+
+            }
+          }
+        }
+      },
+        {
+        value: 40,
+        itemStyle: {
+          // normal:{color:'#4bf3ff',barBorderRadius:[0,10,10,0],  },
+          normal: {
+            barBorderRadius: [0, 10, 10, 0],
+            color: {
+              type: 'bar',
+              colorStops: [{
+                offset: 1,
+                color: '#0985C6' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: '#0985C6' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+
+            }
+          }
+
+        }
+      },
+        {
+
+        value: 60,
+        itemStyle: {
+          // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+          normal: {
+            barBorderRadius: [0, 10, 10, 0],
+            color: {
+              type: 'bar',
+              colorStops: [{
+                offset: 1,
+                color: '#0985C6' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: '#0985C6' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+
+            }
+          }
+        }
+      },
+        {
+        value: 26,
+        itemStyle: {
+          // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+          normal: {
+            barBorderRadius: [0, 10, 10, 0],
+            color: {
+              type: 'bar',
+              colorStops: [{
+                offset: 1,
+                color: '#0985C6' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: '#0985C6' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            }
+          }
+        }
+      },
+        {
+        value: 70,
+        itemStyle: {
+          // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+          normal: {
+            barBorderRadius: [0, 10, 10, 0],
+            color: {
+              type: 'bar',
+              colorStops: [{
+                offset: 1,
+                color: '#85C36A' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: '#97B934' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            }
+          }
+        }
+      },
+        {
+          value: 37,
+          itemStyle: {
+            // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+            normal: {
+              barBorderRadius: [0, 10, 10, 0],
+              color: {
+                type: 'bar',
+                colorStops: [{
+                  offset: 1,
+                  color: '#0985C6' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#0985C6' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
+            }
+          }
+        },
+        {
+          value: 80,
+          itemStyle: {
+            // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+            normal: {
+              barBorderRadius: [0, 10, 10, 0],
+              color: {
+                type: 'bar',
+                colorStops: [{
+                  offset: 1,
+                  color: '#85C36A' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#97B934' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
+            }
+          }
+        },
+        {
+          value: 27,
+          itemStyle: {
+            // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+            normal: {
+              barBorderRadius: [0, 10, 10, 0],
+              color: {
+                type: 'bar',
+                colorStops: [{
+                  offset: 1,
+                  color: '#0985C6' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#0985C6' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
+            }
+          }
+        },
+        {
+          value: 39,
+          itemStyle: {
+            // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+            normal: {
+              barBorderRadius: [0, 10, 10, 0],
+              color: {
+                type: 'bar',
+                colorStops: [{
+                  offset: 1,
+                  color: '#0985C6' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#0985C6' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
+            }
+          }
+        },
+        {
+          value: 19,
+          itemStyle: {
+            // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+            normal: {
+              barBorderRadius: [0, 10, 10, 0],
+              color: {
+                type: 'bar',
+                colorStops: [{
+                  offset: 1,
+                  color: '#0985C6' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#0985C6' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
+            }
+          }
+        },
+        {
+          value: 50,
+          itemStyle: {
+            // normal:{color:'#ffa800',barBorderRadius:[0,10,10,0],}
+            normal: {
+              barBorderRadius: [0, 10, 10, 0],
+              color: {
+                type: 'bar',
+                colorStops: [{
+                  offset: 1,
+                  color: '#0985C6' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#0985C6' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
+            }
+          }
+        },
+      ]
+    }]
+  };
+  per_0.setOption(option_ranking);
+  //左边排名图
+
+
+
+  //右上雷达图
   per_1 = echarts.init(document.getElementById("right"));
   option_right = {
     title: {
@@ -46,16 +402,16 @@ $(function() {
         }
       },
       data: [
-        {
-          value: [1300, 10000, 28000, 35000, 50000, 19000],
-          name: ''
+        {value: [3000,9000,11300,21092],
+         name: ''
         }
       ]
     }]
   };
   per_1.setOption(option_right);
+  //右上雷达图
 
-
+  //右下折线图
   right_down = echarts.init(document.getElementById("right_down"));
   option_rt_one = {
     title: {
@@ -75,9 +431,9 @@ $(function() {
       // data:['邮件营销']
     },
     grid: {
-      left: '1%',
+      left: '0%',
       right: '5%',
-      bottom: '8%',
+      bottom: '15%',
       top: '10%',
       containLabel: true
     },
@@ -135,7 +491,9 @@ $(function() {
     ]
   }
   right_down.setOption(option_rt_one)
+  //右下折线图
 
+  //中间环形图
   right_center=echarts.init(document.getElementById("each_1"));
   option_center= {
     "series": [
@@ -164,9 +522,9 @@ $(function() {
             "labelLine": {
               "show": false
             },
-            "color": "#5886f0",
-            "borderColor": "#5886f0",
-            "borderWidth":10
+            "color": "#3BECEF",
+            "borderColor": "#3BECEF",
+            "borderWidth":7
           },
           "emphasis": {
             "label": {
@@ -175,15 +533,15 @@ $(function() {
                 "fontWeight": "bold"
               }
             },
-            "color": "#5886f0",
-            "borderColor": "#5886f0",
-            "borderWidth":10
+            "color": "#3BECEF",
+            "borderColor": "#3BECEF",
+            "borderWidth":7
           }
         },
         "data": [
           {
-            "value": 53.7,
-            "name": "40 分"
+            "value": 57.7,
+            "name": ""
           },
           {
             "name": " ",
@@ -196,13 +554,13 @@ $(function() {
                 "labelLine": {
                   "show": false
                 },
-                "color": "#5886f0",
-                "borderColor": "#5886f0",
+                "color": "#3BECEF",
+                "borderColor": "#3BECEF",
                 "borderWidth": 0
               },
               "emphasis": {
-                "color": "#5886f0",
-                "borderColor": "#5886f0",
+                "color": "#3BECEF",
+                "borderColor": "#3BECEF",
                 "borderWidth": 0
               }
             }
@@ -223,7 +581,140 @@ $(function() {
   right_center5.setOption(option_center);
   right_center6=echarts.init(document.getElementById("each_6"));
   right_center6.setOption(option_center);
+  //中间环形图
 
+
+
+  $(".each").click(function(){
+    $(this).addClass("actives");
+    $(this).siblings().removeClass("actives");
+  });
+
+  $(".each").mouseover(function(){
+    $(this).css("cursor","pointer");
+  })
+
+
+
+  $("#each_1").parent().click(function(){
+
+    per_1.setOption(
+      {
+        radar: {
+          center: ["50%", "50%"],
+          indicator: [
+            {name: '巡视记录', max: 6500},
+            {name: '查处违规情况', max: 16000},
+            {name: '重大风险人员动态记录', max: 30000},
+            {name: '就寝前点名', max: 38000},
+            {name: '巡控交接班', max: 38000}
+          ]
+        }
+      }
+    )
+
+    $(".center_font_1").css("zIndex","300");
+  })
+
+  $("#each_2").parent().click(function(){
+
+    per_1.setOption(
+      {
+        radar: {
+          center: ["50%", "50%"],
+          indicator: [
+            {name: '谈话情况分析', max: 6500},
+            {name: '两下监室情况分析', max: 16000},
+            {name: '过渡期管理', max: 30000},
+            {name: '日常调监', max: 38000},
+            {name: '三固定排表', max: 38000}
+          ]
+        }
+      }
+    )
+    $(".center_font_2").css("zIndex","300");
+  })
+
+  $("#each_3").parent().click(function(){
+
+    per_1.setOption(
+      {
+        radar: {
+          center: ["50%", "50%"],
+          indicator: [
+            {name: '设施设备的修复', max: 6500},
+            {name: '每周食谱', max: 16000},
+            {name: '日清月结', max: 30000},
+          ]
+        }
+      }
+    )
+    $(".center_font_3").css("zIndex","300");
+  })
+
+  $("#each_4").parent().click(function(){
+
+    per_1.setOption(
+      {
+        radar: {
+          center: ["50%", "50%"],
+          indicator: [
+            {name: '重大风险人员谈话', max: 6500},
+            {name: '其他所领导谈话', max: 16000},
+            {name: '风险评估会议', max: 30000},
+            {name: '应急演练', max: 30000},
+            {name: '集体教育', max: 30000},
+            {name: '所务会', max: 30000},
+            {name: '安全大检查', max: 30000},
+            {name: '所长接待日', max: 30000},
+          ]
+        }
+      }
+    )
+
+    $(".center_font_4").css("zIndex","300");
+  })
+
+  $("#each_5").parent().click(function(){
+
+    per_1.setOption(
+      {
+        radar: {
+          center: ["50%", "50%"],
+          indicator: [
+            {name: '巡诊', max: 6500},
+            {name: '临时固定人员巡查', max: 16000},
+            {name: '单独关押', max: 16000},
+            {name: '消毒', max: 6500},
+          ]
+        }
+      }
+    )
+
+    $(".center_font_5").css("zIndex","300");
+  })
+
+
+  $("#each_6").parent().click(function(){
+
+    per_1.setOption(
+      {
+        radar: {
+          center: ["50%", "50%"],
+          indicator: [
+            {name: '出所谈话是否进行', max: 6500},
+            {name: '提讯会见室巡查', max: 16000},
+            {name: '其他', max: 30000},
+          ]
+        }
+      }
+    )
+
+    $(".center_font_6").css("zIndex","300");
+  })
+
+
+  //echarts自适应
   window.onresize = function(){
     per_1.resize();
     right_down.resize();
@@ -234,13 +725,14 @@ $(function() {
     right_center5.resize();
     right_center6.resize();
   }
+  //echarts自适应
 
 })
 
 
-
-$(window).resize(function(){
-  var total_height = $(".police_law").height();
-  $(".police_law_son>div:first-child").css({"height": total_height + "px"});
-})
-
+  //页面刷新
+  $(window).resize(function(){
+    var total_height = $(".police_law").height();
+    $(".police_law_son>div:first-child").css({"height": total_height + "px"});
+  });
+  //页面刷新

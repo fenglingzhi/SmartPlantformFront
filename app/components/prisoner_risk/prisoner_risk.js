@@ -1,4 +1,6 @@
 $(function(){
+
+  //内容尺寸计算
   var total_height=$(".prisoner_risk").height();
   $("#right_top").css({"height":total_height/2+"px"});
   $("#right_bottom").css({"height":total_height/2+"px"});
@@ -7,25 +9,37 @@ $(function(){
   var table_height2=$("#right_bottom>div:first-child").height();
   console.log(table_height2);
   $(".table").css({"height":table_height-table_height2-50+"px"});
+  //内容尺寸计算
 
-
+  //左下连续违规
   $(".toggle_2").click(function(){
     $(".toggle_1").css({"height":10+"%"});
     $(".toggle_1").css("transition","height 2s");
     $(".toggle_2>span:nth-child(2)").removeClass("glyphicon-chevron-up");
     $(".toggle_2>span:nth-child(2)").addClass("glyphicon-chevron-down");
     $(".mid-midbt").css("opacity","0")
+    $("#center_echarts").css("opacity","0")
     $(".mid-midbt").css("transition","opacity 180ms")
+    $("#center_echarts").css("transition","opacity 180ms")
   })
+  //左下连续违规
+
+  //左上违规类型
   $(".toggle_1").click(function(){
     $(".toggle_1").css({"height":90+"%"});
     $(".toggle_1").css("transition","height 2s");
     $(".toggle_2>span:nth-child(2)").removeClass("glyphicon-chevron-down");
     $(".toggle_2>span:nth-child(2)").addClass("glyphicon-chevron-up");
     $(".mid-midbt").css("opacity","1")
+    $("#center_echarts").css("opacity","1")
     $(".mid-midbt").css("transition","opacity 400ms")
+    $("#center_echarts").css("transition","opacity 400ms")
   })
+  //左上违规类型
 
+
+
+  //圆饼图
   option_top= {
     tooltip: {
       trigger: 'item',
@@ -83,9 +97,9 @@ $(function(){
   };
   center2=echarts.init(document.getElementById("center_echarts"));
   center2.setOption(option_top);
+  //圆饼图
 
-
-
+  //柱状图
   option_top_2= {
     backgroundColor: 'transparent',
     animation: false,
@@ -100,7 +114,7 @@ $(function(){
     },
     grid: {
       top: 60,
-      bottom: 30
+      bottom: 40
     },
     xAxis: {
       splitNumber:25,
@@ -210,10 +224,9 @@ $(function(){
   }
   center3=echarts.init(document.getElementById("center_echarts_2"));
   center3.setOption(option_top_2);
+  //柱状图
 
-
-
-
+  //折线图
   right_top = echarts.init(document.getElementById("right_top"));
   option_right_top= {
     tooltip : {
@@ -288,6 +301,5 @@ $(function(){
     ]
   };
   right_top.setOption(option_right_top);
-
-
+  //折线图
 })

@@ -1,4 +1,5 @@
 $(function() {
+  /*右边折线图*/
   right_t = echarts.init(document.getElementById("right-t"));
   option_rt = {
     tooltip: {
@@ -72,7 +73,7 @@ $(function() {
     ]
   }
   right_t.setOption(option_rt);
-
+  /*中间雷达图*/
   mid_ts = echarts.init(document.getElementById("mid-ts"));
   option_ts = {
     title: {
@@ -125,61 +126,16 @@ $(function() {
     }]
   };
   mid_ts.setOption(option_ts);
-
-
-  $(".each_1").click(function(){
-    mid_ts.setOption({
-      series:[{data:[{value: [1100, 3000, 1000, 33000, 1000, 12000]}]}]
-    });
-    $(this).addClass("actives")
-    $(this).siblings().removeClass("actives")
-  })
-
-  $(".each_2").click(function(){
-    mid_ts.setOption({
-      series:[{data:[{value: [3100, 3000, 11000, 4300, 5000, 2100]}]}]
-    });
-    $(this).addClass("actives");
-    $(this).siblings().removeClass("actives")
-  })
-
-  $(".each_3").click(function(){
-    mid_ts.setOption({
-      series:[{data:[{value: [4100, 2000, 12000, 1100, 3000, 3100]}]}]
-    });
-    $(this).addClass("actives");
-    $(this).siblings().removeClass("actives")
-  })
-
-  $(".each_4").click(function(){
-    mid_ts.setOption({
-      series:[{data:[{value: [6100, 7000, 21000, 2100, 4000, 2100]}]}]
-    });
-    $(this).addClass("actives");
-    $(this).siblings().removeClass("actives")
-  })
-
-  $(".each_5").click(function(){
-    mid_ts.setOption({
-      series:[{data:[{value: [2100, 8000, 7000, 9000, 14000, 8100]}]}]
-    });
-    $(this).addClass("actives");
-    $(this).siblings().removeClass("actives")
-  })
-
-
-  $(".each_6").click(function(){
-    mid_ts.setOption({
-      series:[{data:[{value: [4100, 1000, 9020, 1390, 7800, 9210]}]}]
-    });
-    $(this).addClass("actives");
-    $(this).siblings().removeClass("actives")
-  })
-
-
+/*左边岗位点击事件*/
+$(".each").click(function(){
+  $(this).addClass("actives").siblings().removeClass("actives");
 })
+
+
+
 
 window.onresize=function(){
   right_t.resize();
   mid_ts.resize();
 }
+})

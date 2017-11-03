@@ -1,6 +1,6 @@
 #base_rank{
   width:90%;
-  height: 90%;
+  height: 88%;
   /*border: 1px solid red;*/
   position: absolute;
   left: 0;
@@ -9,6 +9,7 @@
   bottom: 0;
   margin: auto;
   border-radius: 10px;
+  margin-bottom: 60px;
   /*background-color: rgba(255,255,255,0.1);*/
 }
 .col-sm-1,

@@ -158,7 +158,7 @@
   margin: auto;
   /*background-color: red;*/
 }
-.mid-midbt div{
+.mid-midbt>div{
   color: white;
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 10px;
@@ -168,7 +168,7 @@
   height: 45%;
   /*background-color: white;*/
 }
-.mid-midbt div:hover{
+.mid-midbt>div:hover{
   border: 2px solid #45C9E6;
 }
 .mid-midbt div:nth-child(1){
@@ -269,3 +269,23 @@ div.each:last-child{
 
 
 
+.mid-midbt>div>div{
+  text-align: left;
+  width: 80%;
+  height:12px;
+  background-color: rgba(12,18,25,0.8);
+  border-radius: 10px;
+  border: none;
+  margin: 0;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.mid-midbt>div>div>div{
+  text-align: left;
+  width: 60%;
+  height:12px;
+  /*margin: auto;*/
+  background-color: skyblue;
+  border-radius: 10px;
+  border: none;
+}

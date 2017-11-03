@@ -1,6 +1,6 @@
 $(function () {
 
-
+/*上方左边累气球图*/
 risk_rank1=echarts.init(document.getElementById("risk_rank-1"));
 option_one = {
   grid: {
@@ -12,7 +12,7 @@ option_one = {
   xAxis: [
     {
       type: 'category',
-      data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月'],
+      data: ['监所1','监所2','监所3','监所4','监所5','监所6','监所7','监所8','监所9','监所10','监所11'],
       axisPointer: {
         type: 'shadow'
       },
@@ -78,7 +78,7 @@ option_one = {
   ]
 };
 risk_rank1.setOption(option_one)
-
+/*上方右边雷达图*/
 risk_rank2=echarts.init(document.getElementById("risk_rank-2"));
 option_two = {
   tooltip: {},
@@ -88,7 +88,7 @@ option_two = {
     left:'2%',
     itemWidth: 12,
     itemHeight: 12,
-    data: ['第一名监所','第二名监所','第三名监所'],
+    data: ['监所1','监所2','监所3'],
     textStyle: {
       color: '#fff'
     }
@@ -115,25 +115,25 @@ option_two = {
       }
     },
     indicator: [{
-      name: '风险项1',
+      name: '监室设施',
       max: 100
     }, {
-      name: '风险项2',
+      name: '周界报警',
       max: 100
     }, {
-      name: '风险项3',
+      name: '监区门禁',
       max:100
     }, {
-      name: '风险项4',
+      name: '紧急报警',
       max: 100
     }, {
-      name: '风险项5',
+      name: 'AB门设施',
       max: 100
     }, {
-      name: '风险项6',
+      name: '周界防护',
       max: 100
     },{
-      name: '风险项7',
+      name: '2.无线定位',
       max: 100
     }]
   },
@@ -148,19 +148,19 @@ option_two = {
     },
     data: [{
       value: [50, 70, 50, 60, 70, 80,60],
-      name: '第一名监所'
+      name: '监所1'
     }, {
       value: [50, 60, 70, 85, 60, 70,50],
-      name: '第二名监所'
+      name: '监所2'
     }, {
       value: [80, 30, 40, 65, 20, 60,70],
-      name: '第三名监所'
+      name: '监所3'
     }]
   }],
   color: ['#ef4b4c', '#b1eadb','#C75028']
 };
 risk_rank2.setOption(option_two)
-
+/*下方折线图*/
 risk_rank3=echarts.init(document.getElementById("risk_rank-3"));
 option_three = {
   grid: {
@@ -170,7 +170,17 @@ option_three = {
     top:'30%'
     //containLabel: true
   },
-
+  legend: {
+    orient: '',
+    top: '15%',
+    left:'50%',
+    itemWidth: 12,
+    itemHeight: 12,
+    data: ['监室设施'],
+    textStyle: {
+      color: '#fff'
+    }
+  },
   xAxis: {
     type: 'category',
     boundaryGap: false,
@@ -211,7 +221,7 @@ option_three = {
 
   },
   series: [{
-    name: '事业一部',
+    name: '监室设施',
     itemStyle:{
       normal:{
         color:'#E0D011'
@@ -233,7 +243,6 @@ option_three = {
   }]
 };
 risk_rank3.setOption(option_three)
-
 
 window.onresize=function(){
   risk_rank1.resize();

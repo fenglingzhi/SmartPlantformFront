@@ -142,8 +142,8 @@
   line-height: 40px;
 }
 .wc p:first-child,.wc p:nth-child(3){
-  color: skyblue;
-  font-size: 14px;
+  color: #34EAF5;
+  font-size: 16px;
 
 }
 .wc p:last-child,.wc p:nth-child(2){
@@ -166,7 +166,6 @@
 .bottom-hd>div{
   float: left;
   color: white;
-  font-size: 14px;
   margin-left: 1.75%;
   width: 31%;
   height: 90%;
@@ -179,7 +178,9 @@
   border:1px solid #2386AD;
 }
 .bottom-hd>div>p{
+  font-size: 20px;
   height: 40px;
+  color: skyblue;
   line-height: 40px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -190,6 +191,7 @@
   margin-top: 5px;
 }
 .bottom-hd>div>ul li{
+  font-size: 16px;
   margin-left: 10px;
   height:30px;
   line-height: 30px;
@@ -212,7 +214,7 @@
 }
 .table{
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
   border: 1px solid skyblue;
   border-radius: 10px;
 }
@@ -230,7 +232,9 @@
   border-radius: 5px;
   background-color: #A27329;
 }
-
+.table>thead>tr:first-child>td{
+  font-weight: bold;
+}
 
 
 

@@ -1,3 +1,6 @@
+$(function () {
+
+/*左上玫瑰图*/
 left_t=echarts.init(document.getElementById("left-t"));
 option_lt = {
   tooltip : {
@@ -65,28 +68,28 @@ option_lt = {
       },
       roseType : 'area',
       data:[
-        {value:10, name:'rose1',
+        {value:10, name:'监所押量',
           itemStyle:{
             normal:{
               color:'#2EC8CA'
             }
           }
         },
-        {value:5 , name:'rose2',
+        {value:5 , name:'违规督导单',
           itemStyle:{
             normal:{
               color:'#B6A2DF'
             }
           }
         },
-        {value:15, name:'rose3',
+        {value:15, name:'警力配比',
           itemStyle:{
             normal:{
               color:'#DAA67E'
             }
           }
         },
-        {value:25, name:'rose4',
+        {value:25, name:'现场检查',
           itemStyle:{
             normal:{
               color:'#59B1EF'
@@ -105,7 +108,7 @@ option_lt = {
   ]
 };
 left_t.setOption(option_lt);
-
+/*右上折线图*/
 right_t=echarts.init(document.getElementById("right-t"));
 option_rt= {
   tooltip : {
@@ -151,6 +154,44 @@ option_rt= {
       }
     }
   ],
+  "dataZoom": [{
+    "show": true,
+    "height": 20,
+    "xAxisIndex": [
+      0
+    ],
+    bottom: 0,
+    "start": 30,
+    "end": 80,
+    handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
+    handleSize: '0%',
+    backgroundColor:"rgba(25,47,83,0.5)",
+    fillerColor:"#1D5090",
+    dataBackground:{
+      areaStyle:{
+        // color:"red"
+      },
+      lineStyle:{
+        color:"transparent"
+      }
+    },
+    handleStyle:{
+      color:"#ddd"
+
+    },
+    textStyle:{
+      color:"white"
+    },
+    borderColor:"transparent"
+
+
+  }, {
+    "type": "inside",
+    "show": true,
+    "height": 15,
+    "start": 1,
+    "end": 35
+  }],
   series : [
     {
       name:'重点犯数量3',
@@ -175,12 +216,14 @@ option_rt= {
         }
       },
       data:[250, 232, 201, 254, 240, 230, 210,250, 232, 201, 254, 190]
-    },
+    }
   ]
-}
+};
 right_t.setOption(option_rt);
 
 window.onresize = function(){
   left_t.resize();
   right_t.resize();
-}
+};
+
+});

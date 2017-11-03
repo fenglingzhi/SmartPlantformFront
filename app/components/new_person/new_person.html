@@ -1,26 +1,19 @@
 <link rel="stylesheet" href="app/components/new_person/new_person.css">
-<!--<ul id="bottom-ul">-->
-  <!--<li class="active-box">押解总量</li>-->
-  <!--<li>新收人员</li>-->
-  <!--<li>出所人员</li>-->
-  <!--<li>临时出所</li>-->
-<!--</ul>-->
-<!--<img id="button1" src="app/img/button1.png" alt=""/>-->
-<!--<img id="button2" src="app/img/button2.png" alt=""/>-->
-<!--<img id="button3" src="app/img/button3.png" alt=""/>-->
+
+
+
 <div class="person row">
 
   <div class="col-sm-3 per-left">
     <div id="left-df" style="width: 100%;height: 59%;position: relative;">
       <p class="left-fx">新收人员</p>
-      <p class="left-zb">·设计压量占比</p>
-      <p class="left-rs">·压量人数</p>
+      <!--<p class="left-zb"><i></i>设计押量占比</p>-->
+      <!--<p class="left-rs">押量人数<i></i></p>-->
       <img src="app/img/button4.png" class="left-img"/>
       <div style="width: 100%;height:100%;" id="d1">
       </div>
       <div class="left-dw">
-        <p><span>40</span>分</p>
-        <span>良好</span>
+        <p><span>40</span></p>
       </div>
       <div class="man-wo">
         <p class="man"><span>男</span><span>55</span></p>
@@ -72,7 +65,7 @@
 
     <div class="addshow">
       <div style="width: 50%;height: 100%;float: left">
-        <p>重要罪犯嫌疑人</p>
+        <p>重要在押人员</p>
         <p>
           15<span  style="background: url('app/img/jiantou.png')"></span>
         </p>
@@ -82,7 +75,7 @@
       </div>
     </div>
 
-    <div class="addshows">
+    <div class="addshows addshow">
       <div style="width: 50%;height: 100%;float: left">
         <p>风险人员</p>
         <p>
@@ -260,4 +253,52 @@
   </div>
 
 </div>
+<style>
+  #bottom-ul{
+    position: absolute;
+    bottom: 0%;
+    left: 33%;
+  }
+  #bottom-ul li{
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+    border: 1px solid skyblue;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    float:left;
+    box-shadow: inset 0 0 6px 3px #16cbb6;
+  }
+  .active-box{
+    box-shadow: inset 0 0 12px 7px #16cbb6 !important;
+  }
+  #bottom-ul li:hover{
+    box-shadow: inset 0 0 12px 7px #16cbb6 !important;
+  }
+</style>
+<ul id="bottom-ul">
+  <li>押解总量</li>
+  <li class="active-box">新收人员</li>
+  <li>出所人员</li>
+  <li>临时出所</li>
+</ul>
+<script>
+
+  $("#bottom-ul li").click(function(){
+    var inx=$(this).index();
+    $(this).addClass("active-box");
+    $(this).siblings().removeClass("active-box");
+    if(inx==0){
+      $("#content").load('app/components/escort_all/escort_all.html');
+    }else if(inx==1){
+      $('#content').load('app/components/new_person/new_person.html');
+    }else if(inx==2){
+      $("#content").load('app/components/out_police_station/out_police_station.html');
+    }else if(inx==3){
+      $("#content").load('app/components/temporary_outing/temporary_outing.html');
+    }
+
+  })
+</script>
 <script src="app/components/new_person/new_person.js"></script>

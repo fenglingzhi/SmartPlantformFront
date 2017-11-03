@@ -1,6 +1,22 @@
 $(function () {
 
+/*岗位的的点击事件*/
+  $(".top-six>div").click(function(){
+    inx=$(this).index();
+      $(this).addClass("activd-top").siblings().removeClass("activd-top");
+      $(".bottom-left>div").eq(inx).css("display","block").siblings().css("display","none");
 
+    if(inx==0){
+      $("#table").css("display","none");
+      $("#tables").css("display","table");
+    }else if(inx==2){
+      $("#table").css("display","table");
+      $("#tables").css("display","none");
+    }
+  })
+
+
+  /*上面6个岗位的echart*/
 ts_1=echarts.init(document.getElementById("ts-1"));
 option_ts1={
   title: {
@@ -93,7 +109,7 @@ option_ts1={
   ]
 };
 ts_1.setOption(option_ts1);
-
+  /*上面6个岗位的echart*/
 ts_2=echarts.init(document.getElementById("ts-2"));
 option_ts2={
   title: {
@@ -186,7 +202,7 @@ option_ts2={
   ]
 };
 ts_2.setOption(option_ts2);
-
+  /*上面6个岗位的echart*/
 ts_3=echarts.init(document.getElementById("ts-3"));
 option_ts3={
   title: {
@@ -279,7 +295,7 @@ option_ts3={
   ]
 };
 ts_3.setOption(option_ts3);
-
+  /*上面6个岗位的echart*/
 ts_4=echarts.init(document.getElementById("ts-4"));
 option_ts4={
   title: {
@@ -372,7 +388,7 @@ option_ts4={
   ]
 };
 ts_4.setOption(option_ts4);
-
+  /*上面6个岗位的echart*/
 ts_5=echarts.init(document.getElementById("ts-5"));
 option_ts5={
   title: {
@@ -465,7 +481,7 @@ option_ts5={
   ]
 };
 ts_5.setOption(option_ts5);
-
+  /*上面6个岗位的echart*/
 ts_6=echarts.init(document.getElementById("ts-6"));
 option_ts6={
   title: {
@@ -559,14 +575,13 @@ option_ts6={
 };
 ts_6.setOption(option_ts6);
 
-
+  /*事件(数字)的定位*/
 wc=function(){
   blw=$(".bottom-left").width();
   console.log(blw);
   $(".wc").css({'marginLeft':blw/2-160+"px"});
 }
 wc();
-
 
 window.onresize=function(){
   ts_1.resize();

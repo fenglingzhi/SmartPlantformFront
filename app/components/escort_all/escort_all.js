@@ -1,29 +1,23 @@
 $(function(){
+  //内容尺寸计算---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   var two_width=parseInt($(".mid-left>div:first-child>div:nth-child(2)").css("width"));
   var three_width=parseInt($(".mid-left").css("width"));
   var four_width=parseInt($(".right-right-1>div:first-child").css("width"));
   var five_width=parseInt($(".mid_left_1_3").css("width"));
   var height_model=parseInt($(".right-right-1_1").css("height"));
   var height_model_2=parseInt($(".right-right-1-1").css("height"));
-
   var right_model=parseInt($(".right-right-1-1").css("width"));
   var right_model2=parseInt($(".right-right-1_2").css("width"));
-
-
   var width_model=parseInt($(".right-right-1_1").css("width"));
   var width_model_2=parseInt($(".right-right-1-1").css("width"));
   var one_line=parseInt($(".mid_left_1_2").css("width"));
   var height_ema=$("#top_2").height();
-
-
   $(".right-right-1").css({"width":one_line});
   $(".right-right-2").css({"width":one_line});
   $(".right-right-3").css({"width":one_line});
   $(".right-right-1_1").css({"width":one_line});
   $(".right-right-2_1").css({"width":one_line});
   $(".right-right-3_1").css({"width":one_line});
-
-
   $(".right-right-1_2").css({"marginLeft":one_line});
   $(".right-right-2-2").css({"marginLeft":one_line});
   $(".right-right-3-2").css({"marginLeft":one_line});
@@ -33,12 +27,31 @@ $(function(){
   $(".right-right-2_1").next().css({"marginLeft":two_width/2+"px"});
   $(".right-right-3_1").next().css({"marginTop":-height_model});
   $(".right-right-3_1").next().css({"marginLeft":two_width/2+"px"});
-
   $(".imp_person_toggle2").css("opacity","0")
   $(".imp_person_toggle3").css("opacity","0")
   $(".imp_person_toggle1").css("opacity","1")
+  var dw=function(){
+    imgFw=$("#left-df").width();
+    imgFh=$("#left-df").height();
+    imgW=$(".left-img").width();
+    imgH=$(".left-img").height();
+    fenW=$(".left-dw").width();
+    fenH=$(".left-dw").height();
+    $(".left-img").css({"left":imgFw/2-imgW/2+"px"});
+    $(".left-img").css({"top":(imgFh/2-imgW/2)+"px"});
+    $(".left-dw").css({"left":imgFw/2-fenW/2+"px"});
+    $(".left-dw").css({"top":(imgFh/2-fenH/2)+"px"});
+  }
+  dw();
+  $(".mid_left_1_2_img").css({"top":height_model/4,"left":width_model/7});
+  $(".mid_right_1_2_img").css({"top":height_model_2/4,"left":width_model_2/7});
+  //内容尺寸计算---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
+
+
+  //中间第一列鼠标移入展示---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   $(".mid-left>div:first-child>div:first-child").mouseover(function(){
     $("#top_2").css("overflow","hidden");
     $("#mid_2").css("overflow","hidden");
@@ -87,7 +100,13 @@ $(function(){
     $(".right-right-3_1").next().css("width","0");
     $(".right-right-3_1").next().css({"marginLeft":two_width/2+"px"});
   })
+  //中间第一列鼠标移入展示---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+
+
+  //中间第二列鼠标移入展示---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   $(".right-right-1").mouseover(function(){
     $("#top_2").css({"top":0+"px"});
     $("#mid_2").css({"top":0+"px"});
@@ -149,8 +168,14 @@ $(function(){
     per_2_1.resize();
     per_3_1.resize();
   })
+  //中间第二列鼠标移入展示
 
 
+
+
+
+
+  //中间第三列鼠标移入展示---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   $(".right-right-1_1").mouseover(function(){
     $(".last-right-next").css({"width":five_width+"px"});
     $(".right-right-2-2").css({"width":five_width+"px"});
@@ -218,12 +243,17 @@ $(function(){
     per_2_2.resize();
     per_3_2.resize();
   });
-  $(".mid_left_1_2_img").css({"top":height_model/4,"left":width_model/7});
-  $(".mid_right_1_2_img").css({"top":height_model_2/4,"left":width_model_2/7});
+  //中间第三列鼠标移入展示---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-  //echarts
 
+
+
+
+
+
+  //echarts------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //中一上面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   per_1=echarts.init(document.getElementById("top_1"));
   option_top={
     title: {
@@ -321,7 +351,9 @@ $(function(){
     ]
   };
   per_1.setOption(option_top);
+  //中一上面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+  //中二上面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   per_1_1=echarts.init(document.getElementById("top_2"));
   option_top2={
     title: {
@@ -419,7 +451,9 @@ $(function(){
     ]
   };
   per_1_1.setOption(option_top2);
+  //中二上面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+  //中三上面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   per_1_2=echarts.init(document.getElementById("top_3"));
   option_top3={
     title: {
@@ -517,11 +551,11 @@ $(function(){
     ]
   };
   per_1_2.setOption(option_top3);
+  //中三上面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+  //中一中间折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   per_2=echarts.init(document.getElementById("middle_1"));
-  per_2_1=echarts.init(document.getElementById("mid_2"));
-  per_2_2=echarts.init(document.getElementById("mid_3"));
   option_middle= {
     title: {
       text: '',
@@ -587,6 +621,12 @@ $(function(){
       },
     ]
   };
+  per_2.setOption(option_middle);
+  //中一中间折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  //中二中间折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  per_2_1=echarts.init(document.getElementById("mid_2"));
   option_middle2= {
     title: {
       text: '',
@@ -652,6 +692,11 @@ $(function(){
       },
     ]
   };
+  per_2_1.setOption(option_middle2);
+  //中二中间折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //中三中间折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  per_2_2=echarts.init(document.getElementById("mid_3"));
   option_middle3= {
     title: {
       text: '',
@@ -717,13 +762,60 @@ $(function(){
       },
     ]
   };
-  per_2.setOption(option_middle);
-  per_2_1.setOption(option_middle2);
   per_2_2.setOption(option_middle3);
+  //中三中间折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+  //左边右上角环形图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  dq=echarts.init(document.getElementById("d1"));
+  option_dd = {
+    tooltip: {
+      trigger: 'item',
+      formatter: "{d}%"
+    },
+    series: [
+      {
+        type:'pie',
+        hoverAnimation: false,
+        radius: ['40%', '50%'],
+        label: {
+          normal: {
+            show: false,
+            position: 'center'
+          }
+
+        },
+        itemStyle:{
+          normal:{
+            color:'#01EBFA'
+          }
+        },
+        data:[
+          {
+            value:2400,
+            itemStyle:{
+              normal:{
+                color:'#01EBFA'
+              }
+            }
+
+          },
+          {
+            value:600,itemStyle:{
+            normal:{
+              color:'#204E72'
+            }
+          }
+
+          },
+        ]
+      }
+    ]
+  };
+  dq.setOption(option_dd);
+  //左边右上角环形图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //中一下面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   per_3=echarts.init(document.getElementById("bottom_1"));
-  per_3_1=echarts.init(document.getElementById("bottom_2"));
-  per_3_2=echarts.init(document.getElementById("bottom_3"));
   option_bottom= {
     title: {
       text: '',
@@ -788,6 +880,11 @@ $(function(){
       },
     ]
   };
+  per_3.setOption(option_bottom);
+  //中一下面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //中二下面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  per_3_1=echarts.init(document.getElementById("bottom_2"));
   option_bottom2= {
     title: {
       text: '',
@@ -852,6 +949,11 @@ $(function(){
       },
     ]
   };
+  per_3_1.setOption(option_bottom2);
+  //中二下面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //中三下面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  per_3_2=echarts.init(document.getElementById("bottom_3"));
   option_bottom3= {
     title: {
       text: '',
@@ -916,11 +1018,11 @@ $(function(){
       },
     ]
   };
-  per_3.setOption(option_bottom);
-  per_3_1.setOption(option_bottom2);
   per_3_2.setOption(option_bottom3);
+  //中三下面折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+ //左下折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   per_4=echarts.init(document.getElementById("title_1"));
   option_title1= {
     backgroundColor:"rgba(31, 56, 76, 0.63)",
@@ -982,14 +1084,27 @@ $(function(){
         name: '分数',
         itemStyle: {
           normal: {
-            color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
-              offset: 0,
-              color: '#E7DA0A'
-            },{
-              offset: 1,
-              color: '#9BEC09'
-            }]),
-            barBorderRadius: [20, 20, 0, 0]
+            color: function(params) {
+              var colorList = [
+                '#10B3E6',
+                '#10B3E6',
+                '#10B3E6',
+                '#10B3E6',
+                'orange',
+                '#10B3E6',
+                '#10B3E6',
+                '#10B3E6',
+                '#10B3E6',
+                '#10B3E6',
+                '#10B3E6',
+                '#10B3E6',
+                '#10B3E6',
+                'orange',
+              ];
+              return colorList[params.dataIndex]
+            },
+            barBorderRadius: [20, 20, 0, 0],
+
           }
         },
         type:'bar',
@@ -1000,69 +1115,6 @@ $(function(){
     ]
   };
   per_4.setOption(option_title1);
-
-
-  var dw=function(){
-    imgFw=$("#left-df").width();
-    imgFh=$("#left-df").height();
-    imgW=$(".left-img").width();
-    imgH=$(".left-img").height();
-    fenW=$(".left-dw").width();
-    fenH=$(".left-dw").height();
-    $(".left-img").css({"left":imgFw/2-imgW/2+"px"});
-    $(".left-img").css({"top":(imgFh/2-imgW/2)+"px"});
-    $(".left-dw").css({"left":imgFw/2-fenW/2+"px"});
-    $(".left-dw").css({"top":(imgFh/2-fenH/2)+"px"});
-  }
-  dw();
-
-
-  dq=echarts.init(document.getElementById("d1"));
-  option_dd = {
-    tooltip: {
-      trigger: 'item',
-      formatter: "{d}%"
-    },
-    series: [
-
-      {
-        type:'pie',
-        hoverAnimation: false,
-        radius: ['50%', '60%'],
-        label: {
-          normal: {
-            show: false,
-            position: 'center'
-          }
-
-        },
-        itemStyle:{
-          normal:{
-            color:'#01EBFA'
-          }
-        },
-        data:[
-          {
-            value:2400,
-            itemStyle:{
-              normal:{
-                color:'#01EBFA'
-              }
-            }
-
-          },
-          {
-            value:600,itemStyle:{
-            normal:{
-              color:'#204E72'
-            }
-          }
-
-          },
-        ]
-      }
-    ]
-  };
-  dq.setOption(option_dd)
-
+  //左下折线图---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //echarts------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 });

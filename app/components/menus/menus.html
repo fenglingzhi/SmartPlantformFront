@@ -1,0 +1,52 @@
+<style>
+#uls{
+  position: absolute;
+  right: 30px;
+  top: 100px;
+}
+  #uls li{
+    margin-top: 30px;
+    width: 20px;
+    height: 20px;
+    border: 4px solid white;
+    border-radius: 50%;
+  }
+  #uls li:hover{
+    background-color: white;
+  }
+</style>
+  <ul id="uls">
+    <li onmouseover="change_home_page('QSFX')"></li>
+    <li onmouseover="change_home_page('JCFX')"></li>
+    <li onmouseover="change_home_page('FXRY')"></li>
+    <li onmouseover="change_home_page('QSYL')"></li>
+    <li onmouseover="change_home_page('GZTX')"></li>
+  </ul>
+<script>
+
+  function change_home_page(home_name) {
+    switch (home_name){
+      /*全市风险*/
+      case 'QSFX':
+        $('#content').load('app/components/home/home.html');
+        break;
+      /*基础风险*/
+      case 'JCFX':
+        $('#content').load('app/components/base_rank/base_rank.html');
+        break;
+      /*风险人员*/
+      case 'FXRY':
+        $('#content').load('app/components/risk_people/risk_people.html');
+        break;
+      /*全市押量*/
+      case 'QSYL':
+        $('#content').load('app/components/escort_all/escort_all.html');
+        break;
+      /*工作提醒*/
+      case 'GZTX':
+        $('#content').load('app/components/work_remind/work_remind.html');
+        break;
+    }
+  }
+
+</script>

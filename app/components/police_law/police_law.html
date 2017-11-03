@@ -1,166 +1,107 @@
 <link rel="stylesheet" href="app/components/police_law/police_law.css">
+
+
 <div class="police_law">
-  <div style="height:100%" class="police_law_son col-sm-3">
+
+  <!--左边排名部分-->
+  <div style="height:100%" class="police_law_son col-sm-4">
     <div style="height:100%">
       <div class="imp_person_title">
-        <p>全市民警执法风险排名</p>
+        <p class="p-dw">全市民警执法风险排名</p>
       </div>
-      <ul class="imp_person_title_1">
-        <li>监所</li>
-        <div class="mid_left_progress_2">
-          <div class="mid_left_now_progress_2"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_3">
-          <div class="mid_left_now_progress_3"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_4">
-          <div class="mid_left_now_progress_4"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_5">
-          <div class="mid_left_now_progress_5"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_6">
-          <div class="mid_left_now_progress_6"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_7">
-          <div class="mid_left_now_progress_7"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_8">
-          <div class="mid_left_now_progress_8"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_9">
-          <div class="mid_left_now_progress_9"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_10">
-          <div class="mid_left_now_progress_10"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_11">
-          <div class="mid_left_now_progress_11"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_2">
-          <div class="mid_left_now_progress_2"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_12">
-          <div class="mid_left_now_progress_12"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_13">
-          <div class="mid_left_now_progress_13"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_14">
-          <div class="mid_left_now_progress_14"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_14">
-          <div class="mid_left_now_progress_14"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_14">
-          <div class="mid_left_now_progress_14"></div>
-        </div>
-        <li>监所</li>
-        <div class="mid_left_progress_14">
-          <div class="mid_left_now_progress_14"></div>
-        </div>
-      </ul>
+      <div id="ranking" style="width:100;height:100%"></div>
     </div>
   </div>
+  <!--左边排名部分-->
 
-
-  <div class="police_law_son police_law_son2 col-sm-3">
+  <!--中间各岗位评分-->
+  <div id="police_law_son2_test" class="police_law_son police_law_son2 col-sm-2">
     <div>
       <div class="each">
         <div><div>巡控岗</div></div>
         <div id="each_1"></div>
       </div>
       <div class="each">
-        <div><div>巡控岗</div></div>
+        <div><div>管教岗</div></div>
         <div id="each_2"></div>
       </div>
-      <div class="each actives">
-        <div><div>巡控岗</div></div>
+      <div class="each">
+        <div><div>后勤岗</div></div>
         <div id="each_3"></div>
       </div>
       <div class="each">
-        <div><div>巡控岗</div></div>
+        <div><div>所领导及内勤</div></div>
         <div id="each_4"></div>
       </div>
       <div class="each">
-        <div><div>巡控岗</div></div>
+        <div><div>医务岗</div></div>
         <div id="each_5"></div>
       </div>
       <div class="each each-last">
-        <div><div>巡控岗</div></div>
+        <div><div>接待岗</div></div>
         <div id="each_6"></div>
       </div>
     </div>
+    <div class="center_font_1">
+      <div>40分</div>
+    </div>
+    <div class="center_font_2">
+      <div>40分</div>
+    </div>
+    <div class="center_font_3">
+      <div>40分</div>
+    </div>
+    <div class="center_font_4">
+      <div>40分</div>
+    </div>
+    <div class="center_font_5">
+      <div>40分</div>
+    </div>
+    <div class="center_font_6">
+      <div>40分</div>
+    </div>
   </div>
+  <!--中间各岗位评分-->
 
-
-
-  <div  class="police_law_son col-sm-6">
-    <div>
+  <!--右边风险分析-->
+  <div  class="police_law_son police_law_son3 col-sm-6">
+    <div id="police_law_son3_1">
       <div class="police_law1_title" style="color:#fff">
-        医务岗民警执法风险分析
+        民警执法风险分析
       </div>
       <div class="imp_person_toggle1">
         <span>实时统计</span>
         <span>周统计</span>
         <span>月统计</span>
       </div>
-      <div style="width:50%;height:40%" id="right">
-      </div>
-      <div style="width:60%;height:45%" id="right_down">
 
+      <!--上面的雷达图-->
+      <div style="width:90%;height:40%;left:7%" id="right">
       </div>
+      <!--上面的雷达图-->
+
+      <!--下面的折线图-->
+      <div style="width:90%;height:45%;left:7%" id="right_down">
+      </div>
+      <!--下面的折线图-->
+
+
     </div>
   </div>
+  <!--右边风险分析-->
+
 </div>
 
-<style>
-  #bottom-ul{
-    position: absolute;
-    bottom: 0%;
-    left: 33%;
-  }
-  #bottom-ul li{
-    font-size: 20px;
-    color: white;
-    margin-left: 20px;
-    border: 1px solid skyblue;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    float:left;
-    box-shadow: inset 0 0 6px 3px #16cbb6;
-  }
-  .active-box{
-    box-shadow: inset 0 0 12px 7px #16cbb6 !important;
-  }
-  #bottom-ul li:hover{
-    box-shadow: inset 0 0 12px 7px #16cbb6 !important;
-  }
-</style>
 <ul id="bottom-ul">
   <li>基础风险</li>
   <li>在押人员</li>
   <li class="active-box">民警执法</li>
   <li>设施设备</li>
+  <li>警辅外来</li>
 </ul>
 <script>
 
+  //右下角监所切换
   $("#bottom-ul li").click(function(){
     var inx=$(this).index();
     $(this).addClass("active-box");
@@ -174,7 +115,7 @@
     }else if(inx==3){
       $("#content").load('app/components/risk_rank/risk_rank.html');
     }
-
+  //右下角监所切换
   })
 </script>
 

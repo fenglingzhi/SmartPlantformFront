@@ -109,3 +109,6 @@ option = {
 crimal_dangerous.setOption(option, true);
 /*============================ 危险等级 ===============================*/
 })
+$('.card_border').on('click',function () {
+  $('#content').load('app/components/crimal_detail/crimal_detail.html');
+})

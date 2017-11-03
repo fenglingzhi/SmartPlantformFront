@@ -1,3 +1,6 @@
+$(function () {
+
+/*左边雷达图*/
 left_t=echarts.init(document.getElementById("left-t"));
 option_lt = {
   radar: {
@@ -14,13 +17,13 @@ option_lt = {
       }
     },
     indicator: [
-      { name: '风险项1', max: 100},
-      { name: '风险项2', max: 100},
-      { name: '风险项3', max: 100},
-      { name: '风险项4', max: 100},
-      { name: '风险项5', max: 100},
-      { name: '风险项6', max: 100},
-      { name: '风险项7', max: 100}
+      { name: '监室设施', max: 100},
+      { name: '周界报警', max: 100},
+      { name: '监区门禁', max: 100},
+      { name: '紧急报警', max: 100},
+      { name: 'AB门设施', max: 100},
+      { name: '周界防护', max: 100},
+      { name: '无线定位', max: 100}
     ]
   },
   series: [{
@@ -55,7 +58,7 @@ option_lt = {
   }]
 };
 left_t.setOption(option_lt);
-
+/*右边折线图*/
 right_t=echarts.init(document.getElementById("right-t"));
 option_rt= {
   tooltip : {
@@ -71,7 +74,7 @@ option_rt= {
     top:'25%',
     left: '4%',
     right: '6%',
-    bottom: '5%',
+    bottom: '10%',
     containLabel: true
   },
   xAxis : [
@@ -101,6 +104,44 @@ option_rt= {
       }
     }
   ],
+  "dataZoom": [{
+    "show": true,
+    "height": 20,
+    "xAxisIndex": [
+      0
+    ],
+    bottom: 0,
+    "start": 30,
+    "end": 80,
+    handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
+    handleSize: '0%',
+    backgroundColor:"rgba(25,47,83,0.5)",
+    fillerColor:"#1D5090",
+    dataBackground:{
+      areaStyle:{
+        // color:"red"
+      },
+      lineStyle:{
+        color:"transparent"
+      }
+    },
+    handleStyle:{
+      color:"#ddd"
+
+    },
+    textStyle:{
+      color:"white"
+    },
+    borderColor:"transparent"
+
+
+  }, {
+    "type": "inside",
+    "show": true,
+    "height": 15,
+    "start": 1,
+    "end": 35
+  }],
   series : [
     {
       name:'重点犯数量3',
@@ -137,3 +178,4 @@ window.onresize = function(){
   left_t.resize();
   right_t.resize();
 }
+})

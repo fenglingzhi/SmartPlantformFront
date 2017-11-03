@@ -1,16 +1,19 @@
 <link rel="stylesheet" href="app/components/escort_all/escort_all.css">
+
+
+
 <div class="escort row">
   <div class="col-sm-3 left-lf">
     <div id="left-df" style="width: 100%;height: 50%;position: relative;">
-      <p class="left-fx">新收人员</p>
-      <p class="left-zb">·设计押量占比</p>
-      <p class="left-rs">·压量人数</p>
+      <p class="left-fx">押量</p>
+      <p class="left-zb"><span style="display: inline-block;background: #4AC420;height: 10px;width: 10px;border-radius: 5px;margin-right: 10px;"></span>设计押量占比</p>
+      <p class="left-rs"><span style="display: inline-block;background: #BD5EDB;height: 10px;width: 10px;border-radius: 5px;margin-right: 10px;"></span>押量人数</p>
       <img src="app/img/escort_all/button4.png" class="left-img"/>
       <div style="width: 100%;height:100%;" id="d1">
       </div>
       <div class="left-dw">
-        <p><span>40</span>分</p>
-        <span>良好</span>
+        <p><span>40</span></p>
+        <!--<span>良好</span>-->
       </div>
       <div class="man-wo">
         <p class="man"><span>男</span><span>55</span></p>
@@ -30,6 +33,7 @@
   <div class="col-sm-4 mid-left">
     <div style="width:100%;height: 33%;">
       <div class="col-sm-4 mid_left_1_2" style="height: 100%;border-bottom:1px">
+        <span class="active-box_1_1">未成年</span>
         <p class="mid_left_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>10</span>
@@ -54,6 +58,7 @@
     <!--<hr class="top_1_hr">-->
     <div style="width:100%;height: 33%;">
       <div class="col-sm-4 mid_left_2_2" style="height: 100%;">
+        <span class="active-box_1_1">精神病</span>
         <p class="mid_left_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>80</span>
@@ -78,6 +83,7 @@
     <!--<hr style="width: 90%;height: 1%;margin-top: 0;margin-bottom: 0;border-color: #759ACE"/>-->
     <div style="width:100%;height: 33%;">
       <div class="col-sm-4 mid_left_3_2" style="height: 100%;">
+        <span class="active-box_1_1">危害传染病</span>
         <p class="mid_left_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>60</span>
@@ -104,6 +110,7 @@
   <div class="col-sm-4 right-right mid-right" style="margin-right: 1%">
     <div class="right-right-1" style="width:100%;height: 33%;">
       <div class="right-right-1-1 col-sm-12" style="height:100%;">
+        <span class="active-box_1_1">械具使用</span>
         <p class="mid_right_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>30</span>
@@ -127,6 +134,7 @@
     </div>
     <div class="right-right-2" style="width:100%;height: 33%;">
       <div class="col-sm-12" class="right-right-2-1" style="background:rgba(31, 56, 76, 0.63);;width:100%;height: 100%;">
+        <span class="active-box_1_1">超期羁压</span>
         <p class="mid_right_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>10</span>
@@ -152,7 +160,7 @@
     </div>
     <div class="right-right-3" style="width:100%;height: 33%;">
       <div class="col-sm-12" class="right-3-1" style="background:rgba(31, 56, 76, 0.63);width:100%;height: 100%;">
-
+        <span class="active-box_1_1">已为决人员</span>
         <p class="mid_right_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>80</span>
@@ -183,6 +191,7 @@
   <div class="col-sm-4 right-right last-right">
     <div style="width:100%;height: 33%;">
       <div class="right-right-1_1" style="background:rgba(31, 56, 76, 0.63);width:100%;height:100%;">
+        <span class="active-box_1_1">三大刑</span>
         <p class="mid_right_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>50</span>
@@ -208,6 +217,7 @@
     </div>
     <div style="width:100%;height: 33%;">
       <div class="right-right-2_1" style="background:rgba(31, 56, 76, 0.63);width:100%;height:100%;">
+        <span class="active-box_1_1">单独关押</span>
         <p class="mid_right_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>90</span>
@@ -233,10 +243,10 @@
     </div>
     <div style="width:100%;height: 33%;">
       <div class="right-right-3_1" style="background:rgba(31, 56, 76, 0.63);width:100%;height:100%;">
+        <span class="active-box_1_1">临时固定</span>
         <p class="mid_right_1_2_img">
           <img src="app/img/escort_all/button4.png">
           <span>90</span>
-
         <div class="mid_left_progress">
           <div class="mid_left_now_progress_9"></div>
           <div class="mid_left_progress_head_9">
@@ -246,7 +256,6 @@
             </span>
           </div>
         </div>
-
         </p>
       </div>
       <div id="bottom_3" style="width:0;margin-left:100px;height:100%;"></div>
@@ -259,7 +268,54 @@
   </div>
 </div>
 
+<style>
+  #bottom-ul{
+    position: absolute;
+    bottom: 0%;
+    left: 33%;
+  }
+  #bottom-ul li{
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+    border: 1px solid skyblue;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    float:left;
+    box-shadow: inset 0 0 6px 3px #16cbb6;
+  }
+  .active-box{
+    box-shadow: inset 0 0 12px 7px #16cbb6 !important;
+  }
+  #bottom-ul li:hover{
+    box-shadow: inset 0 0 12px 7px #16cbb6 !important;
+  }
+</style>
+<ul id="bottom-ul">
+  <li class="active-box">押解总量</li>
+  <li>新收人员</li>
+  <li>出所人员</li>
+  <li>临时出所</li>
+</ul>
+<script>
 
+  $("#bottom-ul li").click(function(){
+    var inx=$(this).index();
+    $(this).addClass("active-box");
+    $(this).siblings().removeClass("active-box");
+    if(inx==0){
+      $("#content").load('app/components/escort_all/escort_all.html');
+    }else if(inx==1){
+      $('#content').load('app/components/new_person/new_person.html');
+    }else if(inx==2){
+      $("#content").load('app/components/out_police_station/out_police_station.html');
+    }else if(inx==3){
+      $("#content").load('app/components/temporary_outing/temporary_outing.html');
+    }
+
+  })
+</script>
 
 
 

@@ -1,0 +1,73 @@
+<style>
+  #button3{
+    position: absolute;
+    bottom: 40px;
+    right: -118px;
+    z-index: 10;
+    transition: all 0.5s linear;
+  }
+  #click_js{
+    color: white;
+    width: 200px;
+    border: 2px solid #33FFEE;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    bottom: 100px;
+    right: 130px;
+    z-index: 10;
+    transition: display 1s linear;
+    background-color: rgba(0,6,12,0.7);
+    display: none;
+  }
+  #click_js>p{
+    margin: 5px 0 5px 0;
+  }
+  #click_js>p:first-child{
+    margin-top: 10px;
+  }
+  #click_js>p:last-child{
+    margin-bottom: 10px;
+  }
+  .actittc{
+    background-color: #0000fe;
+  }
+  #click_js>p:hover{
+    background-color: #0000fe;
+  }
+</style>
+<img id="button3" src="app/img/button3.png" alt=""/>
+<div id="click_js">
+  <p>第一看守所</p>
+  <p>第二看守所</p>
+  <p>第三看守所</p>
+  <p>第四看守所</p>
+  <p>第五看守所</p>
+  <p>第六看守所</p>
+  <p>第七看守所</p>
+  <p>第八看守所</p>
+  <p>第九看守所</p>
+  <p>第十看守所</p>
+  <p>第十一看守所</p>
+  <p>第十二看守所</p>
+  <p>第十三看守所</p>
+</div>
+<script>
+  /*左下查询图点击事件*/
+  $("#button3").click(function(){
+    if($("#click_js").css("display")=="none"){
+      $("#button3").css("right","0");
+      $("#click_js").css("display","block");
+    }else if($("#click_js").css("display")=="block"){
+      $("#click_js").css("display","none");
+      $("#button3").css("right","-118px")
+    }
+  })
+  /*查询图点击过后出来的点击事件*/
+  $("#click_js p").mousedown(function(){
+    $("#click_js").css("display","none");
+    $("#button3").css("right","-118px")
+    pInx=$(this).index();
+  })
+</script>

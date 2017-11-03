@@ -53,7 +53,7 @@
   background: #0486de;
 }
 .crimal_info_form_wrap .content{
-  width: 178px;
+  width: 160px;
   height: 40px;
   border: 1px solid #3fe3fe;
   color: #fff;
@@ -85,7 +85,7 @@
   text-align: center;
 }
 .crimal_other_info td{
-  width: 162px;
+  width: 150px;
   text-align: center;
 }
 .crimal_charts_wrap{
@@ -279,3 +279,4 @@ body::-webkit-scrollbar-thumb{
   background: rgba(239, 250, 255, 0.3);
   line-height: 50px;
 }
+

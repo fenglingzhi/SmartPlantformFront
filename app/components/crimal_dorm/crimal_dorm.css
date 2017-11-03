@@ -29,7 +29,7 @@
   margin-top: 80px;
 }
 .tab{
-  overflow: auto;
+  overflow: hidden;
   margin: 14px 0;
 }
 .tab_conten:first-child{
@@ -133,6 +133,7 @@
   color: #fff;
   border-radius: 6px;
   padding: 10px;
+  cursor: pointer;
 }
 .card_border p{
   text-indent: 20px;
@@ -150,5 +151,8 @@
   font-weight: bold;
   font-size: 16px;
   color: #fff;
+}
+.card_border:hover{
+  box-shadow: 0px 0 20px 1px #4aecff;
 }
 
