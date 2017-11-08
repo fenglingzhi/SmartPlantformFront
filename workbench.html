@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>南京智慧监管平台</title>
+  <link rel="stylesheet" type="text/css" href="app/css/reset.css">
+  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
+  <link rel="stylesheet" type="text/css" href="app/css/index.css">
+</head>
+<body>
+<!-- 背景 -->
+<div id="background"></div>
+<!-- 背景 -->
+
+<!-- 头部导航 -->
+<div id="header_nav"></div>
+<!-- 头部导航 -->
+
+<!-- 内容主视区 -->
+<div id="content"></div>
+<!-- 内容主视区 -->
+
+<!-- 左侧菜单 -->
+<div id="left_drop"></div>
+<!-- 左侧菜单 -->
+</body>
+</html>
+<script type="text/javascript" src="app/lib/jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="app/lib/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="app/js/common.js"></script>
+<!-- <script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script> -->
+
+
+<script type="text/javascript">
+  $(function(){
+    $.ajaxSetup ({ cache: false });
+    /* 载入页面 */
+    /*头部导航*/
+    $('#header_nav').load('app/components/header.html');
+    $('#mustbe').load('app/components/mustbe.html');
+    /*菜单-切换主页*/
+    $('#menu').load('app/components/menus/menus.html');
+//    $('#check').load('app/components/botrig_check.html');
+
+    /*左侧菜单*/
+    $('#left_drop').load('app/components/left_drop.html');
+    /*实时监控*/
+    $('#content').load('app/components/video_2/video_2.html');
+    /*督导页面*/
+//    $('#content').load('app/components/list_law/list_law.html');
+    /*背景特效*/
+    $('#background').load('app/components/background.html');
+    /* 页面缩放 */
+    $(window).resize(function(){
+      $('#content').css({'height':$(window).height()-90+"px"});
+      $('#background').css({'width':$(window).width()});
+      $('#background').css({'height':$(window).height()});
+      var heiss=$('#content').css({'height':$(window).height()-90+"px"});
+      $("#ss").css({'height':heiss.height()-50+"px"});
+      ldw();
+    });
+    /* 页面计算 */
+    $('#background').css({'width':$(window).width()},{'height':$(window).height()});
+    $('#content').css({'height':$(window).height()-90+"px"});
+    $('.contents_two').css({'height':$(window).height()-90+"px"});
+    $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
+  });
+
+</script>

@@ -4,15 +4,12 @@
   <meta charset="utf-8">
   <title>南京智慧监管平台</title>
   <link rel="stylesheet" type="text/css" href="app/css/reset.css">
-  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css"> -->
   <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap.min.css">
-  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css"> -->
   <link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
   <link rel="stylesheet" type="text/css" href="app/css/index.css">
-  <!-- <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script> -->
+  <link rel="stylesheet" href="app/components/video_2/css/demo.css" type="text/css">
+  <link rel="stylesheet" href="app/components/video_2/css/zTreeStyle/zTreeStyle.css" type="text/css">
 </head>
 <body>
 <!-- 左侧菜单 -->
@@ -38,7 +35,6 @@
 </div>
 
 <!-- tab切换 -->
-<div id="mustbe"></div>
 <div id="check"></div>
 <div id="left_drop"></div>
 <!-- 内容主视区 -->
@@ -47,12 +43,12 @@
 <script type="text/javascript" src="app/lib/jQuery/jquery.min.js"></script>
 <script type="text/javascript" src="app/lib/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
-
-<!-- <script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script> -->
-<!-- <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script> -->
-<!-- <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-zh-CN.js"></script> -->
-<!-- <script type="text/javascript" src="app/lib/jQuery-Timepicker-Addon/jquery.ui.datepicker-zh-CN.js.js"></script> -->
-
+<script type="text/javascript" src="app/js/common.js"></script>
+<script src="app/components/list_law/laydate/laydate.js"></script>
+<script src="app/components/list_law/paging/paging.js"></script>
+<script type="text/javascript" src="app/components/video_2/js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="app/components/video_2/js/jquery.ztree.excheck.js"></script>
+<script type="text/javascript" src="app/components/video_2/js/jquery.ztree.exedit.js"></script>
 
 <script type="text/javascript">
   $(function(){
@@ -64,12 +60,12 @@
     /*菜单-切换主页*/
 //    $('#menu').load('app/components/menu/menu.html');
     $('#menu').load('app/components/menus/menus.html');
-    $('#check').load('app/components/botrig_check.html');
+//    $('#check').load('app/components/botrig_check.html');
 
     /*左侧菜单*/
     $('#left_drop').load('app/components/left_drop.html');
     /*首页*/
-    $('#content').load('app/components/home/home.html');
+//    $('#content').load('app/components/home/home.html');
     /*风险人员*/
 //    $('#content').load('app/components/risk_people/risk_people.html');
     /*押量-新收人员*/
@@ -98,6 +94,11 @@
 //    $('#content').load('app/components/prisoner_risk/prisoner_risk.html');
     /*工作提醒*/
 //    $('#content').load('app/components/work_remind/work_remind.html');
+    /* 实时监控 */
+    $('#content').load('app/components/video_2/video_2.html');
+    /* 督导页面 */
+//    $('#content').load('app/components/list_law/list_law.html');
+//    $('#content').load('app/components/list_supervisor/list_supervisor.html');
     /*背景特效*/
     $('#background').load('app/components/background.html');
     /* 页面缩放 */
@@ -108,15 +109,10 @@
       var heiss=$('#content').css({'height':$(window).height()-90+"px"});
       $("#ss").css({'height':heiss.height()-50+"px"});
       ldw();
-      //重置容器高宽
-//      zero.resize();
-//      myChart.resize();
-//      second.resize();
-//      fourth.resize();
   });
     /* 页面计算 */
     $('#background').css({'width':$(window).width()},{'height':$(window).height()});
-    $('#content').css({'height':$(window).height()-90+"px"});
+    $('#content').css({'height':$(window).height()-80+"px"});
     $('.contents_two').css({'height':$(window).height()-90+"px"});
     $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
   });

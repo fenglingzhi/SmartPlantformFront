@@ -7,17 +7,27 @@
     color: white;
     font-size: 16px;
     text-align: center;
-    width: 0;
-    height: 420px;
-    overflow: hidden;
+    width: 102px;
+    height: 422px;
+    /*overflow: hidden;*/
     /*border: 1px solid skyblue;*/
     transition: width 1s linear;
     border-radius: 10px;
+    display: none;
   }
   #left-drop>li{
     height: 70px;
     width: 100px;
     background-color: #000000;
+
+  }
+  #left-drop>li:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #left-drop>li:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   #left-drop>li:not(:last-child){
     border-bottom: 1px solid #838699;
@@ -36,46 +46,26 @@
     z-index: 9;
   }
 
-
-  #left-drop-rig{
-    width: 0px;
-    height: 420px;
-    position: absolute;
-    z-index: 5;
-    top:300px;
-    left: 101px;
-    color: white;
-    font-size: 16px;
-    /*text-align: center;*/
-    /*overflow: hidden;*/
-    /*transition: width 1s linear;*/
-    /*border: 1px solid red;*/
-  }
-  #left-drop-rig>li{
-    width: 0px;
-    height: 70px;
-    /*border: 1px solid red;*/
-    overflow: hidden;
-  }
-  #left-drop-rig>li>span{
-    margin-top: 2px;
-    text-align: center;
-    display: inline-block;
-    /*margin: 0;*/
-    color: white;
-    /*float: left;*/
-    /*width: 108px;*/
-    height: 34px;
-    padding-left: 4px;
-    padding-right: 4px;
-    line-height: 34px;
-    border: 1px solid transparent;
-    margin-left: 2px;
-    background-color: rgba(0,0,0,0.95);
-  }
-  #left-drop-rig>li>span:hover{
-    border: 1px solid skyblue;
-    background-color: rgba(99,99,99,0.95);
+  .second_menu{
+     position: absolute;
+     left: 102px;
+     /*height: 70px;*/
+    margin-top: -70px;
+     width: 390px;
+     background: rgba(0,0,0,.5);
+     overflow: auto;
+     height: auto;
+     display: none;
+   }
+  .second_menu li{
+    margin: 5px;
+    padding: 6px;
+    width: 120px;
+    border-radius: 5px;
+    /* height: 20px; */
+    float: left;
+    overflow: auto;
+    background-color:rgba(0,0,0,.7) ;
   }
 </style>
 
@@ -84,102 +74,238 @@
   <li>
     <p><img src="app/img/yewu.png" alt=""/></p>
     <p>业务指导</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
   </li>
   <li>
     <p><img src="app/img/dudao.png" alt=""/></p>
     <p>日常督导</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
   </li>
   <li>
     <p><img src="app/img/shuhjv.png" alt=""/></p>
     <p>大数据应用</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
   </li>
   <li>
     <p><img src="app/img/chaxun.png" alt=""/></p>
     <p>综合查询</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
   </li>
   <li>
     <p><img src="app/img/xuexi.png" alt=""/></p>
     <p>帮助学习</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
   </li>
   <li>
     <p><img src="app/img/weihu.png" alt=""/></p>
     <p>为维护设置</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
   </li>
 </ul>
-<ul id="left-drop-rig">
-  <li>
-    <span>实时监控</span>
-    <span>录像回放</span><br/>
-    <span>视频点名</span>
-  </li>
-  <li>
-    <span>督导单</span><br/>
-    <span>现场检查</span>
-  </li>
-  <li>
-    <span>监所综合风险</span>
-    <span>民警岗位履职情况</span>
-    <span>在押人员分析</span><br/>
-    <span>人员构成分析</span>
-    <span>其他分析</span>
-  </li>
-  <li>
-    <span>监所管理</span>
-    <span>民警类</span>
-    <span>在押人员类</span><br/>
-    <span>安防报警类</span>
-    <span>日常督查类</span>
-  </li>
-  <li>
-    <!--<span>五所基础风险</span>-->
-    <!--<span>五警执法风险</span><br/>-->
-    <!--<span>五押人员风险</span>-->
-    <!--<span>五防安防设备风险</span>-->
-  </li>
-  <li>
-    <span>用户管理</span>
-    <span>角色管理</span>
-    <span>岗位管理</span>
-    <span>用户权限管理</span>
-    <span>地图管理</span>
-    <span>设备管理</span>
-    <span>设备点位管理</span>
-    <span>报警联动设置</span>
-    <span>应急预案设置</span>
-    <span>风险评估因素及模型设置</span>
-    <span>排班</span>
-    <span>字典维护</span>
-    <span>平台日志</span>
-  </li>
-</ul>
-
 <script>
   /*左侧边栏的点击事件*/
   $('#tik').click(function(){
-    $("#left-drop").css("width","100px");
-    $("#left-drop").addClass("ad");
+    $("#left-drop").css("display","block");
     $("#left-drop").css("border","1px solid skyblue");
-    $("#left-drop-rig").css("width","800px");
   })
-  $('#left-drop-rig>li span').click(function(){
-    $("#left-drop").css("width","0");
-    $("#left-drop").css("border","1px solid transparent");
-    $("#left-drop-rig>li").css("width","0px");
-    $('#content').load('app/components/video_1/video_1.html');
-  })
+
   $('#left-drop>li').hover(function(){
-    if($('#left-drop').hasClass("ad")==true){
-      console.log(1);
       dropInx=$(this).index();
+      $("ul.second_menu").eq(dropInx).css("display","block")
+      $("ul.second_menu").eq(dropInx).parent().siblings().children("ul.second_menu").css("display","none");
       console.log(dropInx);
-      $("#left-drop-rig>li").eq(dropInx).css("width","630px").siblings().css("width","0px");
-    }
   })
-  $('#left-drop-rig>li').bind("mouseleave",function(){
-    $("#left-drop").css("width","0");
-    $("#left-drop").removeClass("ad");
+  $('ul.second_menu').bind("mouseleave",function(e){
+    e.stopPropagation();
+    $("#left-drop").css("display","none");
     $("#left-drop").css("border","1px solid transparent");
-    $("#left-drop-rig>li").css("width","0px");
+    $("ul.second_menu").css("display","none");
   })
   /*左侧边栏的定位*/
   ldw=function(){

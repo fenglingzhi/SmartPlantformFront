@@ -1,0 +1,354 @@
+<link rel="stylesheet" href="app/components/list_law/css/list_law.css"/>
+
+<div class="list_law">
+  <div class="header_nav">
+    <ul>
+      <li><a href="#">一级名称 &nbsp;</a>></li>
+      <li><a href="#">&nbsp;二级名称 &nbsp;</a>></li>
+      <li><a href="#">&nbsp;三级名称</a></li>
+    </ul>
+  </div>
+  <div class="row body_section">
+    <div class="col-xs-2">监所
+      <div class="status_dropdown dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span>请选择</span>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu_1" aria-labelledby="dropdownMenu1">
+          <li><a href="#">全部</a></li>
+          <li><a href="#">南京一所</a></li>
+          <li><a href="#">南京二所</a></li>
+          <li><a href="#">南京三所</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-2">状态
+      <div class="status_dropdown dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span>请选择</span>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu_2" aria-labelledby="dropdownMenu1">
+          <li><a href="#">全部</a></li>
+          <li><a href="#">待处理</a></li>
+          <li><a href="#">准备中</a></li>
+          <li><a href="#">已完结</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-2">违规类型
+      <div class="status_dropdown dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span>请选择</span>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu_3" aria-labelledby="dropdownMenu1">
+          <li><a href="#">全部</a></li>
+          <li><a href="#">110215</a></li>
+          <li><a href="#">110216</a></li>
+          <li><a href="#">110217</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-2">起始时间&nbsp;&nbsp;&nbsp;
+      <input type="text" class="demo-input" placeholder="请选择开始时间" id="starttime_law">
+      <img class="time_img" src="app/img/list_law/rili.png" alt=""/>
+    </div>
+    <div class="col-xs-2 ending">结束时间&nbsp;&nbsp;&nbsp;
+      <input type="text" class="demo-input" placeholder="请选择结束时间" id="endtime_law">
+      <img class="time_img" src="app/img/list_law/rili.png" alt=""/>
+    </div>
+    <div class="col-xs-2">
+      <button type="button" class="total_find">查 询</button>
+    </div>
+  </div>
+  <div class="row">
+    <p class="title">南京一所</p>
+  </div>
+  <div class="row">
+    <div class="table_main table-responsive">
+      <table class="table">
+        <tr>
+          <td>
+            <input class="d1" type="checkbox"/>
+          </td>
+          <td>编号</td>
+          <td>所在监所</td>
+          <td>督导状态</td>
+          <td>违规类型</td>
+          <td id="date_create">创建时间
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </td>
+          <td>创建人</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox"/>
+          </td>
+          <td>1</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>2</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>3</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>4</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>5</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>6</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>7</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>8</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>9</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>10</td>
+          <td>南京一所</td>
+          <td>已完结</td>
+          <td>110215</td>
+          <td>2017-11-16</td>
+          <td>小王</td>
+          <td>
+            <button type="button">查 看</button>
+          </td>
+          <td>
+            <button type="button">审 批</button>
+          </td>
+          <td>
+            <button type="button">撤 销</button>
+          </td>
+        </tr>
+        <!--<tr>-->
+          <!--<td></td>-->
+          <!--<td>1</td>-->
+          <!--<td>南京一所</td>-->
+          <!--<td>已完结</td>-->
+          <!--<td>110215</td>-->
+          <!--<td>2017-11-16</td>-->
+          <!--<td>小王</td>-->
+          <!--<td>-->
+            <!--<button type="button">查 看</button>-->
+          <!--</td>-->
+          <!--<td>-->
+            <!--<button type="button">审 批</button>-->
+          <!--</td>-->
+          <!--<td>-->
+            <!--<button type="button">撤 销</button>-->
+          <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td></td>-->
+          <!--<td>1</td>-->
+          <!--<td>南京一所</td>-->
+          <!--<td>已完结</td>-->
+          <!--<td>110215</td>-->
+          <!--<td>2017-11-16</td>-->
+          <!--<td>小王</td>-->
+          <!--<td>-->
+            <!--<button type="button">查 看</button>-->
+          <!--</td>-->
+          <!--<td>-->
+            <!--<button type="button">审 批</button>-->
+          <!--</td>-->
+          <!--<td>-->
+            <!--<button type="button">撤 销</button>-->
+          <!--</td>-->
+        <!--</tr>-->
+      </table>
+    </div>
+  </div>
+  <!--<div class="page_right">-->
+    <!--<ul class="pagination_1">-->
+      <!--<li>-->
+        <!--<a href="#">-->
+          <!--<span>&laquo;</span>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>1</li>-->
+      <!--<li>2</li>-->
+      <!--<li>3</li>-->
+      <!--<li>4</li>-->
+      <!--<li>5</li>-->
+      <!--<li>-->
+        <!--<a href="#">-->
+          <!--<span>&raquo;</span>-->
+        <!--</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+
+
+  <div value="1 0"></div>
+  <div id="page" style="display: inline-block" class="page_div"></div>
+  <div class="page_dropdown dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <span>请选择</span>
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu_3" aria-labelledby="dropdownMenu1">
+      <li><a href="#">10</a></li>
+      <li><a href="#">20</a></li>
+      <li><a href="#">30</a></li>
+      <li><a href="#">40</a></li>
+    </ul>
+  </div>
+
+
+
+
+
+
+</div>
+
+<script src="app/components/list_law/js/list_law.js"></script>
+
+

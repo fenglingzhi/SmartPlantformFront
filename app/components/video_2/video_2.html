@@ -1,0 +1,588 @@
+<link rel="stylesheet" href="app/components/video_2/css/video_2.css"/>
+
+<link rel="stylesheet" type="text/css" href="app/css/index.css">
+<link rel="stylesheet" href="app/components/video_2/css/jquery.treeview.css" />
+<link rel="stylesheet" href="app/components/video_2/css/screen.css" />
+
+
+
+<style type="text/css">
+  .ztree li span.button.icon01_ico_docu{
+
+    background: url(app/components/video_2/css/zTreeStyle/gun1.png) no-repeat;
+    background-position: center;
+    background-size: 15px;
+    vertical-align:top;
+    *vertical-align:middle
+  }
+  .ztree li span.button.icon02_ico_docu{
+
+    background: url(app/components/video_2/css/zTreeStyle/ball1.png) no-repeat;
+    background-position: center;
+    background-size: 15px;
+    vertical-align:top;
+    *vertical-align:middle
+  }
+  .ztree li span.button.icon03_ico_docu{
+
+    background: url(app/components/video_2/css/zTreeStyle/ball2.png) no-repeat;
+    background-position: center;
+    background-size: 15px;
+    vertical-align:top;
+    *vertical-align:middle
+  }
+
+
+
+  .node_name{
+    color: white;
+  }
+  #rMenu{
+    visibility:hidden;
+    position: absolute;
+    font-size: 18px;
+    z-index: 10;
+    text-align: center;
+    width: 120px;
+    height: 150px;
+    background-color: #0066cb;
+  }
+  #rMenu{
+    margin-bottom: 5px;
+    color: black;
+  }
+  #rMenu>p:first-child{
+    margin-bottom: 10px;
+  }
+  #rMenu>p:nth-child(3){
+    margin-bottom: 10px;
+  }
+</style>
+
+<div id="rMenu">
+  <p>添加自定义</p>
+  <p>设置标签AA</p>
+  <p>设置标签BB</p>
+  <p>相关视屏01</p>
+  <p>相关视屏02</p>
+  <p>相关视屏03</p>
+</div>
+<div class="video_2 row">
+  <div class="col-xs-2 video_table video_table_1" style="color:#fff">
+    <div  class="video_table_1_div">
+      <div style="float: left;" class="video_table_1_img">
+        <img src="app/img/video_2/a1.png" alt=""/>
+      </div>
+      <div style="float: left;" class="video_table_1_img">
+        <img src="app/img/video_2/b1.png" alt=""/>
+      </div>
+      <div style="float: left;" class="video_table_1_img">
+        <img src="app/img/video_2/c1.png" alt=""/>
+      </div>
+    </div>
+    <p>公共分组 <span></span></p>
+    <div class="list_1" style="height:81%;">
+      <div id="dw_d_1">
+        <span class="glyphicon glyphicon-search form-search"></span>
+        <input type="text"/>
+        <span class="biaoq">
+          按标签
+          <span class="tbot"></span>
+        </span>
+      </div>
+      <div class="left" >
+        <ul id="treeDemo" class="ztree"></ul>
+      </div>
+    </div>
+    <p>个人分组 <span></span></p>
+    <div class="list_2" style="height:81%;">
+      <div id="dw_d">
+        <span class="glyphicon glyphicon-search form-search"></span>
+        <input type="text"/>
+        <span class="biaoq">
+          按标签
+          <span class="tbot"></span>
+        </span>
+      </div>
+      <div class="left" >
+        <ul id="treeDemos" class="ztree"></ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 video_table video_table_2">
+    <div class="video_table_2_title">
+    </div>
+    <div style="height:100%;padding:0 10px 10px 10px">
+      <div class="video_table_2_main" style="width:100%;height:100%;transform: translate(0,-50px);">
+        <p id="bj">
+          <span class="button">
+            <a class="button1" onclick="select_template(0,1)">
+              <img src="app/img/video_2/1_2.png" alt=""/>
+            </a>
+          </span>
+          <span class="button">
+            <a class="button2" onclick="select_template(1,4)">
+              <img src="app/img/video_2/2.png" alt=""/>
+            </a>
+          </span>
+          <span class="button">
+            <a class="button3" onclick="select_template(2,9)">
+              <img src="app/img/video_2/3.png" alt=""/>
+            </a>
+          </span>
+          <span class="button">
+            <a class="button4" onclick="select_template(3,16)">
+              <img src="app/img/video_2/4.png" alt=""/>
+            </a>
+          </span>
+          <span class="button">
+            <a class="button5">
+              <img src="app/img/video_2/10.png" alt=""/>
+            </a>
+          </span>
+          <span class="button">
+            <a class="button6">
+              <img src="app/img/video_2/15.png" alt=""/>
+            </a>
+          </span>
+          <span class="button">
+            <a class="button7">
+              <img src="app/img/video_2/6.png" alt=""/>
+            </a>
+          </span>
+        </p>
+
+
+
+
+        <div id="gezi" class="row">
+          <div class="template template_1"">
+            <div class="video_wrap">
+              <object id="plugin1" type="application/x-mediacuplugin">
+                <param name="onload" value="pluginLoaded" />
+              </object>
+              <!--<div class="botton_wrap">-->
+              <!--<button onclick="play(true)">播放</button>-->
+              <!--<button onclick="stop(true)">停止</button>-->
+              <!--<button onclick="snap(true)">抓拍</button>-->
+              <!--</div>-->
+            </div>
+          </div>
+          <div class="template template_2">
+          </div>
+          <div class="template template_3">
+          </div>
+          <div class="template template_4">
+          </div>
+          <div class="template template_5 col-xs-12">
+            <div  class="col-xs-8"  style="height:100%">
+              <object id="plugin0" type="application/x-mediacuplugin">
+                <param name="onload" value="pluginLoaded" />
+              </object>
+            </div>
+            <div  class="col-xs-4"  style="height:101%;">
+              <div  class="col-xs-12" style="margin-top:4%;height:32%">
+                <object id="plugin2" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div  class="col-xs-12" style="margin-top:1%;height:32%;">
+                <object id="plugin3" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div  class="col-xs-12" style="margin-top:1%;height:32%">
+                <object id="plugin4" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+            </div>
+          </div>
+
+          <div class="template template_6">
+            <div  class="col-xs-6"  style="height:100%;">
+              <div class="col-xs-12" style="height:48%;">
+                <object id="plugin0" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div class="col-xs-12" style="height:48%;">
+                <object id="plugin2" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+            </div>
+            <div  class="col-xs-3"  style="height:100%;">
+              <div  class="col-xs-12" style="height:31%;margin-top:4%;">
+                <object id="plugin3" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div  class="col-xs-12" style="height:31%;">
+                <object id="plugin4" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div  class="col-xs-12" style="height:31%;">
+                <object id="plugin5" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+            </div>
+            <div  class="col-xs-3"  style="height:100%;padding-right:20px;padding-left: 0px;padding-bottom: 3px;">
+              <div  class="col-xs-12" style="height:31%;margin-top:5%;background-color:blue;">
+                <object id="plugin6" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div  class="col-xs-12" style="height:31%;">
+                <object id="plugin7" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div  class="col-xs-12" style="height:31%;">
+                <object id="plugin8" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="template template_7">
+            <div  class="col-xs-8" style="height:100%">
+              <object id="plugin0" type="application/x-mediacuplugin">
+                <param name="onload" value="pluginLoaded" />
+              </object>
+            </div>
+            <div  class="col-xs-4" style="height:100%">
+              <div class="col-xs-12"  style="height:20%;">
+                <object id="plugin2" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div class="col-xs-12"  style="height:20%;">
+                <object id="plugin3" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div class="col-xs-12"  style="height:20%;">
+                <object id="plugin4" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div class="col-xs-12"  style="height:20%;">
+                <object id="plugin5" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+              <div class="col-xs-12"  style="height:20%;">
+                <object id="plugin6" type="application/x-mediacuplugin">
+                  <param name="onload" value="pluginLoaded" />
+                </object>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-2  video_table video_table_3">
+    <div>附件信息</div>
+    <div>
+      <input type="checkbox"/>
+      <span>全选/全不选</span>
+    </div>
+    <ul id="scroll-1">
+      <li>
+        <video src="app/components/video_1/video/demo1.mp4" id="d1_1_video" preload="metadata" muted playsinline></video>
+        <img src="app/img/video_1/a.png" id="play1_1">
+        <img class="close_img" src="app/img/video_1/d.png" alt=""/>
+      </li>
+      <li>
+        <video src="app/components/video_1/video/demo1.mp4" id="d1_2_video" preload="metadata" muted playsinline></video>
+        <img src="app/img/video_1/a.png" id="play1_2">
+        <img class="close_img" src="app/img/video_1/d.png" alt=""/>
+      </li>
+      <li>
+        <img class="video_table_3_imgs" src="app/img/video_1/video_1.jpg" alt=""/>
+        <img class="close_img" src="app/img/video_1/d.png" alt=""/>
+      </li>
+      <li>
+        <img class="video_table_3_imgs" src="app/img/video_1/video_1.jpg" alt=""/>
+        <img class="close_img" src="app/img/video_1/d.png" alt=""/>
+      </li>
+      <li>
+        <img class="video_table_3_imgs" src="app/img/video_1/video_1.jpg" alt=""/>
+        <img class="close_img" src="app/img/video_1/d.png" alt=""/>
+      </li>
+      <li>
+        <img class="video_table_3_imgs" src="app/img/video_1/video_1.jpg" alt=""/>
+        <img class="close_img" src="app/img/video_1/d.png" alt=""/>
+      </li>
+    </ul>
+
+    <header>监室情况</header>
+    <section>
+      <p>名称：<span class="prison_dorm">101监室南</span></p>
+      <p>分管民警：王鹏</p>
+      <p>协管民警：司伟</p>
+    </section>
+    <footer id="scroll-2">
+      <div class="people_total">
+        <img src="app/img/text/1.jpg">
+        <div class="people_details">
+          <p>姓名：张三</p>
+          <p>番号：123456</p>
+          <p>状态：提审中</p>
+        </div>
+      </div>
+      <div>
+        <img src="app/img/text/1.jpg">
+        <div class="people_details2">
+          <p>姓名：张三</p>
+          <p>番号：123456</p>
+          <p>状态：提审中</p>
+        </div>
+      </div>
+      <div>
+        <img src="app/img/text/1.jpg">
+        <div class="people_details3">
+          <p>姓名：张三</p>
+          <p>番号：123456</p>
+          <p>状态：提审中</p>
+        </div>
+      </div>
+      <div>
+        <img src="app/img/text/1.jpg">
+        <div class="people_details4">
+          <p>姓名：张三</p>
+          <p>番号：123456</p>
+          <p>状态：提审中</p>
+        </div>
+      </div>
+      <div>
+        <img src="app/img/text/1.jpg">
+        <div class="people_details5">
+          <p>姓名：张三</p>
+          <p>番号：123456</p>
+          <p>状态：提审中</p>
+        </div>
+      </div>
+      <div>
+        <img src="app/img/text/1.jpg">
+        <div class="people_details6">
+          <p>姓名：张三</p>
+          <p>番号：123456</p>
+          <p>状态：提审中</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="col-xs-1 video_table video_table_4">
+    <div class="video_table_list video_table_list_1">
+      <img src="app/img/video_1/ren.png" alt=""/>
+      <!--<div class="video_table_list_1_else"></div>-->
+      <div class="video_table_list_1_div">人员列表</div>
+    </div>
+    <div class="video_table_list video_table_list_2">
+      <img src="app/img/video_1/fu.png" alt=""/>
+      <!--<div class="video_table_list_2_else"></div>-->
+      <div class="video_table_list_2_div">附件库</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="back" style="position: relative;z-index:500">
+  <div class="true_false_arrow" style="width: 0;height: 0;border-bottom:20px solid rgba(9, 108, 197, 0.65);border-left: 16px solid transparent;"></div>
+  <div class="true_false" style="width:0.85%;height:60px;background:rgba(9, 108, 197, 0.65)">
+    <img class="back_img" src="app/img/video_2/back.png" alt=""/>
+  </div>
+  <div class="true_false_arrow" style="width: 0;height: 0;border-top:20px solid rgba(9, 108, 197, 0.65);border-left: 16px solid transparent;"></div>
+</div>
+
+
+
+
+
+
+<script src="app/components/video_2/js/video_2.js"></script>
+
+<!--<script src="app/lib/jQuery/jquery.min.js" type="text/javascript"></script>-->
+<!--<script src="app/lib/tree/jquery.cookie.js" type="text/javascript"></script>-->
+<!--<script src="app/components/video_2/js/jquery.treeview.js" type="text/javascript"></script>-->
+<!--<script type="text/javascript" src="app/components/video_2/js/demo.js"></script>-->
+<!--<script type="text/javascript" src="app/components/video_2/js/VideoMethod.js"></script>-->
+<script type="text/javascript" src="app/components/video_2/js/nicescroll.min.js"></script>
+<script type="text/javascript">
+
+  var setting = {
+    view: {
+      dblClickExpand: false
+    },
+
+    callback: {
+      onRightClick: OnRightClick
+    }
+  };
+
+  var zNodes =[
+    {id:1, name:"一监区", open:true, noR:true,
+      children:[
+        {id:11, name:"101监室", noR:true,open:true,
+          children:[
+            {id:111, name:"101监室东北01", iconSkin:"icon01"},
+            {id:112, name:"101监室西南02", iconSkin:"icon02"},
+            {id:113, name:"101监室厕所03", iconSkin:"icon03"}
+          ]},
+        {id:12, name:"102监室", noR:true,
+          children:[
+            {id:121, name:"102监室东北01", iconSkin:"icon01"},
+            {id:122, name:"102监室西南02", iconSkin:"icon02"},
+            {id:123, name:"102监室厕所03", iconSkin:"icon03"}
+          ]},
+        {id:13, name:"103监室", noR:true,
+          children:[
+            {id:131, name:"103监室东北01", iconSkin:"icon01"},
+            {id:132, name:"103监室西南02", iconSkin:"icon02"},
+            {id:133, name:"103监室厕所03", iconSkin:"icon03"}
+          ]},
+        {id:14, name:"104监室", noR:true,
+          children:[
+            {id:141, name:"104监室东北01", iconSkin:"icon01"},
+            {id:142, name:"104监室西南02", iconSkin:"icon02"},
+            {id:143, name:"104监室厕所03", iconSkin:"icon03"}
+          ]},
+      ]},
+    {id:2, name:"二监区", open:true, noR:true,
+      children:[
+        {id:221, name:"101监室", noR:true,open:true,
+          children:[
+            {id:211, name:"101监室东北01", iconSkin:"icon01"},
+            {id:212, name:"101监室西南02", iconSkin:"icon02"},
+            {id:213, name:"101监室厕所03", iconSkin:"icon03"}
+          ]},
+        {id:222, name:"102监室", noR:true,
+          children:[
+            {id:221, name:"102监室东北01", iconSkin:"icon01"},
+            {id:222, name:"102监室西南02", iconSkin:"icon02"},
+            {id:223, name:"102监室厕所03", iconSkin:"icon03"}
+          ]},
+        {id:23, name:"103监室", noR:true,
+          children:[
+            {id:231, name:"103监室东北01", iconSkin:"icon01"},
+            {id:232, name:"103监室西南02", iconSkin:"icon02"},
+            {id:233, name:"103监室厕所03", iconSkin:"icon03"}
+          ]},
+        {id:224, name:"104监室", noR:true,
+          children:[
+            {id:241, name:"104监室东北01", iconSkin:"icon01"},
+            {id:242, name:"104监室西南02", iconSkin:"icon02"},
+            {id:243, name:"104监室厕所03", iconSkin:"icon03"}
+          ]},
+      ]},
+  ];
+
+  function OnRightClick(event, treeId, treeNode) {
+    if (!treeNode && event.target.tagName.toLowerCase() != "button" && $(event.target).parents("a").length == 0) {
+      zTree.cancelSelectedNode();
+      showRMenu("root", event.clientX, event.clientY);
+    } else if (treeNode && !treeNode.noR) {
+      zTree.selectNode(treeNode);
+      showRMenu("node", event.clientX, event.clientY);
+    }
+  }
+
+  function showRMenu(type, x, y) {
+    $("#rMenu ul").show();
+    if (type=="root") {
+      $("#m_del").hide();
+      $("#m_check").hide();
+      $("#m_unCheck").hide();
+    } else {
+      $("#m_del").show();
+      $("#m_check").show();
+      $("#m_unCheck").show();
+    }
+
+    y += document.body.scrollTop;
+    x += document.body.scrollLeft;
+    rMenu.css({"top":y+"px", "left":x+"px", "visibility":"visible"});
+
+    $("body").bind("mousedown", onBodyMouseDown);
+  }
+  function hideRMenu() {
+    if (rMenu) rMenu.css({"visibility": "hidden"});
+    $("body").unbind("mousedown", onBodyMouseDown);
+  }
+  function onBodyMouseDown(event){
+    if (!(event.target.id == "rMenu" || $(event.target).parents("#rMenu").length>0)) {
+      rMenu.css({"visibility" : "hidden"});
+    }
+  }
+  var addCount = 1;
+  function addTreeNode() {
+    hideRMenu();
+    var newNode = { name:"增加" + (addCount++)};
+    if (zTree.getSelectedNodes()[0]) {
+      newNode.checked = zTree.getSelectedNodes()[0].checked;
+      zTree.addNodes(zTree.getSelectedNodes()[0], newNode);
+    } else {
+      zTree.addNodes(null, newNode);
+    }
+  }
+  function removeTreeNode() {
+    hideRMenu();
+    var nodes = zTree.getSelectedNodes();
+    if (nodes && nodes.length>0) {
+      if (nodes[0].children && nodes[0].children.length > 0) {
+        var msg = "要删除的节点是父节点，如果删除将连同子节点一起删掉。\n\n请确认！";
+        if (confirm(msg)==true){
+          zTree.removeNode(nodes[0]);
+        }
+      } else {
+        zTree.removeNode(nodes[0]);
+      }
+    }
+  }
+  function checkTreeNode(checked) {
+    var nodes = zTree.getSelectedNodes();
+    if (nodes && nodes.length>0) {
+      zTree.checkNode(nodes[0], checked, true);
+    }
+    hideRMenu();
+  }
+  function resetTree() {
+    hideRMenu();
+    $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+  }
+  function resetTree() {
+    hideRMenu();
+    $.fn.zTree.init($("#treeDemos"), setting, zNodes);
+  }
+
+  var zTree, rMenu;
+  $(document).ready(function(){
+    $.fn.zTree.init($("#treeDemos"), setting, zNodes);
+    zTree = $.fn.zTree.getZTreeObj("treeDemos");
+    rMenu = $("#rMenu");
+  });
+  function resetTree() {
+    hideRMenu();
+    $.fn.zTree.init($("#treeDemos"), setting, zNodes);
+  }
+  var zTree, rMenu;
+  $(document).ready(function(){
+    $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    zTree = $.fn.zTree.getZTreeObj("treeDemo");
+    rMenu = $("#rMenu");
+  });
+
+</script>

@@ -1,0 +1,314 @@
+.list_law{
+  width:100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  /*border-radius: 10px;*/
+  margin-bottom:-3px;
+  background-color:#fff;
+}
+
+.header_nav{
+  border-bottom:1px solid #DFDFDF;
+  height:40px;
+  padding:10px;
+  padding-left:30px;
+}
+
+.header_nav>ul{
+  float:left;
+  color:#000
+}
+
+.header_nav>ul>li{
+  float:left;
+}
+
+.header_nav>ul>li>a{
+  text-decoration:none;
+  color:#000
+}
+
+.body_section{
+  width:90%;
+  margin-left:105px;
+  padding-top:10px;
+  color:#000;
+  /*border:1px solid red*/
+}
+
+.body_section>div{
+  padding: 0;
+}
+
+.body_section>div.col-xs-2{
+  width:15%
+}
+
+.table_main{
+  color:#000;
+  width:95%;
+  padding-left:120px;
+  text-align: center;
+}
+
+.table_main>table>tbody>tr:first-child{
+  background-color: #F9F9F9;
+  color:rgb(92,108,189)
+}
+
+.table_main>table>tbody>tr:nth-child(even){
+  background-color: #E7F4FD;
+}
+
+
+.table_main>table>tbody>tr:not(:first-child)>td:nth-child(8)>button{
+  padding-left:5px;
+  width:35%;
+  text-align:center;
+  font-weight:lighter;
+  padding-top: 3px;
+  border:1px solid transparent;
+  padding-bottom: 3px;
+  padding-right:5px;
+  border-radius:4px;
+  background: #00A0E8;
+  color:#fff;
+  outline:none;
+}
+
+.table_main>table>tbody>tr:not(:first-child)>td:nth-child(9)>button{
+  padding-left:5px;
+  width:35%;
+  text-align:center;
+  font-weight:lighter;
+  padding-top: 3px;
+  border:1px solid transparent;
+  padding-bottom: 3px;
+  padding-right:5px;
+  border-radius:4px;
+  background: #FE7449;
+  color:#fff;
+  outline:none;
+}
+
+.table_main>table>tbody>tr:not(:first-child)>td:nth-child(10)>button{
+  padding-left:5px;
+  width:35%;
+  text-align:center;
+  font-weight:lighter;
+  padding-top: 3px;
+  border:1px solid transparent;
+  padding-bottom: 3px;
+  padding-right:5px;
+  border-radius:4px;
+  background: #ACACAC;
+  color:#fff;
+  outline:none;
+}
+
+.page_right{
+  float:right;
+  margin-right:180px;
+  margin-top: 10px;
+}
+
+.pagination_1>li{
+  float:left;
+  width:11%;
+  margin-left:3%;
+  padding:4px;
+  padding-left:5px;
+  padding-right:5px;
+  border:1px solid #E6E6E6;
+  border-radius:4px;
+}
+
+.pagination_1>li:hover{
+  cursor:pointer;
+}
+
+.pagination_1{
+  float: left;
+  width:170%;
+}
+
+.pagination_1>li{
+  margin-left:5px;
+  font-size:16px;
+  text-align: center;
+  color:#000;
+}
+
+.active_bgc{
+  background-color:#118EEA;
+  color:#fff !important;
+}
+
+.title{
+  color:#717171;
+  font-size:18px;
+  padding-left:120px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  margin:0;
+  font-weight: bold;
+}
+
+.section_select{
+  color:#000;
+  width:50%;
+  margin-left:20px;
+  padding-bottom: 3px;
+}
+
+.table_main>table>tbody>tr:first-child>td:first-child{
+  font-size:12px;
+}
+
+.table_main span.glyphicon{
+  color:#000;
+  font-size:10px;
+  transform: translate(0,2px);
+}
+
+.table_main span.glyphicon:hover{
+  cursor:pointer;
+}
+
+ table>tbody>tr>td#date_create{
+  padding-left:15px;!important;
+}
+
+.total_find{
+  padding-left:5px;
+  width:25%;
+  margin-left:30px;
+  text-align:center;
+  font-weight:lighter;
+  padding-top: 3px;
+  border:1px solid transparent;
+  padding-bottom: 3px;
+  padding-right:5px;
+  border-radius:4px;
+  background: #00A0E8;
+  color:#fff;
+  outline:none;
+}
+
+#starttime_law{
+  position:relative;
+}
+
+#endtime_law{
+  position:relative;
+}
+
+.time_img{
+  position:absolute;
+  top:22%;
+  left:88%
+}
+
+.status_dropdown{
+  display:inline-block;
+  margin-left:10px;
+}
+
+.status_dropdown>button.dropdown-toggle{
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ending{
+  margin-left: 30px;
+}
+
+.btn-default>span:first-child{
+  margin-right:5px
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+/*
+        * 外面盒子样式---自己定义
+        */
+
+.page_div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  float: left;
+  font-family: "microsoft yahei";
+  color: #666666;
+  margin-right: 15px;
+  margin-left: 960px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+/*
+       * 页数按钮样式
+       */
+
+.page_div a {
+  min-width: 30px;
+  height: 28px;
+  border: 1px solid #dce0e0!important;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 4px;
+  cursor: pointer;
+  line-height: 28px;
+  color: #666666;
+  font-size: 13px;
+  display: inline-block;
+}
+
+#firstPage,
+#lastPage {
+  width: 50px;
+  color: #0073A9;
+  border: 1px solid #0073A9!important;
+}
+
+#prePage,
+#nextPage {
+  width: 70px;
+  color: #0073A9;
+  border: 1px solid #0073A9!important;
+}
+
+.page_div .current {
+  background-color: #0073A9;
+  border-color: #0073A9;
+  color: #FFFFFF;
+}
+
+.totalPages {
+  margin: 0 10px;
+}
+
+.totalPages span,
+.totalSize span {
+  color: #0073A9;
+  margin: 0 5px;
+}
+
+.page_dropdown{
+  float: left;
+  height: 28px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.page_dropdown>button.btn:first-child{
+  height:28px;
+  line-height:16px;
+}

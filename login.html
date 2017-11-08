@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>南京智慧监管平台</title>
+  <link rel="stylesheet" type="text/css" href="app/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
+  <link rel="stylesheet" type="text/css" href="app/css/index.css">
+  <style>
+    #bg{
+      position: relative;
+      background: url("app/img/Bg_login.png") no-repeat;
+      background-size: 100%;
+    }
+    #login{
+      width: 400px;
+      height: 500px;
+      /*border:2px solid yellow;*/
+      border-radius: 10px;
+      background-color: rgba(0,0,0,0.3);
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0)); /* 标准的语法 */
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+    }
+    #login div:first-child{
+      width: 190px;
+      height: 190px;
+      /*border: 1px solid skyblue;*/
+      margin-top: -65px;
+      margin-left: 105px;
+      background:url("app/img/logo_login.png") 50% 50% no-repeat;;
+
+    }
+    #login img{
+      width: 190px;
+      height: 190px;
+      animation:circle 5s infinite linear;/*匀速 循环*/
+      -webkit-animation:circle 5s infinite linear;/*匀速 循环*/
+      -ms-animation:circle 5s infinite linear;/*匀速 循环*/
+
+    }
+    @keyframes circle{
+      0%{ transform:rotate(0deg); }
+      100%{ transform:rotate(360deg); }
+    }
+    @-webkit-keyframes circle{
+      0%{ transform:rotate(0deg); }
+      100%{ transform:rotate(360deg); }
+    }
+    @-ms-keyframes circle{
+      0%{ transform:rotate(0deg); }
+      100%{ transform:rotate(360deg); }
+    }
+
+
+    #login>p:nth-child(2){
+      font-size: 24px;
+      color: #fff;
+      margin-top: 25px;
+    }
+    #login input:nth-child(3){
+      margin-top: 30px;
+      width: 320px;
+      height: 50px;
+      background:url("app/img/input-ico1.png") 18px 14px no-repeat;
+      background-size: 7%;
+      background-color: #fff;
+      text-indent: 60px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: 2px solid transparent;
+      outline:none;
+    }
+    #login input:nth-child(3):focus{
+      background:url("app/img/input-ico1s.png") 18px 14px no-repeat;
+      background-size: 7%;
+      background-color: #fff;
+      border-color:#00FA21;
+      border-radius: 5px;
+    }
+    #login input:nth-child(4){
+      margin-top: 15px;
+      width: 320px;
+      height: 50px;
+      background:url("app/img/input-ico2.png") 20px 10px no-repeat;
+      background-size: 6%;
+      background-color: #fff;
+      text-indent: 60px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: 2px solid transparent;
+      outline:none;
+    }
+    #login input:nth-child(4):focus{
+      background:url("app/img/input-ico2s.png") 20px 10px no-repeat;
+      background-size: 6%;
+      background-color: #fff;
+      border-color:#00FA21;
+      border-radius: 5px;
+    }
+    #login button{
+      margin-top: 15px;
+      width: 320px;
+      height: 50px;
+      background-color: #1BBE31;
+      color: #fff;
+      font-size:24px ;
+      border: none;
+    }
+    #login button:hover{
+
+    }
+    #login label{
+      width: 320px;
+      text-align: left;
+      margin-top: 20px;
+      color: white;
+    }
+    #login label input{
+      vertical-align: middle;
+      margin: 0;
+      height: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div id="bg">
+    <div id="login">
+      <div>
+        <img src="app/img/login-quan.png" alt=""/>
+      </div>
+      <p>公安监管支队智慧管理平台</p>
+      <input type="text" name="name" id="name" placeholder="用户名" />
+      <input type="password" name="word" id="pwd" placeholder="密码"/><br/>
+      <button id="btn">登&nbsp;&nbsp;&nbsp;&nbsp;录</button><br/>
+      <label>
+        <input type="checkbox" />&nbsp;&nbsp;保持下次自动登录
+      </label>
+    </div>
+  </div>
+</body>
+</html>
+<script type="text/javascript" src="app/lib/jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="app/lib/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('#bg').css({'width':$(window).width()});
+    $('#bg').css({'height':$(window).height()});
+    $(window).resize(function(){
+      $('#bg').css({'width':$(window).width()});
+      $('#bg').css({'height':$(window).height()});
+    });
+  });
+ //请求前缀的Url
+    let preReqUrl = "http://10.58.1.134:8080/";
+
+    let token;
+
+    $("#btn").click(function () {
+        var name = $("#name").val();
+        var pwd = $("#pwd").val();
+        //登录请求,向本地存放token
+        $.ajax({
+            type: "post",
+            url: preReqUrl + "sysmng/userlogin/authlogin",
+            contentType: "application/json;charset=utf-8",
+            async: false,
+            data: JSON.stringify({
+                "username": name,
+                "password": pwd
+            }),
+            success: function (resp) {
+                let code = resp.resultCode;
+                if(code == 1){
+                    token = resp.data.token;
+                    //将token存放在本地
+                    localStorage.setItem("token", token);
+                    window.location.href = "index.html";
+                }else{
+                    alert(resp.resultMsg);
+                }
+
+            },
+            error: function () {
+                alert("请求异常");
+            }
+        })
+    })
+</script>
