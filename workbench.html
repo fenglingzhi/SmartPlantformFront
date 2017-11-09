@@ -4,9 +4,7 @@
   <meta charset="utf-8">
   <title>南京智慧监管平台</title>
   <link rel="stylesheet" type="text/css" href="app/css/reset.css">
-  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="app/lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="app/css/reset.css">
   <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="app/lib/star_background/css/index_style.css">
@@ -34,8 +32,11 @@
 <script type="text/javascript" src="app/lib/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
 <script type="text/javascript" src="app/js/common.js"></script>
-<!-- <script type="text/javascript" src="app/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script> -->
-
+<script src="app/components/list_law/laydate/laydate.js"></script>
+<script src="app/components/list_law/paging/paging.js"></script>
+<script type="text/javascript" src="app/components/video_2/js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="app/components/video_2/js/jquery.ztree.excheck.js"></script>
+<script type="text/javascript" src="app/components/video_2/js/jquery.ztree.exedit.js"></script>
 
 <script type="text/javascript">
   $(function(){
@@ -51,9 +52,9 @@
     /*左侧菜单*/
     $('#left_drop').load('app/components/left_drop.html');
     /*实时监控*/
-    $('#content').load('app/components/video_2/video_2.html');
+//    $('#content').load('app/components/video_2/video_2.html');
     /*督导页面*/
-//    $('#content').load('app/components/list_law/list_law.html');
+    $('#content').load('app/components/list_law/list_law.html');
     /*背景特效*/
     $('#background').load('app/components/background.html');
     /* 页面缩放 */
@@ -67,8 +68,8 @@
     });
     /* 页面计算 */
     $('#background').css({'width':$(window).width()},{'height':$(window).height()});
-    $('#content').css({'height':$(window).height()-90+"px"});
-    $('.contents_two').css({'height':$(window).height()-90+"px"});
+    $('#content').css({'height':$(window).height()-80+"px"});
+    $('.contents_two').css({'height':$(window).height()-80+"px"});
     $(".contents_two div.row:nth-child(2)").css({'height':$(window).height()-$("#imp_person").height()-186+"px"})
   });
 

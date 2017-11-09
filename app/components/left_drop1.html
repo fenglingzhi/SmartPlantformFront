@@ -1,0 +1,318 @@
+<style>
+  #left-drop{
+    position: absolute;
+    z-index: 10;
+    /*top: 100px;*/
+    left: 0px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    width: 102px;
+    height: 422px;
+    /*overflow: hidden;*/
+    /*border: 1px solid skyblue;*/
+    transition: width 1s linear;
+    border-radius: 10px;
+    display: none;
+  }
+  #left-drop>li{
+    height: 70px;
+    width: 100px;
+    background-color: #000000;
+
+  }
+  #left-drop>li:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #left-drop>li:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #left-drop>li:not(:last-child){
+    border-bottom: 1px solid #838699;
+  }
+  #left-drop>li>p:first-child{
+    line-height: 48px;
+    width: 100px;
+    height: 48px;
+  }
+  #left-drop> li p{
+    margin: 0;
+  }
+  #tik{
+    position: absolute;
+    left: 1px;
+    z-index: 9;
+  }
+
+  .second_menu{
+     position: absolute;
+     left: 102px;
+     /*height: 70px;*/
+    margin-top: -70px;
+     width: 390px;
+     background: rgba(0,0,0,.5);
+     overflow: auto;
+     height: auto;
+     display: none;
+   }
+  .second_menu li{
+    margin: 5px;
+    padding: 6px;
+    width: 120px;
+    border-radius: 5px;
+    /* height: 20px; */
+    float: left;
+    overflow: auto;
+    background-color:rgba(0,0,0,.7) ;
+  }
+</style>
+
+<img src="app/img/left-button.png" id="tik">
+<ul id="left-drop">
+  <li>
+    <p><img src="app/img/yewu.png" alt=""/></p>
+    <p>业务指导</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><img src="app/img/dudao.png" alt=""/></p>
+    <p>日常督导</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><img src="app/img/shuhjv.png" alt=""/></p>
+    <p>大数据应用</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><img src="app/img/chaxun.png" alt=""/></p>
+    <p>综合查询</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><img src="app/img/xuexi.png" alt=""/></p>
+    <p>帮助学习</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><img src="app/img/weihu.png" alt=""/></p>
+    <p>为维护设置</p>
+    <ul class="second_menu">
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+      <li>
+        <span>实时监控</span>
+      </li>
+    </ul>
+  </li>
+</ul>
+<script>
+  /*左侧边栏的点击事件*/
+  $('#tik').click(function(){
+    $("#left-drop").css("display","block");
+    $("#left-drop").css("border","1px solid skyblue");
+  })
+
+  $('#left-drop>li').hover(function(){
+      dropInx=$(this).index();
+      $("ul.second_menu").eq(dropInx).css("display","block")
+      $("ul.second_menu").eq(dropInx).parent().siblings().children("ul.second_menu").css("display","none");
+      console.log(dropInx);
+  })
+  $('ul.second_menu').bind("mouseleave",function(e){
+    e.stopPropagation();
+    $("#left-drop").css("display","none");
+    $("#left-drop").css("border","1px solid transparent");
+    $("ul.second_menu").css("display","none");
+  })
+  /*左侧边栏的定位*/
+  ldw=function(){
+    leDw=$(window).height();
+    $("#tik").css({"top":leDw/2-32+"px"});
+    $("#left-drop").css({"top":leDw/2-210+"px"});
+    $("#left-drop-rig").css({"top":leDw/2-210+"px"});
+  }
+  ldw();
+</script>

@@ -1,8 +1,11 @@
+var preReqUrl = "http://10.58.1.134:8080/";
+var token = '?token=' + localStorage.getItem("token");
+
 function commonAjax(method,baseUrl,sendData) {
   var successData = null;
   $.ajax({
     type: method,
-    url: baseUrl,
+    url: preReqUrl + baseUrl,
     contentType: "application/json;charset=utf-8",
     data: JSON.stringify({sendData}),
     async: false,
@@ -16,6 +19,7 @@ function commonAjax(method,baseUrl,sendData) {
       XHR = null;  //回收资源
     }
   });
+  console.log(preReqUrl + baseUrl + token)
   return successData;
 }
 

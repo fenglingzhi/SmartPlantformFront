@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="app/components/video_2/css/video_2.css"/>
-
 <link rel="stylesheet" type="text/css" href="app/css/index.css">
 <link rel="stylesheet" href="app/components/video_2/css/jquery.treeview.css" />
 <link rel="stylesheet" href="app/components/video_2/css/screen.css" />
+<link rel="stylesheet" href="app/components/video_2/css/demo.css" type="text/css">
+<link rel="stylesheet" href="app/components/video_2/css/zTreeStyle/zTreeStyle.css" type="text/css">
 
 
 
@@ -44,7 +45,7 @@
     z-index: 10;
     text-align: center;
     width: 120px;
-    height: 150px;
+    height: 180px;
     background-color: #0066cb;
   }
   #rMenu{
@@ -493,10 +494,10 @@
   function OnRightClick(event, treeId, treeNode) {
     if (!treeNode && event.target.tagName.toLowerCase() != "button" && $(event.target).parents("a").length == 0) {
       zTree.cancelSelectedNode();
-      showRMenu("root", event.clientX, event.clientY);
+      showRMenu("root", event.clientX, event.clientY - 90);
     } else if (treeNode && !treeNode.noR) {
       zTree.selectNode(treeNode);
-      showRMenu("node", event.clientX, event.clientY);
+      showRMenu("node", event.clientX, event.clientY - 90);
     }
   }
 
