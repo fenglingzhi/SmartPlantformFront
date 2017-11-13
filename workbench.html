@@ -44,19 +44,26 @@
     /* 载入页面 */
     /*头部导航*/
     $('#header_nav').load('app/components/header.html');
-    $('#mustbe').load('app/components/mustbe.html');
     /*菜单-切换主页*/
     $('#menu').load('app/components/menus/menus.html');
-//    $('#check').load('app/components/botrig_check.html');
-
     /*左侧菜单*/
     $('#left_drop').load('app/components/left_drop.html');
-    /*实时监控*/
-//    $('#content').load('app/components/video_2/video_2.html');
-    /*督导页面*/
-    $('#content').load('app/components/list_law/list_law.html');
     /*背景特效*/
     $('#background').load('app/components/background.html');
+    /* 实时监控 */
+//    $('#content').load('app/components/video_2/video_2.html');
+    /* 督导列表 */
+//    $('#content').load('app/components/list_law/list_law.html');
+    /* 督导创建 */
+//    $('#content').load('app/components/list_supervisor/list_supervisor.html');
+    /* 督导查看 */
+//    $('#content').load('app/components/list_set/list_set.html');
+    /* 审核流转 */
+//    $('#content').load('app/components/list_base/list_base.html');
+    /* 督导审核 */
+//    $('#content').load('app/components/basic_info/basic_info.html');
+    /* 督导消息 */
+    $('#content').load('app/components/information/information.html');
     /* 页面缩放 */
     $(window).resize(function(){
       $('#content').css({'height':$(window).height()-90+"px"});

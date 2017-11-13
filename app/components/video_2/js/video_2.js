@@ -434,3 +434,9 @@ $(".back").click(function(){
     }
 
   })
+
+  $(".dropdown-menu>li").click(function()
+  {
+    var new_text=$(this).text();
+    $(this).parent().prev().children(":first-child").text(new_text);
+  })

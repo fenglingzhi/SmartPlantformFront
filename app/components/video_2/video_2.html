@@ -87,8 +87,17 @@
         <span class="glyphicon glyphicon-search form-search"></span>
         <input type="text"/>
         <span class="biaoq">
-          按标签
-          <span class="tbot"></span>
+          <div class="status_dropdown dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span>请选择</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu_1" aria-labelledby="dropdownMenu1">
+              <li><a href="#">按标签</a></li>
+              <li><a href="#">按时间</a></li>
+              <li><a href="#">按名称</a></li>
+            </ul>
+          </div>
         </span>
       </div>
       <div class="left" >
@@ -101,8 +110,17 @@
         <span class="glyphicon glyphicon-search form-search"></span>
         <input type="text"/>
         <span class="biaoq">
-          按标签
-          <span class="tbot"></span>
+          <div class="status_dropdown dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span>请选择</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu_1" aria-labelledby="dropdownMenu1">
+              <li><a href="#">按标签</a></li>
+              <li><a href="#">按时间</a></li>
+              <li><a href="#">按名称</a></li>
+            </ul>
+          </div>
         </span>
       </div>
       <div class="left" >
@@ -494,7 +512,7 @@
   function OnRightClick(event, treeId, treeNode) {
     if (!treeNode && event.target.tagName.toLowerCase() != "button" && $(event.target).parents("a").length == 0) {
       zTree.cancelSelectedNode();
-      showRMenu("root", event.clientX, event.clientY - 90);
+//      showRMenu("root", event.clientX, event.clientY - 90);
     } else if (treeNode && !treeNode.noR) {
       zTree.selectNode(treeNode);
       showRMenu("node", event.clientX, event.clientY - 90);

@@ -270,15 +270,13 @@ p{
 .biaoq{
   text-align: center;
   display: inline-block;
-  width: 60px;
+  width: 64px;
   height: 28px;
   line-height: 19px;
-  background-color: #8696A5;
   color: #000;
   position: absolute;
   top: 1px;
   right: 1px;
-  padding-top: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   z-index: 100;
@@ -912,3 +910,59 @@ div.template_7 #plugin2,div.template_7 #plugin3,div.template_7 #plugin4{
   overflow:hidden;
 }
 
+.status_dropdown{
+  display:inline-block;
+  background-color:transparent;
+}
+
+ul,li{
+  list-style: none !important;
+}
+
+.status_dropdown>button.dropdown-toggle{
+  padding-left: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+}
+
+.status_dropdown button.btn{
+  border-radius:0;
+  outline: none;
+  color:#fff
+}
+
+.status_dropdown button.btn:hover{
+  border-radius:0;
+  outline: none;
+  color:#fff
+}
+
+.status_dropdown button{
+  background-color:transparent;
+}
+
+.status_dropdown button:hover{
+  background-color:transparent;
+}
+
+.status_dropdown button.btn-default{
+  text-shadow:none;
+  border-top:1px solid transparent;
+  border-bottom:1px solid transparent;
+  border-right:1px solid transparent;
+  border-left:1px solid #fff;
+}
+
+.status_dropdown button.btn-default:hover{
+  text-shadow:none;
+}
+
+.btn-default{
+  padding-top:3px;
+}
+#dropdownMenu1{
+  color: #fff;
+   background-color: transparent;
+   border-color: transparent;
+  border-left: 1px solid #fff;
+}
